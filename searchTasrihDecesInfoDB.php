@@ -1,0 +1,128 @@
+<?php
+require "dbConnect.php";
+if(isset($_POST["numero"]) && isset($_POST["annee"]))
+{
+
+  $numero=$_POST["numero"];
+  $annee=$_POST["annee"];
+  $query="SELECT * FROM `tasrih_deces` WHERE `numero`=? AND `annee`=?";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoResult->execute(array($numero,$annee));
+$result=$pdoResult->fetch();
+if($pdoResult->rowCount()>0)
+{
+  $response = array(
+    "numero"=>$result["numero"],
+     "annee"=>$result["annee"],
+     "rdv"=>$result["rdv"],
+     "date_deces_hijri"=>$result["date_deces_hijri"],
+     "annee_deces_hijri"=>$result["annee_deces_hijri"],
+     "date_deces_miladi"=>$result["date_deces_miladi"],
+     "annee_deces_miladi"=>$result["annee_deces_miladi"],
+     "heure"=>$result["heure"],
+     "min"=>$result["min"],
+     "lieu_deces"=>$result["lieu_deces"],
+     "prenom_deces"=>$result["prenom_deces"],
+     "prenom_deces_fr"=>$result["prenom_deces_fr"],
+     "nom_deces"=>$result["nom_deces"],
+     "nom_deces_fr"=>$result["nom_deces_fr"],
+     "sex"=>$result["sex"],
+     "nationalite"=>$result["nationalite"],
+     "adresse_deces"=>$result["adresse_deces"],
+     "date_naiss_hijri"=>$result["date_naiss_hijri"],
+     "annee_naiss_hijri"=>$result["annee_naiss_hijri"],
+     "date_naiss_miladi"=>$result["date_naiss_miladi"],
+     "annee_naiss_miladi"=>$result["annee_naiss_miladi"],
+     "lieu_naiss"=>$result["lieu_naiss"],
+     "etat_familiale"=>$result["etat_familiale"],
+     "niveau_scolaire"=>$result["niveau_scolaire"],
+     "profession"=>$result["profession"],
+     "nom_pere"=>$result["nom_pere"],
+     "date_naiss_pere_hijri"=>$result["date_naiss_pere_hijri"],
+     "annee_naiss_pere_hijri"=>$result["annee_naiss_pere_hijri"],
+     "date_naiss_pere_miladi"=>$result["date_naiss_pere_miladi"],
+     "annee_naiss_pere_miladi"=>$result["annee_naiss_pere_miladi"],
+     "adresse_pere"=>$result["adresse_pere"],
+     "profession_pere"=>$result["profession_pere"],
+     "nationalite_pere"=>$result["nationalite_pere"],
+     "nom_mere"=>$result["nom_mere"],
+     "date_naiss_mere_hijri"=>$result["date_naiss_mere_hijri"],
+     "annee_naiss_mere_hijri"=>$result["annee_naiss_mere_hijri"],
+     "date_naiss_mere_miladi"=>$result["date_naiss_mere_miladi"],
+     "annee_naiss_mere_miladi"=>$result["annee_naiss_mere_miladi"],
+     "adresse_mere"=>$result["adresse_mere"],
+     "profession_mere"=>$result["profession_mere"],
+     "nationalite_mere"=>$result["nationalite_mere"],
+    "date_ecrit_hijri"=>$result["date_ecrit_hijri"],
+    "annee_ecrit_hijri"=>$result["annee_ecrit_hijri"],
+    "date_ecrit_miladi"=>$result["date_ecrit_miladi"],
+    "annee_ecrit_miladi"=>$result["annee_ecrit_miladi"],
+    "selon_annonceur"=>$result["selon_annonceur"],
+    "age_annonceur"=>$result["age_annonceur"],
+    "profession_annonceur"=>$result["profession_annonceur"],
+    "nationalite_annonceur"=>$result["nationalite_annonceur"],
+    "liaison_avec_deces"=>$result["liaison_avec_deces"],
+    "adresse_annonceur"=>$result["adresse_annonceur"],
+    "officier_etat_civil"=>$result["officier_etat_civil"]
+  );
+
+}else{
+  $response = array(
+    "numero"=>"",
+     "annee"=>"",
+     "rdv"=>"",
+     "date_deces_hijri"=>"",
+     "annee_deces_hijri"=>"",
+     "date_deces_miladi"=>"",
+     "annee_deces_miladi"=>"",
+     "heure"=>"",
+     "min"=>"",
+     "lieu_deces"=>"",
+     "prenom_deces"=>"",
+     "prenom_deces_fr"=>"",
+     "nom_deces"=>"",
+     "nom_deces_fr"=>"",
+     "sex"=>"",
+     "nationalite"=>"",
+     "adresse_deces"=>"",
+     "date_naiss_hijri"=>"",
+     "annee_naiss_hijri"=>"",
+     "date_naiss_miladi"=>"",
+     "annee_naiss_miladi"=>"",
+     "lieu_naiss"=>"",
+     "etat_familiale"=>"",
+     "niveau_scolaire"=>"",
+     "profession"=>"",
+     "nom_pere"=>"",
+     "date_naiss_pere_hijri"=>"",
+     "annee_naiss_pere_hijri"=>"",
+     "date_naiss_pere_miladi"=>"",
+     "annee_naiss_pere_miladi"=>"",
+     "adresse_pere"=>"",
+     "profession_pere"=>"",
+     "nationalite_pere"=>"",
+     "nom_mere"=>"",
+     "date_naiss_mere_hijri"=>"",
+     "annee_naiss_mere_hijri"=>"",
+     "date_naiss_mere_miladi"=>"",
+     "annee_naiss_mere_miladi"=>"",
+     "adresse_mere"=>"",
+     "profession_mere"=>"",
+     "nationalite_mere"=>"",
+    "date_ecrit_hijri"=>"",
+    "annee_ecrit_hijri"=>"",
+    "date_ecrit_miladi"=>"",
+    "annee_ecrit_miladi"=>"",
+    "selon_annonceur"=>"",
+    "age_annonceur"=>"",
+    "profession_annonceur"=>"",
+    "nationalite_annonceur"=>"",
+    "liaison_avec_deces"=>"",
+    "adresse_annonceur"=>"",
+    "officier_etat_civil"=>""
+  );
+}
+echo json_encode($response);
+}
+
+?>
