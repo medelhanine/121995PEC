@@ -1347,7 +1347,7 @@ $numero_etat_civil = $_GET["numero_etat_civil"];
 
                                   </div>
 
-                                  <!--Children info--->
+                                  <!--Children info-->
                                   <div class="row" style="margin-right : 3%">
                                     <h3 class="droid-arabic-kufi"> الأبناء
                                       <button  class="btn btn-success btn-round btn-fab btn-fab-mini m-button-mini" rel="tooltip" title="إضافة إبن" id="addChild">

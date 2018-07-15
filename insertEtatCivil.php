@@ -42,8 +42,6 @@ else {
 
     <style>
 
-
-
 	</style>
 
 </head>
@@ -1296,7 +1294,7 @@ else {
                                       </div>
 
                                     </div>
-                                    <!--add father--->
+                                    <!--add father-->
                                     <div class="col-md-6">
                                       <div class="form-group label-floating">
                                     <label class="control-label m-label-form droid-arabic-kufi">السنة  </label>
@@ -1313,7 +1311,7 @@ else {
 
                                   </div>
 
-                                  <!--add Children--->
+                                  <!--add Children-->
                                   <div class="row" style="margin-right : 3%">
                                     <h3 class="droid-arabic-kufi">إضافة الأبناء
                                       <button  class="btn btn-success btn-round btn-fab btn-fab-mini m-button-mini" rel="tooltip" title="إضافة إبن" id="addChild">
