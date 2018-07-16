@@ -124,26 +124,26 @@
                   <li >
                      <a href="index.php">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/home.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">الرئيسية </p>
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;">الرئيسية </p>
                      </a>
                   </li>
 
                   <li>
                      <a href="#" data-toggle="modal" data-target=".general_search">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/search_general.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">    بحث عام </p>
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;">    بحث عام </p>
                      </a>
                   </li>
                   <li>
                      <a href="#" data-toggle="modal" data-target=".etatCivil">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/open-book.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">  كناش الحالة المدنية </p>
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;">  كناش الحالة المدنية </p>
                      </a>
                   </li>
                   <li>
                      <a data-toggle="collapse" href="#dbBayane" class="collapsed" aria-expanded="false">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/contract.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;"> بيان الزواج و الطلاق
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;"> بيان الزواج و الطلاق
                            <b class="caret"></b>
                         </p>
                      </a>
@@ -168,7 +168,7 @@
                   <li>
                      <a data-toggle="collapse" href="#dbAhkamTasarih" class="collapsed" aria-expanded="false">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/auction.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;"> الأحكام و التصاريح
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;"> الأحكام و التصاريح
                            <b class="caret"></b>
                         </p>
                      </a>
@@ -194,7 +194,7 @@
                   <li  class="active">
                      <a data-toggle="collapse" href="#dbSolb" class="collapsed" aria-expanded="false">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/notebook.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;"> قاعدة بيانات الصلب
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;"> قاعدة بيانات الصلب
                            <b class="caret"></b>
                         </p>
                      </a>
@@ -218,7 +218,7 @@
                   <li>
                      <a data-toggle="collapse" href="#dbTorar" class="collapsed" aria-expanded="false">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/message-on-a-sticky-note.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">قاعدة بيانات الطرر
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;">قاعدة بيانات الطرر
                            <b class="caret"></b>
                         </p>
                      </a>
@@ -242,7 +242,7 @@
                   <li>
                      <a data-toggle="collapse" href="#dbExtrait" class="collapsed" aria-expanded="false">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/file.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">قاعدة بيانات العقود
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;">قاعدة بيانات العقود
                            <b class="caret"></b>
                         </p>
                      </a>
@@ -266,14 +266,14 @@
                   <li>
                      <a href="filter.php">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/filtering-data.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;"> انتقاء البيانات</p>
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;"> انتقاء البيانات</p>
                      </a>
                   </li>
                   <!--irsal-->
                   <li>
                      <a href="" data-toggle="modal" data-target=".irsal">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/send-file.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">   الإرسالات و التقارير </p>
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;">   الإرسالات و التقارير </p>
                      </a>
                   </li>
                   <!--end irsal-->
@@ -281,13 +281,13 @@
                   <li>
                      <a href="archive_numerique.php">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/archive.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;"> الأرشيف الرقمي </p>
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;"> الأرشيف الرقمي </p>
                      </a>
                   </li>
                   <li>
                      <a href="statistiques.php">
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/graph.svg">
-                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">إحصائيات</p>
+                        <p class="m-pages droid-arabic-kufi" style="margin-right:8px;">إحصائيات</p>
                      </a>
                   </li>
                   <!-- end db management-->

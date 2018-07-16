@@ -74,6 +74,12 @@ $query="SELECT * FROM `acte_deces` WHERE `numero`=? AND `annee`=?";
 
 	if($pdoResult->rowCount()>0)
 {
+    //insert the acte deces in timestamp table for statistics
+    $queryActeDece="INSERT INTO `timep_stamp_table`(`numero`, `annee`, `type`) VALUES(?,?,?)";
+	$pdoResultActeDece = $pdoConnect->prepare($queryActeDece);
+	$pdoResultActeDece->execute(array($numero,$annee,"acteDeces"));
+
+
 //pour les donnees en arabe
 $pdf->setRTL(true);
 

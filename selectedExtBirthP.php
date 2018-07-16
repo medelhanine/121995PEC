@@ -77,6 +77,12 @@ $query="SELECT * FROM `exbirth` WHERE `numero`=? AND `annee`=?";
 	if($pdoResult->rowCount()>0)
 {
 
+    //insert the extrait in timestamp table for statistics
+    $queryExt="INSERT INTO `timep_stamp_table`(`numero`, `annee`, `type`) VALUES(?,?,?)";
+	$pdoResultExt = $pdoConnect->prepare($queryExt);
+	$pdoResultExt->execute(array($numero,$annee,"exbirth"));
+
+
 //pour les donnees en arabe
 $pdf->setRTL(true);
 

@@ -523,10 +523,10 @@
                         <div class="modal-body">
                         <ul class="nav nav-pills nav-pills-warning droid-arabic-kufi" style="margin-left : 24%"> 
                                         <li >
-                                            <a href="#takarir" data-toggle="tab" style="font-size : 18px !important">التقارير</a>
+                                            <a href="#takarir" data-toggle="tab" style="font-size : 18px !important">التقرير حول المكتب</a>
                                         </li>
                                         <li>
-                                            <a href="#irsal_dawri" data-toggle="tab" style="font-size : 18px !important">الإرسال الدوري</a>
+                                            <a href="#irsal_dawri" data-toggle="tab" style="font-size : 18px !important"> جدادة الفرز</a>
                                         </li>
                                         <li class="active">
                                             <a href="#irsal_chahri" data-toggle="tab" style="font-size : 18px !important">الإرسال الشهري</a>
@@ -629,6 +629,121 @@
 
                                        <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">   نشاط المكتب</h4>
 
+                                       <?php  ///// ********* number of new birth
+                                       //$monthComplet = "0".$month;
+                                       //$result_month = $months_letter[$month];
+
+                                       if((int)$monthActu <= 3)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 01 OR SUBSTRING(`time_stamp`, 6, 2) = 02  OR SUBSTRING(`time_stamp`, 6, 2) = 03 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 04 OR SUBSTRING(`time_stamp`, 6, 2) = 05  OR SUBSTRING(`time_stamp`, 6, 2) = 06 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 07 OR SUBSTRING(`time_stamp`, 6, 2) = 08  OR SUBSTRING(`time_stamp`, 6, 2) = 09 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 10 OR SUBSTRING(`time_stamp`, 6, 2) = 11  OR SUBSTRING(`time_stamp`, 6, 2) = 12 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       $pdoResultBirth = $pdoConnect->prepare($queryBirth);
+                                            $pdoResultBirth->execute(array($anneActu));
+                                            
+                                            $resultBirth=$pdoResultBirth->fetch();
+                                            
+                                       ?>
+
+
+                                       <?php  ///// ********* number of new death
+                                       //$monthComplet = "0".$month;
+                                       //$result_month = $months_letter[$month];
+
+                                       if((int)$monthActu <= 3)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 01 OR SUBSTRING(`time_stamp`, 6, 2) = 02  OR SUBSTRING(`time_stamp`, 6, 2) = 03 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 04 OR SUBSTRING(`time_stamp`, 6, 2) = 05  OR SUBSTRING(`time_stamp`, 6, 2) = 06 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 07 OR SUBSTRING(`time_stamp`, 6, 2) = 08  OR SUBSTRING(`time_stamp`, 6, 2) = 09 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 10 OR SUBSTRING(`time_stamp`, 6, 2) = 11  OR SUBSTRING(`time_stamp`, 6, 2) = 12 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+
+                                       $pdoResultDeath = $pdoConnect->prepare($queryDeath);
+                                            $pdoResultDeath->execute(array($anneActu));
+                                            
+                                            $resultDeath=$pdoResultDeath->fetch();
+                                            
+                                       ?>
+
+
+                                       <?php  // calcule extrait
+                                       if((int)$monthActu <= 3)
+                                       {
+                                       $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                        $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                        $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                        $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                       $pdoResultExtBirth  = $pdoConnect->prepare($queryExtBirth);
+                                        $pdoResultExtBirth ->execute(array($anneActu));                                            
+                                        $resultExtBirth =$pdoResultExtBirth ->fetch();
+
+                                        if((int)$monthActu <= 3)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+
+                                        $pdoResultActeDeces  = $pdoConnect->prepare($queryActeDeces);
+                                         $pdoResultActeDeces ->execute(array($anneActu));                                            
+                                         $resultActeDeces =$pdoResultActeDeces ->fetch();
+                                       
+                                       ?>
+
                                        <div class="col-md-4">
                                           <div class="form-group label-floating">
                                              <label class="control-label m-label-form droid-arabic-kufi">   أحكام تصريحية بالولادة</label>
@@ -639,13 +754,13 @@
                                         <div class="col-md-4">
                                           <div class="form-group label-floating">
                                              <label class="control-label m-label-form droid-arabic-kufi">   ولادات حديثة</label>
-                                             <input type="text" name="wiladat_hadita" value="" class="form-control">
+                                             <input type="text" name="wiladat_hadita" value="<?php echo $resultBirth["count(numero)"] ?>" class="form-control">
                                           </div>
                                        </div>
                                        <div class="col-md-4">
                                           <div class="form-group label-floating">
                                              <label class="control-label m-label-form droid-arabic-kufi">  عدد رسوم الولادات</label>
-                                             <input type="text" name="extrait_naiss" value="" class="form-control">
+                                             <input type="text" name="extrait_naiss" value="<?php echo $resultExtBirth["count(numero)"] ?>" class="form-control">
                                           </div>
                                        </div>
 
@@ -660,13 +775,13 @@
                                         <div class="col-md-4">
                                           <div class="form-group label-floating">
                                              <label class="control-label m-label-form droid-arabic-kufi">   وفيات حديثة</label>
-                                             <input type="text" name="deces_hadita" value="" class="form-control">
+                                             <input type="text" name="deces_hadita" value="<?php echo $resultDeath["count(numero)"] ?>" class="form-control">
                                           </div>
                                        </div>
                                        <div class="col-md-4">
                                           <div class="form-group label-floating">
                                              <label class="control-label m-label-form droid-arabic-kufi">  عدد رسوم الوفاة</label>
-                                             <input type="text" name="acte_deces" value="" class="form-control">
+                                             <input type="text" name="acte_deces" value="<?php echo $resultActeDeces["count(numero)"] ?>" class="form-control">
                                           </div>
                                        </div>
 
