@@ -80,9 +80,11 @@ $fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTyp
         $lg['w_page'] = 'page';
         $pdf->setLanguageArray($lg);
         $pdf->setRTL(true);
+        
         $pdf->SetFont($fontname, 'B', 15);
         $pdf->SetXY(89, 67.5);
         $pdf->Cell(0, 25,$result_month,'C');
+
         $pdf->SetFont('helvetica', 'B', 14);
         $pdf->SetXY(120, 67.5);
         $pdf->Cell(0, 25,$year,'C');

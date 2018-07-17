@@ -3,25 +3,25 @@ require 'dbConnect.php';
 $query='';
 $output = '';
 $pdoResult;
-	$adad= $_POST['adad'];
-	$numero_sijil= $_POST['numero_sijil'];
-	if(trim($adad)!="" && trim($numero_sijil)!="")
+	$annee_epoux= $_POST['annee_epoux'];
+	$numero_epoux= $_POST['numero_epoux'];
+	if(trim($annee_epoux)!="" && trim($numero_epoux)!="")
 {
-	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_rasm`,`nom_epoux_ar`,`nom_epouse_ar` FROM `avis_mariage` WHERE `adad`=? AND `numero_sijil`=?";
+	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_rasm`,`nom_epoux_ar`,`nom_epouse_ar` FROM `avis_mariage` WHERE `numero_epoux`=? AND `annee_epoux`=?";
 	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($adad,$numero_sijil));
+	$pdoResult->execute(array($numero_epoux,$annee_epoux));
 }
-if(trim($adad)=="")
+if(trim($annee_epoux)=="")
 {
-	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_rasm`,`nom_epoux_ar`,`nom_epouse_ar` FROM `avis_mariage` WHERE `numero_sijil`=?";
+	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_rasm`,`nom_epoux_ar`,`nom_epouse_ar` FROM `avis_mariage` WHERE `numero_epoux`=?";
 	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($numero_sijil));
+	$pdoResult->execute(array($numero_epoux));
 }
-if(trim($numero_sijil)=="")
+if(trim($numero_epoux)=="")
 {
-	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_rasm`,`nom_epoux_ar`,`nom_epouse_ar` FROM `avis_mariage` WHERE `adad`=?";
+	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_rasm`,`nom_epoux_ar`,`nom_epouse_ar` FROM `avis_mariage` WHERE `annee_epoux`=?";
 	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($adad));
+	$pdoResult->execute(array($annee_epoux));
 }
 
 

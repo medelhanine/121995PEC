@@ -480,7 +480,7 @@ TRUNCATE filter_prof_pere";
 $pdoResult = $pdoConnect->prepare($query);
 $pdoExec = $pdoResult->execute();*/
 
-//select distinct value from db
+
 $query="INSERT INTO filter_prenom(prenom_ar)  VALUES (?);";
 $pdoResult = $pdoConnect->prepare($query);
 $pdoExec = $pdoResult->execute(array($prenom_ar));
@@ -496,7 +496,7 @@ $pdoResult = $pdoConnect->prepare($query);
 $pdoExec = $pdoResult->execute(array($lieu_naiss_ar));
 
 
-$query="INSERT INTO filter_lieu_naiss  VALUES (?);";
+$query="INSERT INTO filter_nom_mere  VALUES (?);";
 $pdoResult = $pdoConnect->prepare($query);
 $pdoExec = $pdoResult->execute(array($nom_mere_ar));
 

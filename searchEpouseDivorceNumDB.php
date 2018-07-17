@@ -3,25 +3,25 @@ require 'dbConnect.php';
 $query='';
 $output = '';
 $pdoResult;
-	$adad= $_POST['adad'];
-	$numero_sijil= $_POST['numero_sijil'];
-	if(trim($adad)!="" && trim($numero_sijil)!="")
+	$annee_epouseDivorce= $_POST['annee_epouseDivorce'];
+	$numero_epouseDivorce= $_POST['numero_epouseDivorce'];
+	if(trim($annee_epouseDivorce)!="" && trim($numero_epouseDivorce)!="")
 {
-	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_divorce`,`nom_motalak_ar`,`nom_motalaka_ar` FROM `avis_divorce` WHERE `adad`=? AND `numero_sijil`=?";
+	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_divorce`,`nom_motalak_ar`,`nom_motalaka_ar` FROM `avis_divorce` WHERE `numero_motalaka`=? AND `annee_motalaka`=?";
 	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($adad,$numero_sijil));
+	$pdoResult->execute(array($numero_epouseDivorce,$annee_epouseDivorce));
 }
-if(trim($adad)=="")
+if(trim($annee_epouseDivorce)=="")
 {
-	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_divorce`,`nom_motalak_ar`,`nom_motalaka_ar` FROM `avis_divorce` WHERE `numero_sijil`=?";
+	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_divorce`,`nom_motalak_ar`,`nom_motalaka_ar` FROM `avis_divorce` WHERE `numero_motalaka`=?";
 	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($numero_sijil));
+	$pdoResult->execute(array($numero_epouseDivorce));
 }
-if(trim($numero_sijil)=="")
+if(trim($numero_epouseDivorce)=="")
 {
-	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_divorce`,`nom_motalak_ar`,`nom_motalaka_ar` FROM `avis_divorce` WHERE `adad`=?";
+	$query="SELECT `adad`,`sahifa`,`numero_sijil`,`type_divorce`,`nom_motalak_ar`,`nom_motalaka_ar` FROM `avis_divorce` WHERE `annee_motalaka`=?";
 	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($adad));
+	$pdoResult->execute(array($annee_epouseDivorce));
 }
 
 
@@ -40,8 +40,8 @@ if($pdoResult->rowCount()>0)
 							<th style="text-align: center;width:15%;" >رقم السجل</th>
 							<th style="text-align: center;width:15%;"> الصحيفة</th>
 							<th style="text-align: center;width:15%;"> نوع الطلاق</th>
-							<th style="text-align: center;width:25%;">  اسم الزوجة</th>
-							<th style="text-align: center;">اسم الزوج</th>
+							<th style="text-align: center;width:25%;">  اسم المطلقة</th>
+							<th style="text-align: center;">اسم المطلق</th>
 					</thead>
 				 </table>
 			</td>

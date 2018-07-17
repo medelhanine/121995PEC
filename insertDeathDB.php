@@ -518,4 +518,39 @@ if($pdoExec2)
 }
 
 
+
+$query="INSERT INTO filter_prenom_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($prenom_ar));
+
+
+$query="INSERT INTO filter_nom_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($nom_ar));
+
+
+$query="INSERT INTO filter_lieu_naiss_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($lieu_naiss_ar));
+
+$query="INSERT INTO filter_nom_mere_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($nom_mere_ar));
+
+$query="INSERT INTO filter_nom_pere_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($nom_pere_ar));
+
+$query="INSERT INTO filter_prof_mere_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($profession_mere_ar));
+
+$query="INSERT INTO filter_prof_pere_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($profession_pere_ar));
+
+$query="INSERT INTO filter_officier_etat_civil_death  VALUES (?);";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoExec = $pdoResult->execute(array($officier_etat_civil_ar));
+
 ?>
