@@ -19,17 +19,7 @@
    $numero  =$request["numero"];
    $annee  =$request["annee"];
    
-   if(isset($request["numero"])!="" && isset($request["annee"])!="" )
-   {
-   	$query="SELECT * FROM `sdeadtable` WHERE `numero`=? AND `annee`=?";
-   $pdoResult = $pdoConnect->prepare($query);
-   $pdoResult->execute(array($request["numero"],$request["annee"]));
    
-   }
-   
-   $result=$pdoResult->fetch();
-   if($pdoResult->rowCount()>0)
-   {
    
    
    
@@ -300,7 +290,19 @@
                   <div class="collapse navbar-collapse">
                      <ul class="nav navbar-nav navbar-right">
                         <li id="validation">
-                           <?php if($result['validate']==0){ ?>
+                           <?php
+                           if(isset($request["numero"])!="" && isset($request["annee"])!="" )
+                           {
+                             $query="SELECT * FROM `sdeadtable` WHERE `numero`=? AND `annee`=?";
+                           $pdoResult = $pdoConnect->prepare($query);
+                           $pdoResult->execute(array($request["numero"],$request["annee"]));
+                           
+                           }
+                           
+                           $result=$pdoResult->fetch();
+                           if($pdoResult->rowCount()>0)
+                           {
+                           if($result['validate']==0){ ?>
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" rel="tooltip" title="تأكيد المعلومات" data-placement="bottom" data-numero="<?php echo $request["numero"]?>" data-annee="<?php echo $request["annee"]?>" id="validateDeath">
                               <img class="material-icons" style="width:40px;height:40px;display:inline;" src="svg/exclamation.svg">
                               <p class="hidden-lg hidden-md">Apps</p>
@@ -310,7 +312,7 @@
                               <img class="material-icons" style="width:40px;height:40px;display:inline;" src="svg/checked.svg">
                               <p class="hidden-lg hidden-md">Apps</p>
                            </a>
-                           <?php } ?>
+                           <?php } }?>
                         </li>
                         <li class="dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -2062,6 +2064,19 @@
                </div>
                <!--end modal acte deces-->
                <div class="">
+               <?php 
+               if(isset($request["numero"])!="" && isset($request["annee"])!="" )
+               {
+                 $query="SELECT * FROM `sdeadtable` WHERE `numero`=? AND `annee`=?";
+               $pdoResult = $pdoConnect->prepare($query);
+               $pdoResult->execute(array($request["numero"],$request["annee"]));
+               
+               }
+               
+               $result=$pdoResult->fetch();
+               if($pdoResult->rowCount()>0)
+               {
+               ?>
                   <div class="card">
                      <div class="card-header ">
                      </div>

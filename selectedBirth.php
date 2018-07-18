@@ -19,16 +19,7 @@
    $request = $_REQUEST;
    $numero = $request["numero"];
    $annee = $request["annee"];
-   if(trim($numero)!="" && trim($annee)!="" )
-   {
-   	$query="SELECT * FROM `sbirth` WHERE `numero`=? AND `annee`=?";
-   $pdoResult = $pdoConnect->prepare($query);
-   $pdoResult->execute(array($numero,$annee));
-   }
-
-   $result=$pdoResult->fetch();
-   if($pdoResult->rowCount()>0)
-   {
+ 
    ?>
 <!doctype html>
 <html lang="en">
@@ -307,7 +298,18 @@
                        </div>
 
 
-                       <?php if($result['validate']==0){ ?>
+                       <?php
+                         if(trim($numero)!="" && trim($annee)!="" )
+                         {
+                           $query="SELECT * FROM `sbirth` WHERE `numero`=? AND `annee`=?";
+                         $pdoResult = $pdoConnect->prepare($query);
+                         $pdoResult->execute(array($numero,$annee));
+                         }
+                      
+                         $result=$pdoResult->fetch();
+                         if($pdoResult->rowCount()>0)
+                         {
+                       if($result['validate']==0){ ?>
                         <li>
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" rel="tooltip" title="تأكيد المعلومات" data-placement="bottom" data-numero="<?php echo $numero?>" data-annee="<?php echo $annee?>" id="validateBirth">
                               <img class="material-icons" style="width:40px;height:40px;display:inline;" src="svg/exclamation.svg">
@@ -329,7 +331,8 @@
                                </a>
                              </li>
 
-                           <?php } ?>
+                           <?php } 
+                          }?>
                         </li>
 
 
@@ -2124,6 +2127,18 @@
                </div>
                <!--end modal acte deces-->
                <div class="">
+               <?php 
+                if(trim($numero)!="" && trim($annee)!="" )
+                {
+                  $query="SELECT * FROM `sbirth` WHERE `numero`=? AND `annee`=?";
+                $pdoResult = $pdoConnect->prepare($query);
+                $pdoResult->execute(array($numero,$annee));
+                }
+             
+                $result=$pdoResult->fetch();
+                if($pdoResult->rowCount()>0)
+                {
+               ?>
                   <div class="card">
                      <div class="card-content" style="padding : 0 !important">
                           <div class="col-md-6"><!--images div-->
