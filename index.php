@@ -382,6 +382,7 @@
                   </div>
                </div>
                <!--end modal search general-->
+
                <!--modal avis marriage-->
                <div class="modal fade avis_mariage" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                   <div class="modal-dialog modal-lg m-modal-margin" role="document">
@@ -1356,6 +1357,7 @@
                   </div>
                </div>
                <!--end modal one month irsal-->
+               
                <!--modal tasrih naiss-->
                <div class="modal fade tasrihNaiss" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                   <div class="modal-dialog modal-lg m-modal-margin" role="document">

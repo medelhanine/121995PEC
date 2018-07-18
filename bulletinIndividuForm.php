@@ -405,7 +405,7 @@ else {
                            <!--searhc with num-->
                            <form action="searchAvisMariageNumDB.php" method="post" class="searchAvisMariageNum">
                               <div class="row m-search-margin">
-                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام الرقم </h4>
+                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام رقم البيان  </h4>
                                  <div class="col-md-2" style="text-align: center">
                                     <button type="submit" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
                                     <i class="material-icons">search</i>
@@ -426,7 +426,54 @@ else {
                               </div>
                            </form>
                            <!-- end searhc by num-->
-                           
+                           <!--searhc with num epoux-->
+                           <form action="searchEpouxNumDB.php" method="post" class="searchEpouxNum">
+                              <div class="row m-search-margin">
+                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام رقم الزوج </h4>
+                                 <div class="col-md-2" style="text-align: center">
+                                    <button type="submit" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
+                                    <i class="material-icons">search</i>
+                                    </button>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi">السنة</label>
+                                       <input type="text" name="annee_epoux"  class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi"> الرقم</label>
+                                       <input type="text" name="numero_epoux"  class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                           <!-- end searhc by epoux-->
+                           <!--searhc with num epouse-->
+                           <form action="searchEpouseNumDB.php" method="post" class="searchEpouseNum">
+                              <div class="row m-search-margin">
+                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام رقم الزوجة </h4>
+                                 <div class="col-md-2" style="text-align: center">
+                                    <button type="submit" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
+                                    <i class="material-icons">search</i>
+                                    </button>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi">السنة</label>
+                                       <input type="text" name="annee_epouse"  class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi"> الرقم</label>
+                                       <input type="text" name="numero_epouse"  class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                           <!-- end searhc by epouse-->
                            <!--table result-->
                            <div class="row" >
                               <div class="table-responsive m-scroll" id="divResultAvisMariage">
@@ -456,20 +503,18 @@ else {
                   </div>
                </div>
                <!--end modal avis marriage-->
-
-
-                <!--modal avis divorce-->
-                <div class="modal fade avis_divorce" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+               <!--modal avis divorce-->
+               <div class="modal fade avis_divorce" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
                   <div class="modal-dialog modal-lg m-modal-margin" role="document">
                      <div class="modal-content">
                         <div class="modal-header">
                            <h3 style="text-align: center" class="droid-arabic-kufi">البحث في قاعدة البيانات  </h3>
                         </div>
                         <div class="modal-body">
-                           <!--searhc with num-->
+                           <!--searhc with num avis-->
                            <form action="searchAvisDivorceNumDB.php" method="post" class="searchAvisDivorceNum">
                               <div class="row m-search-margin">
-                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام الرقم </h4>
+                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام رقم البيان </h4>
                                  <div class="col-md-2" style="text-align: center">
                                     <button type="submit" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
                                     <i class="material-icons">search</i>
@@ -489,8 +534,55 @@ else {
                                  </div>
                               </div>
                            </form>
-                           <!-- end searhc by num-->
-                          
+                           <!-- end searhc by num avis-->
+                           <!--searhc with num epoux-->
+                           <form action="searchEpouxDivorceNumDB.php" method="post" class="searchEpouxDivorceNum">
+                              <div class="row m-search-margin">
+                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام رقم المطلق </h4>
+                                 <div class="col-md-2" style="text-align: center">
+                                    <button type="submit" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
+                                    <i class="material-icons">search</i>
+                                    </button>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi">السنة</label>
+                                       <input type="text" name="annee_epouxDivorce"  class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi"> الرقم</label>
+                                       <input type="text" name="numero_epouxDivorce"  class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                           <!-- end searhc by epoux-->
+                           <!--searhc with num epouse-->
+                           <form action="searchEpouseDivorceNumDB.php" method="post" class="searchEpouseDivorceNum">
+                              <div class="row m-search-margin">
+                                 <h4 class="droid-arabic-kufi m-title-color">باستخدام رقم المطلقة </h4>
+                                 <div class="col-md-2" style="text-align: center">
+                                    <button type="submit" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
+                                    <i class="material-icons">search</i>
+                                    </button>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi">السنة</label>
+                                       <input type="text" name="annee_epouseDivorce"  class="form-control">
+                                    </div>
+                                 </div>
+                                 <div class="col-md-5">
+                                    <div class="form-group label-floating">
+                                       <label class="control-label m-label-form droid-arabic-kufi"> الرقم</label>
+                                       <input type="text" name="numero_epouseDivorce"  class="form-control">
+                                    </div>
+                                 </div>
+                              </div>
+                           </form>
+                           <!-- end searhc by epouse-->
                            <!--table result-->
                            <div class="row" >
                               <div class="table-responsive m-scroll" id="divResultAvisDivorce">
@@ -520,115 +612,757 @@ else {
                   </div>
                </div>
                <!--end modal avis divorce-->
-
                <!--modal  irsal-->
                <div class="modal fade irsal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                  <div class="modal-dialog  m-modal-margin" role="document">
-                     <div class="modal-content" style="margin-top:30%">
+                  <div class="modal-dialog modal-lg  m-modal-margin" role="document">
+                     <div class="modal-content" style="margin-top:10%">
                         <div class="modal-header">
                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                            <h3 style="text-align: center" class="droid-arabic-kufi">  البحث في قاعدة البيانات </h3>
                         </div>
                         <div class="modal-body">
-                        <ul class="nav nav-pills nav-pills-warning droid-arabic-kufi" style="margin-left : 15%"> 
-                                        <li >
-                                            <a href="#takarir" data-toggle="tab" style="font-size : 18px !important">التقارير</a>
-                                        </li>
-                                        <li>
-                                            <a href="#irsal_dawri" data-toggle="tab" style="font-size : 18px !important">الإرسال الدوري</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#irsal_chahri" data-toggle="tab" style="font-size : 18px !important">الإرسال الشهري</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane " id="takarir"><!--takarir-->
+                           <ul class="nav nav-pills nav-pills-warning droid-arabic-kufi" style="margin-left : 24%">
+                              <li >
+                                 <a href="#takarir" data-toggle="tab" style="font-size : 18px !important">التقرير حول المكتب</a>
+                              </li>
+                              <li>
+                                 <a href="#jodada" data-toggle="tab" style="font-size : 18px !important"> جدادة الفرز</a>
+                              </li>
+                              <li class="active">
+                                 <a href="#irsal_chahri" data-toggle="tab" style="font-size : 18px !important">الإرسال الشهري</a>
+                              </li>
+                           </ul>
+                           <div class="tab-content">
+                              <div class="tab-pane " id="takarir">
+                                 <!--takarir///////////*********************-->
+                                 <?php
+                                    $query = "SELECT * FROM `rapport_bureau`";
+                                    $pdoResult = $pdoConnect->prepare($query);
+                                    $pdoResult->execute();
+                                    
+                                    $result=$pdoResult->fetch();
+                                    
+                                    ?>
+                                 <form action="rapport_bureau.php" method="post">
+                                    <h3 class="droid-arabic-kufi" style="text-align : center;color:#3F51B5">تقرير حول وضعية المكتب خلال الثلاث الأشهر 
+                                       <?php 
+                                          if((int)$monthActu <= 3)
+                                          {
+                                            echo "الأولى";
+                                          }
                                           
-                                        </div><!--end takarir-->
-                                        <div class="tab-pane" id="irsal_dawri"><!--irsal dawri-->
+                                          if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                          {
+                                            echo "الثانية";
+                                          }
+                                          
+                                          if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                          {
+                                            echo "الثالثة";
+                                          }
+                                          
+                                          if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                          {
+                                            echo "الرابعة";
+                                          }
+                                          ?>
+                                       لسنة <?php echo $anneActu ?>
+                                    </h3>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> نسبة التسجيل بالحالة المدنية</label>
+                                          <input type="text" name="nisbat_tsjil" value="<?php echo $result["nisbat_tsjil"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> عدد السكان</label>
+                                          <input type="text" name="adad_sokan" value="<?php echo $result["adad_sokan"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> تاريخ إحداث المكتب</label>
+                                          <input type="text" name="tarikh_ihdat_maktab" value="<?php echo $result["tarikh_ihdat_maktab"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> ضابط الحالة المدنية الأصلي</label>
+                                          <input type="text" name="dabit_asli" value="<?php echo $result["dabit_asli"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">ضباط الحالة المدنية بالتفويض
+                                       <button type="button"  class="btn btn-success btn-round btn-fab btn-fab-mini m-button-mini" rel="tooltip" title=" إضافة ضابط" id="addDabit">
+                                       <i class="material-icons">add</i>
+                                       </button>
+                                    </h4>
+                                    <?php
+                                       $query = "SELECT * FROM `dobat_hala_madania`";
+                                       $pdoResult = $pdoConnect->prepare($query);
+                                       $pdoResult->execute();
                                        
-
-                                        </div><!--end irsal dawri-->
-                                        <div class="tab-pane active" id="irsal_chahri"><!--irsal chahri-->
-                                        <!--searhc with num-->
-                           <form action="irsal_one_monthP.php" method="post" >
-                              <div class="row">
-                                 <h4 class="droid-arabic-kufi" style="color:#3F51B5;margin:0;text-align: center">  الإرسال الشهري العام</h4>
-                                 <div class="col-md-2" style="text-align: center">
-                                    <button type="submit" name="type_irsal" value="general" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
-                                    <i class="material-icons">print</i>
-                                    </button>
-                                 </div>
-                               
-                                 <div class="col-md-4" >
-                                    <select name="year_general" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="السنة" data-size="7" required>
-                                       <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu ?></option>
-                                       <option value="<?php echo $anneActu-1 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-1 ?></option>
-                                       <option value="<?php echo $anneActu-2 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-2 ?></option>
-                                       <option value="<?php echo $anneActu-3 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-3 ?></option>
-                                       <option value="<?php echo $anneActu-4 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-4 ?></option>
-                                    </select>
-                                 </div>
-                                 <div class="col-md-4" style="margin-right:1%">
-                                    <select name="month_general" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الشهر" data-size="7" required>
-                                       <option value="1" class="m-label-form droid-arabic-kufi" style="text-align:center">يناير</option>
-                                       <option value="2" class="m-label-form droid-arabic-kufi" style="text-align:center">فبراير</option>
-                                       <option value="3" class="m-label-form droid-arabic-kufi" style="text-align:center">مارس</option>
-                                       <option value="4" class="m-label-form droid-arabic-kufi" style="text-align:center">أبريل</option>
-                                       <option value="5" class="m-label-form droid-arabic-kufi" style="text-align:center">ماي</option>
-                                       <option value="6" class="m-label-form droid-arabic-kufi" style="text-align:center">يونيو</option>
-                                       <option value="7" class="m-label-form droid-arabic-kufi" style="text-align:center">يوليوز</option>
-                                       <option value="8" class="m-label-form droid-arabic-kufi" style="text-align:center">غشت</option>
-                                       <option value="9" class="m-label-form droid-arabic-kufi" style="text-align:center">شتنبر</option>
-                                       <option value="10" class="m-label-form droid-arabic-kufi" style="text-align:center">أكتوبر</option>
-                                       <option value="11" class="m-label-form droid-arabic-kufi" style="text-align:center">نونبر</option>
-                                       <option value="12" class="m-label-form droid-arabic-kufi" style="text-align:center">دجنبر</option>
-                                    </select>
-                                 </div>
+                                       $result=$pdoResult->fetchAll();
+                                       if($pdoResult->rowCount()>0)
+                                       {
+                                         foreach($result as $row)
+                                         {                                             
+                                       ?>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   الصفة</label>
+                                          <input type="text" name="sifa" value="<?php echo $row["sifa"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  الإسم</label>
+                                          <input type="text" name="nom_dabit" value="<?php echo $row["nom"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <?php  
+                                       } 
+                                       } else{ // if there is no dabit
+                                         ?>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   الصفة</label>
+                                          <input type="text" name="sifa" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  الإسم</label>
+                                          <input type="text" name="nom_dabit" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <?php
+                                       }
+                                       ?>
+                                    <div class="row" style="margin-right : 0.35%">
+                                       <!--add dabit-->
+                                       <div class="addedDabit">
+                                       </div>
+                                    </div>
+                                    <!--end add dabit-->
+                                    <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">   نشاط المكتب</h4>
+                                    <?php  ///// ********* number of new birth
+                                       //$monthComplet = "0".$month;
+                                       //$result_month = $months_letter[$month];
+                                       
+                                       if((int)$monthActu <= 3)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 01 OR SUBSTRING(`time_stamp`, 6, 2) = 02  OR SUBSTRING(`time_stamp`, 6, 2) = 03 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 04 OR SUBSTRING(`time_stamp`, 6, 2) = 05  OR SUBSTRING(`time_stamp`, 6, 2) = 06 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 07 OR SUBSTRING(`time_stamp`, 6, 2) = 08  OR SUBSTRING(`time_stamp`, 6, 2) = 09 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                         $queryBirth = "SELECT count(numero) FROM sbirth WHERE SUBSTRING(`time_stamp`, 6, 2) = 10 OR SUBSTRING(`time_stamp`, 6, 2) = 11  OR SUBSTRING(`time_stamp`, 6, 2) = 12 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       $pdoResultBirth = $pdoConnect->prepare($queryBirth);
+                                            $pdoResultBirth->execute(array($anneActu));
+                                            
+                                            $resultBirth=$pdoResultBirth->fetch();
+                                            
+                                       ?>
+                                    <?php  ///// ********* number of new death
+                                       //$monthComplet = "0".$month;
+                                       //$result_month = $months_letter[$month];
+                                       
+                                       if((int)$monthActu <= 3)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 01 OR SUBSTRING(`time_stamp`, 6, 2) = 02  OR SUBSTRING(`time_stamp`, 6, 2) = 03 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 04 OR SUBSTRING(`time_stamp`, 6, 2) = 05  OR SUBSTRING(`time_stamp`, 6, 2) = 06 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 07 OR SUBSTRING(`time_stamp`, 6, 2) = 08  OR SUBSTRING(`time_stamp`, 6, 2) = 09 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                         $queryDeath = "SELECT count(numero) FROM sdeadtable WHERE SUBSTRING(`time_stamp`, 6, 2) = 10 OR SUBSTRING(`time_stamp`, 6, 2) = 11  OR SUBSTRING(`time_stamp`, 6, 2) = 12 AND SUBSTRING(`time_stamp`, 1, 4) =? ";
+                                       }
+                                       
+                                       $pdoResultDeath = $pdoConnect->prepare($queryDeath);
+                                            $pdoResultDeath->execute(array($anneActu));
+                                            
+                                            $resultDeath=$pdoResultDeath->fetch();
+                                            
+                                       ?>
+                                    <?php  // calcule extrait
+                                       if((int)$monthActu <= 3)
+                                       {
+                                       $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                        $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                        $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                        $queryExtBirth = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='exbirth' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                       $pdoResultExtBirth  = $pdoConnect->prepare($queryExtBirth);
+                                        $pdoResultExtBirth ->execute(array($anneActu));                                            
+                                        $resultExtBirth =$pdoResultExtBirth ->fetch();
+                                       
+                                        if((int)$monthActu <= 3)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                       if((int)$monthActu >= 4 && (int)$monthActu <= 6)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                       if((int)$monthActu >= 7 && (int)$monthActu <= 9)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                       if((int)$monthActu >= 10 && (int)$monthActu <= 12)
+                                       {
+                                        $queryActeDeces = "SELECT count(numero) FROM `timep_stamp_table` WHERE type='acteDeces' AND SUBSTR(timestamp, 1, 4) =?";
+                                       }
+                                       
+                                        $pdoResultActeDeces  = $pdoConnect->prepare($queryActeDeces);
+                                         $pdoResultActeDeces ->execute(array($anneActu));                                            
+                                         $resultActeDeces =$pdoResultActeDeces ->fetch();
+                                       
+                                       ?>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   أحكام تصريحية بالولادة</label>
+                                          <input type="text" name="ahkam_tsrih_naiss" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   ولادات حديثة</label>
+                                          <input type="text" name="wiladat_hadita" value="<?php echo $resultBirth["count(numero)"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  عدد رسوم الولادات</label>
+                                          <input type="text" name="extrait_naiss" value="<?php echo $resultExtBirth["count(numero)"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   أحكام تصريحية بالوفاة</label>
+                                          <input type="text" name="ahkam_tsrihia_deces" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   وفيات حديثة</label>
+                                          <input type="text" name="deces_hadita" value="<?php echo $resultDeath["count(numero)"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  عدد رسوم الوفاة</label>
+                                          <input type="text" name="acte_deces" value="<?php echo $resultActeDeces["count(numero)"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">    عدد الأحكام التنقيحية</label>
+                                          <input type="text" name="ahkam_tnkihia" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  عدد  الدفاتر العائلية المسلمة</label>
+                                          <input type="text" name="dafatir_familiale" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">    الإمكانيات البشرية
+                                       <button type="button"  class="btn btn-success btn-round btn-fab btn-fab-mini m-button-mini" rel="tooltip" title=" إضافة كاتب" id="addKatib">
+                                       <i class="material-icons">add</i>
+                                       </button>
+                                    </h4>
+                                    <?php
+                                       $query = "SELECT COUNT(id_imkaniat_bacharia),nom,echelle,date_debut_travail,niveau_scol,takwin,adad_nadawat  FROM `imkaniat_bacharia` WHERE 1";
+                                       $pdoResult = $pdoConnect->prepare($query);
+                                       $pdoResult->execute();
+                                       
+                                       $result=$pdoResult->fetchAll();
+                                       if($pdoResult->rowCount()>0)
+                                       {
+                                         foreach($result as $row)
+                                         {                                             
+                                       ?>
+                                    <div class="col-md-6">
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">     مجموع عدد كتاب الحالة المدنية </label>
+                                          <input type="text" name="somme_kotab_etat" value="<?php echo $row["COUNT(id_imkaniat_bacharia)"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">تاريخ بدأ العمل</label>
+                                          <input type="text" name="date_debut_travail" value="<?php echo $row["date_debut_travail"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">الرتبة</label>
+                                          <input type="text" name="echelle" value="<?php echo $row["echelle"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> الإسم الكامل</label>
+                                          <input type="text" name="nom_katib" value="<?php echo $row["nom"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  عدد الندوات المستفيد منها</label>
+                                          <input type="text" name="adad_nadawat" value="<?php echo $row["adad_nadawat"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">هل خضع للتكوين</label>
+                                          <input type="text" name="takwin" value="<?php echo $row["takwin"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  المستوى الدراسي</label>
+                                          <input type="text" name="niveau_scol" value="<?php echo $row["niveau_scol"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <?php
+                                       }
+                                       }else
+                                       {
+                                         ?>
+                                    <div class="col-md-6">
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">     مجموع عدد كتاب الحالة المدنية </label>
+                                          <input type="text" name="somme_kotab_etat" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">تاريخ بدأ العمل</label>
+                                          <input type="text" name="date_debut_travail" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">الرتبة</label>
+                                          <input type="text" name="echelle" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> الإسم الكامل</label>
+                                          <input type="text" name="nom_katib" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  عدد الندوات المستفيد منها</label>
+                                          <input type="text" name="adad_nadawat" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">هل خضع للتكوين</label>
+                                          <input type="text" name="takwin" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  المستوى الدراسي</label>
+                                          <input type="text" name="niveau_scol" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <?php
+                                       } ?>
+                                    <div class="row" style="margin-right : 0.35%">
+                                       <!--add katib-->
+                                       <div class="addedKatib">
+                                       </div>
+                                    </div>
+                                    <!--end add katib-->
+                                    <?php
+                                       $query = "SELECT * FROM `rapport_bureau`";
+                                       $pdoResult = $pdoConnect->prepare($query);
+                                       $pdoResult->execute();
+                                       
+                                       $result=$pdoResult->fetch();
+                                       
+                                       ?>
+                                    <div class="col-md-6">
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> ملاحظات حول الإمكانيات البشرية للمكتب</label>
+                                          <input type="text" name="molahadat_imkanyat_maktab" value="<?php echo $result["molahadat_imkanyat_maktab"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">    الإمكانيات المادية</h4>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> وضعيتها</label>
+                                          <input type="text" name="etat_hojorat" value="<?php echo $result["molahadat_imkanyat_maktab"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">     هل أضيفت للمكتب حجرات جديدة</label>
+                                          <input type="text" name="odifat_hojorat_jadida" value="<?php echo $result["molahadat_imkanyat_maktab"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> عدد الحجرات</label>
+                                          <input type="text" name="adad_hojorat" value="<?php echo $result["molahadat_imkanyat_maktab"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> عدد الخزانات</label>
+                                          <input type="text" name="adad_khizanat" value="<?php echo $result["adad_khizanat"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> عدد الكراسي</label>
+                                          <input type="text" name="adad_karassi" value="<?php echo $result["adad_karassi"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> عدد الطاولات</label>
+                                          <input type="text" name="adad_tawilat" value="<?php echo $result["adad_tawilat"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  المطبوعات</label>
+                                          <input type="text" name="matbo3at" value="<?php echo $result["matbo3at"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> عدد الات الكتابة</label>
+                                          <input type="text" name="adad_alat_kitaba" value="<?php echo $result["adad_alat_kitaba"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> عدد الرفوف</label>
+                                          <input type="text" name="adad_rofof" value="<?php echo $result["adad_rofof"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   التجهيزات المكتبية</label>
+                                          <input type="text" name="thizat_maktabia" value="<?php echo $result["thizat_maktabia"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  المراجع</label>
+                                          <input type="text" name="maraji3" value="<?php echo $result["maraji3"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  عدد التفتيشيات خلال الثلاث أشهر</label>
+                                          <input type="text" name="adad_tftichiat" value="<?php echo $result["adad_tftichiat"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  ملاحظات حول الإمكانيات المادية للمكتب</label>
+                                          <input type="text" name="molahadat_imkanat_madia" value="<?php echo $result["molahadat_imkanat_madia"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">     سير أعمال المكتب</h4>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">المخالفات القانونية </label>
+                                          <input type="text" name="mokhalafat_kanonia" value="<?php echo $result["mokhalafat_kanonia"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  المخالفات المسطرية </label>
+                                          <input type="text" name="mokhalaft_mistaria" value="<?php echo $result["mokhalaft_mistaria"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> خلاصة حول وضعية المكتب </label>
+                                          <input type="text" name="kholassa_wadiat_maktab" value="<?php echo $result["kholassa_wadiat_maktab"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   الإجراءات المتخدة لإصلاح وضعية المكتب </label>
+                                          <input type="text" name="ijraat_isla7_lmktab" value="<?php echo $result["ijraat_isla7_lmktab"] ?>" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div style="text-align : center">
+                                       <button type="submit" class="btn btn-info m-margin-left">
+                                       <span class="btn-label">
+                                       <img  style="width:18px;height:18px" src="svg/rounded-add-button.svg">
+                                       </span>
+                                       <b class="droid-arabic-kufi m-button-text">حفظ و طباعة</b>
+                                       </button>
+                                    </div>
+                                 </form>
                               </div>
-                              </form>
+                              <!--end takarir//////////////**********************************************-->
+                              <div class="tab-pane" id="jodada">
+                                 <!--jodada//////////////////////////////////**************-->
+                                 <form action="jodadaP.php" method="post" >
+                                    <div class="row" style="margin-left : 20%;">
+                                       
+                                       <div class="col-md-4" >
+                                          <select name="year_jodada" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="السنة" data-size="7" required>
+                                             <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center" selected><?php echo $anneActu ?></option>
+                                             <option value="<?php echo $anneActu-1 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-1 ?></option>
+                                             <option value="<?php echo $anneActu-2 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-2 ?></option>
+                                             <option value="<?php echo $anneActu-3 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-3 ?></option>
+                                             <option value="<?php echo $anneActu-4 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-4 ?></option>
+                                          </select>
+                                       </div>
+                                       <div class="col-md-4" >
+                                          <select name="month_jodada" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الشهر" data-size="7" required>
+                                             <option value="1" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='01')?'selected':'' ?> >يناير</option>
+                                             <option value="2" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='02')?'selected':'' ?> >فبراير</option>
+                                             <option value="3" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='03')?'selected':'' ?>>مارس</option>
+                                             <option value="4" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='04')?'selected':'' ?>>أبريل</option>
+                                             <option value="5" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='05')?'selected':'' ?>>ماي</option>
+                                             <option value="6" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='06')?'selected':'' ?>>يونيو</option>
+                                             <option value="7" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='07')?'selected':'' ?>>يوليوز</option>
+                                             <option value="8" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='08')?'selected':'' ?>>غشت</option>
+                                             <option value="9" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='09')?'selected':'' ?>>شتنبر</option>
+                                             <option value="10" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='10')?'selected':'' ?>>أكتوبر</option>
+                                             <option value="11" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='11')?'selected':'' ?>>نونبر</option>
+                                             <option value="12" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='12')?'selected':'' ?>>دجنبر</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                       
+                                      <!--info to fill-->
+                                      <div class="row"> <!--start a row-->
+                                      <h3 class="droid-arabic-kufi" > الولادات و الوفيات : </h3>
 
-                              <!--mofassal-->
-                              <form action="irsal_one_monthP.php" method="post" >
-                              <div class="row">
-                                <h4 class="droid-arabic-kufi" style="color:#3F51B5;margin:0;text-align: center"> الإرسال الشهري المفصل</h4>
-                                <div class="col-md-2" style="text-align: center">
-                                   <button type="submit" name="type_irsal" value="detail" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
-                                   <i class="material-icons">print</i>
-                                   </button>
-                                </div>
-                              
-                                <div class="col-md-4" >
-                                   <select name="year_detail" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="السنة" data-size="7" required>
-                                      <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu ?></option>
-                                      <option value="<?php echo $anneActu-1 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-1 ?></option>
-                                      <option value="<?php echo $anneActu-2 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-2 ?></option>
-                                      <option value="<?php echo $anneActu-3 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-3 ?></option>
-                                      <option value="<?php echo $anneActu-4 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-4 ?></option>
-                                   </select>
-                                </div>
-                                <div class="col-md-4" style="margin-right:1%">
-                                   <select name="month_detail" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الشهر" data-size="7" required>
-                                      <option value="1" class="m-label-form droid-arabic-kufi" style="text-align:center">يناير</option>
-                                      <option value="2" class="m-label-form droid-arabic-kufi" style="text-align:center">فبراير</option>
-                                      <option value="3" class="m-label-form droid-arabic-kufi" style="text-align:center">مارس</option>
-                                      <option value="4" class="m-label-form droid-arabic-kufi" style="text-align:center">أبريل</option>
-                                      <option value="5" class="m-label-form droid-arabic-kufi" style="text-align:center">ماي</option>
-                                      <option value="6" class="m-label-form droid-arabic-kufi" style="text-align:center">يونيو</option>
-                                      <option value="7" class="m-label-form droid-arabic-kufi" style="text-align:center">يوليوز</option>
-                                      <option value="8" class="m-label-form droid-arabic-kufi" style="text-align:center">غشت</option>
-                                      <option value="9" class="m-label-form droid-arabic-kufi" style="text-align:center">شتنبر</option>
-                                      <option value="10" class="m-label-form droid-arabic-kufi" style="text-align:center">أكتوبر</option>
-                                      <option value="11" class="m-label-form droid-arabic-kufi" style="text-align:center">نونبر</option>
-                                      <option value="12" class="m-label-form droid-arabic-kufi" style="text-align:center">دجنبر</option>
-                                   </select>
-                                </div>
-                             </div>
-                           </form>
-                           <!-- end searhc by num-->     
 
-                                        </div><!--end irsal chahri-->
-                                    </div>                   
+                                      <div class="row"> 
+                                      <div class="col-md-6 ">
+                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">أحكام الولادات للسنة الجارية</h4>
+                                      </div>
+
+                                      <div class="col-md-6 " >
+                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)"> ولادات داخل الأجل القانوني</h4>
+                                      </div>
+
+                                      </div>
+
+                                      <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
+                                          <input type="text" name="kholassa_wadiat_maktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   ذكر </label>
+                                          <input type="text" name="ijraat_isla7_lmktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
+                                          <input type="text" name="kholassa_wadiat_maktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  ذكر</label>
+                                          <input type="text" name="ijraat_isla7_lmktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+
+
+                                    <div class="row"> 
+                                      <div class="col-md-6 ">
+                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">مجموع الولادات</h4>
+                                      </div>
+
+                                      <div class="col-md-6 " >
+                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)"> أحكام الولادات للسنوات الفارطة</h4>
+                                      </div>
+
+                                      </div>
+
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
+                                          <input type="text" name="kholassa_wadiat_maktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   ذكر </label>
+                                          <input type="text" name="ijraat_isla7_lmktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
+                                          <input type="text" name="kholassa_wadiat_maktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  ذكر</label>
+                                          <input type="text" name="ijraat_isla7_lmktab" value="" class="form-control">
+                                       </div>
+                                    </div>
+
+                                      </div><!--end row-->
+                                      
+                                      <div style="text-align : center">
+                                       <button type="submit" name="type_irsal" value="general" class="btn btn-info m-margin-left">
+                                       <i class="material-icons">print</i>
+                                       <b class="droid-arabic-kufi m-button-text"> طباعة</b>
+                                       </button>
+                                    </div>
+
+                                 </form>
+                              </div>
+                              <!--end jodada********************************************//////////////////////////////-->
+                              <div class="tab-pane active" id="irsal_chahri">
+                                 <!--irsal chahri*************************************-->
+                                 <!--searhc with num-->
+                                 <form action="irsal_one_monthP.php" method="post" >
+                                    <div class="row">
+                                       <h4 class="droid-arabic-kufi" style="color:#3F51B5;margin:0;text-align: center">  الإرسال الشهري العام</h4>
+                                       <div class="col-md-2" style="text-align: center">
+                                          <button type="submit" name="type_irsal" value="general" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
+                                          <i class="material-icons">print</i>
+                                          </button>
+                                       </div>
+                                       <div class="col-md-4" >
+                                          <select name="year_general" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="السنة" data-size="7" required>
+                                             <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center" selected><?php echo $anneActu ?></option>
+                                             <option value="<?php echo $anneActu-1 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-1 ?></option>
+                                             <option value="<?php echo $anneActu-2 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-2 ?></option>
+                                             <option value="<?php echo $anneActu-3 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-3 ?></option>
+                                             <option value="<?php echo $anneActu-4 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-4 ?></option>
+                                          </select>
+                                       </div>
+                                       <div class="col-md-4" style="margin-right:1%">
+                                          <select name="month_general" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الشهر" data-size="7" required>
+                                             <option value="1" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='01')?'selected':'' ?> >يناير</option>
+                                             <option value="2" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='02')?'selected':'' ?> >فبراير</option>
+                                             <option value="3" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='03')?'selected':'' ?>>مارس</option>
+                                             <option value="4" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='04')?'selected':'' ?>>أبريل</option>
+                                             <option value="5" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='05')?'selected':'' ?>>ماي</option>
+                                             <option value="6" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='06')?'selected':'' ?>>يونيو</option>
+                                             <option value="7" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='07')?'selected':'' ?>>يوليوز</option>
+                                             <option value="8" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='08')?'selected':'' ?>>غشت</option>
+                                             <option value="9" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='09')?'selected':'' ?>>شتنبر</option>
+                                             <option value="10" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='10')?'selected':'' ?>>أكتوبر</option>
+                                             <option value="11" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='11')?'selected':'' ?>>نونبر</option>
+                                             <option value="12" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='12')?'selected':'' ?>>دجنبر</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </form>
+                                 <!--mofassal-->
+                                 <form action="irsal_one_monthP.php" method="post" >
+                                    <div class="row">
+                                       <h4 class="droid-arabic-kufi" style="color:#3F51B5;margin:0;text-align: center"> الإرسال الشهري المفصل</h4>
+                                       <div class="col-md-2" style="text-align: center">
+                                          <button type="submit" name="type_irsal" value="detail" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
+                                          <i class="material-icons">print</i>
+                                          </button>
+                                       </div>
+                                       <div class="col-md-4" >
+                                          <select name="year_detail" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="السنة" data-size="7" required>
+                                             <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center" selected><?php echo $anneActu ?></option>
+                                             <option value="<?php echo $anneActu-1 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-1 ?></option>
+                                             <option value="<?php echo $anneActu-2 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-2 ?></option>
+                                             <option value="<?php echo $anneActu-3 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-3 ?></option>
+                                             <option value="<?php echo $anneActu-4 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-4 ?></option>
+                                          </select>
+                                       </div>
+                                       <div class="col-md-4" style="margin-right:1%">
+                                          <select name="month_detail" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الشهر" data-size="7" required>
+                                             <option value="1" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='01')?'selected':'' ?>>يناير</option>
+                                             <option value="2" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='02')?'selected':'' ?>>فبراير</option>
+                                             <option value="3" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='03')?'selected':'' ?>>مارس</option>
+                                             <option value="4" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='04')?'selected':'' ?>>أبريل</option>
+                                             <option value="5" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='05')?'selected':'' ?>>ماي</option>
+                                             <option value="6" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='06')?'selected':'' ?>>يونيو</option>
+                                             <option value="7" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='07')?'selected':'' ?>>يوليوز</option>
+                                             <option value="8" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='08')?'selected':'' ?>>غشت</option>
+                                             <option value="9" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='09')?'selected':'' ?>>شتنبر</option>
+                                             <option value="10" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='10')?'selected':'' ?>>أكتوبر</option>
+                                             <option value="11" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='11')?'selected':'' ?>>نونبر</option>
+                                             <option value="12" class="m-label-form droid-arabic-kufi" style="text-align:center" <?php echo ($monthActu=='12')?'selected':'' ?>>دجنبر</option>
+                                          </select>
+                                       </div>
+                                    </div>
+
+                                       
+                                 </form>
+                                 <!-- end searhc by num-->     
+                              </div>
+                              <!--end irsal chahri************************************-->
+                           </div>
                         </div>
                      </div>
                   </div>

@@ -1269,36 +1269,18 @@
                     {                
                  
                    ?>
-                  <ul class="nav nav-pills nav-pills-warning nav-pills-icons" role="tablist">
-                      <h3 class="droid-arabic-kufi" style="text-align : center">نتائج البحث العام الخاص ب :<?php echo $result["prenom_ar"]." ".$result["nom_ar"] ?></h3>
-                     <!--
-                        color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
-                        -->
-                     <li>
-                        <a href="#certificat" role="tab" data-toggle="tab">
-                           <i class="material-icons " style="padding: 0 !important">border_color</i>
-                           <p class="droid-arabic-kufi" style="font-size:18px"> الشواهد الإدارية الخاصة</p>
-                        </a>
-                     </li>
-                     <li class="active">
-                        <a href="#document" role="tab" data-toggle="tab">
-                           <i class="material-icons" style="padding: 0 !important">insert_drive_file</i>
-                           <p class="droid-arabic-kufi" style="font-size:18px">   الوثائق المتعلقة بالحالة المدنية</p>
-                        </a>
-                     </li>
-                  </ul>
+                
+                      <h3 class="droid-arabic-kufi" style="text-align : center;color : #FFC107">نتائج البحث العام الخاص ب :<?php echo $result["prenom_ar"]." ".$result["nom_ar"] ?></h3>
+                   
                </div>
                <div class="tab-content">
-                  <div class="tab-pane active" id="document">
+                  <div class="">
                      <!--impression documents-->
-                     <div class="row">
-                        <div class="col-lg-1 col-md-6 col-sm-6">
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                           
-                         
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="row">  
+
+                     <h3 class="droid-arabic-kufi" style="color : rgb(38, 50, 56);margin-right : 5%" >الوثائق المتعلقة بالحالة المدنية</h3>                     
+                       
+                        <div class="col-lg-4 col-md-4 col-sm-4" style="margin-left :30.5%">
                         <form action="selectedBirthP.php" method="post" class="form_copie_integ_birth">
                             <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
                             <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
@@ -1312,11 +1294,11 @@
                            </div>
                         </form>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
                             <form action="selectedExtBirthP.php" method="post" class="form_acte_naiss">
                             <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
                             <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
-                           <div class="card card-stats m-card "  style="background-color: #02B07D ">
+                           <div class="card card-stats m-card "  style="background-color: #02B07D ;width :322px;">
                               <div class="card-content">
                                  <a href="#" id="submit_acte_naiss">
                                     <h4 class="m-card-title droid-arabic-kufi" >رسم الولادة</h4>
@@ -1329,9 +1311,10 @@
                      </div>
                      <!--end impression document-->
                   </div>
-                  <div class="tab-pane" id="certificat">
+                  <div >
                      <!--chawahid*******************************************-->
                      <div class="row" style="margin-right: 15px !important; margin-left: 15px !important;">
+                     <h3 class="droid-arabic-kufi" style="color : rgb(38, 50, 56);margin-right : 2.5%" > الشواهد الإدارية الخاصة</h3>  
                         <div class="col-lg-4 col-md-4 col-sm-4">
                            <div class="card card-stats m-card" style="background-color: #8BC34A ">
                                 <form action="nonDivorceInfo.php" method="post" class="form_non_divorce">
@@ -1404,6 +1387,8 @@
                               </form>
                            </div>
                         </div>
+
+
                         <div class="col-lg-4 col-md-6 col-sm-6">
                            <div class="card card-stats m-card" style="background-color: #2ABCCF ">
                                 <form action="vieIndividuInfo.php" method="post" class="form_vie_individuelle">
