@@ -24,16 +24,9 @@
    $request = $_REQUEST;
    $adad = $request["adad"];
    $numero_sijil = $request["numero_sijil"];
-   if(trim($adad)!="" && trim($numero_sijil)!="" )
-   {
-   	$query="SELECT * FROM `avis_mariage` WHERE `adad`=? AND `numero_sijil`=?";
-   $pdoResult = $pdoConnect->prepare($query);
-   $pdoResult->execute(array($adad,$numero_sijil));
-   }
 
-   $result=$pdoResult->fetch();
-   if($pdoResult->rowCount()>0)
-   {
+ 
+  
    ?>
 <!doctype html>
 <html lang="en">
@@ -2003,6 +1996,18 @@
                   </div>
                </div>
                <!--end modal acte deces-->
+               <?php
+                if(trim($adad)!="" && trim($numero_sijil)!="" )
+                {
+                  $query="SELECT * FROM `avis_mariage` WHERE `adad`=? AND `numero_sijil`=?";
+                $pdoResult = $pdoConnect->prepare($query);
+                $pdoResult->execute(array($adad,$numero_sijil));
+                }
+             
+                $result=$pdoResult->fetch();
+                if($pdoResult->rowCount()>0)
+                {
+               ?>
                <div class="card">
                   <div class="card-content">
                      <div class="row">

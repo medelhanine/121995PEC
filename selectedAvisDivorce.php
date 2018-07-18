@@ -24,16 +24,7 @@
    $request = $_REQUEST;
    $adad = $request["adad"];
    $numero_sijil = $request["numero_sijil"];
-   if(trim($adad)!="" && trim($numero_sijil)!="" )
-   {
-   	$query="SELECT * FROM `avis_divorce` WHERE `adad`=? AND `numero_sijil`=?";
-   $pdoResult = $pdoConnect->prepare($query);
-   $pdoResult->execute(array($adad,$numero_sijil));
-   }
-
-   $result=$pdoResult->fetch();
-   if($pdoResult->rowCount()>0)
-   {
+   
    ?>
 <!doctype html>
 <html lang="en">
@@ -2006,6 +1997,18 @@
                <!--end modal acte deces-->
 
                <div class="card">
+               <?php 
+               if(trim($adad)!="" && trim($numero_sijil)!="" )
+               {
+                 $query="SELECT * FROM `avis_divorce` WHERE `adad`=? AND `numero_sijil`=?";
+               $pdoResult = $pdoConnect->prepare($query);
+               $pdoResult->execute(array($adad,$numero_sijil));
+               }
+            
+               $result=$pdoResult->fetch();
+               if($pdoResult->rowCount()>0)
+               {
+               ?>
                   <div class="card-content">
                      <div class="row">
                         <h3 class="droid-arabic-kufi"> معلومات بيان الطلاق </h3>
