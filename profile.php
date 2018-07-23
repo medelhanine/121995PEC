@@ -16,12 +16,7 @@
    }
    $query='';
    $pdoResult='';
-   $query ="SELECT * FROM `users` WHERE `username`=?";
-   $pdoResult = $pdoConnect->prepare($query);
-   $pdoResult->execute(array($username));
-   $result=$pdoResult->fetch();
-   if($pdoResult->rowCount()>0)
-   {
+  
 
    ?>
 <!doctype html>
@@ -1987,6 +1982,15 @@
                </div>
                <!--end modal acte deces-->
                <div class="container-fluid">
+
+               <?php 
+                $query ="SELECT * FROM `users` WHERE `username`=?";
+                $pdoResult = $pdoConnect->prepare($query);
+                $pdoResult->execute(array($username));
+                $result=$pdoResult->fetch();
+                if($pdoResult->rowCount()>0)
+                {
+               ?>
                   <div class="row">
                      <div class="col-md-8">
                         <div class="card" id="profile-main">
