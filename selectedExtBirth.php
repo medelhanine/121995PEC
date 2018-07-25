@@ -21,26 +21,7 @@
 	$numero = $_GET["numero"];
 	$annee = $_GET["annee"];*/
 
-	if(isset($request["numero"])!="" && isset($request["annee"])!="" )
-	{
-		$query="SELECT * FROM `exbirth` WHERE `numero`=? AND `annee`=?";
-	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($request["numero"],$request["annee"]));
-
-	}
-
-	if(isset($request["nom_ar"])!="" && isset($request["nom"])!="")
-	{
-		$query="SELECT * FROM `exbirth` WHERE `nom_ar`=? AND `nom`=?";
-	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($request["nom_ar"],$request["nom"]));
-
-	}
-
-
-	$result=$pdoResult->fetch();
-if($pdoResult->rowCount()>0)
-{
+	
 
 
 
@@ -2033,13 +2014,13 @@ border-radius: 5px;
                                                 <div class="tab-pane active" id="infoRasm">
                                                   <div class="col-md-6">
                                             <div class="form-group label-floating">
-												<label class="control-label m-label-form">السنة</label>
+												<label class="control-label m-label-form droid-arabic-kufi">السنة</label>
 												<input type="text" name="annee"  value="<?php echo $result["annee"]?>" class="form-control" readonly>
 											  </div>
                                             </div>
                                                  <div class="col-md-6">
                                             <div class="form-group label-floating">
-											<label class="control-label m-label-form"> الرقم</label>
+											<label class="control-label m-label-form droid-arabic-kufi"> الرقم</label>
 											<input type="text" name="numero" value="<?php echo $result["numero"]?>"  class="form-control" readonly>
 										  </div>
                                             </div>
@@ -2061,7 +2042,7 @@ border-radius: 5px;
                                             	</div>
                                                    <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم الشخصي</label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم الشخصي</label>
 													<input type="text" name="prenom_ar" value="<?php echo $result["prenom_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2077,7 +2058,7 @@ border-radius: 5px;
                                             	</div>
                                                    <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم العائلي</label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم العائلي</label>
 													<input type="text" name="nom_ar" value="<?php echo $result["nom_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2094,7 +2075,7 @@ border-radius: 5px;
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">مكان الازدياد</label>
+													<label class="control-label m-label-form droid-arabic-kufi">مكان الازدياد</label>
 													<input type="text" name="lieu_naiss_ar" value="<?php echo $result["lieu_naiss_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2104,13 +2085,13 @@ border-radius: 5px;
 
                                                     <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">بالفرنسية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">بالفرنسية</label>
 													<input type="text" name="date_naiss_miladi" value="<?php echo $result["date_naiss_miladi"]?>" class="form-control datepicker">
 												</div>
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">تاريخ الإزدياد بالعربية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">تاريخ الإزدياد بالعربية</label>
 													<input type="text" name="date_naiss_miladi_ar" value="<?php echo $result["date_naiss_miladi_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2120,13 +2101,13 @@ border-radius: 5px;
 
                                                     <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">بالفرنسية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">بالفرنسية</label>
 													<input type="text" name="date_naiss_hijri" value="<?php echo $result["date_naiss_hijri"]?>" class="form-control datepicker">
 												</div>
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">موافق بالعربية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">موافق بالعربية</label>
 													<input type="text" name="date_naiss_hijri_ar" value="<?php echo $result["date_naiss_hijri_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2142,7 +2123,7 @@ border-radius: 5px;
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">طرة الوفاة</label>
+													<label class="control-label m-label-form droid-arabic-kufi">طرة الوفاة</label>
 													<input type="text" name="tora_deces_ar" value="<?php echo $result["tora_deces_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2157,13 +2138,13 @@ border-radius: 5px;
                                                    	<!--prenom dad-->
                                                     <div class="col-md-6">
                                             	<div class="form-group label-floating m-input-fr">
-													<label class="control-label m-label-form">Prénom </label>
+													<label class="control-label m-label-form droid-arabic-kufi">Prénom </label>
 													<input type="text" name="prenom_pere" value="<?php echo $result["prenom_pere"]?>" class="form-control">
 												</div>
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم الشخصي</label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم الشخصي</label>
 													<input type="text" name="prenom_pere_ar" value="<?php echo $result["prenom_pere_ar"]?>" value="" class="form-control">
 												</div>
                                             	</div>
@@ -2183,7 +2164,7 @@ border-radius: 5px;
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم </label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم </label>
 													<input type="text" name="prenom_mere_ar" value="<?php echo $result["prenom_mere_ar"]?>" class="form-control">
 												</div>
                                             	</div>

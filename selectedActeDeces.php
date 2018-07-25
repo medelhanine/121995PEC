@@ -21,26 +21,7 @@
 	$numero = $_GET["numero"];
 	$annee = $_GET["annee"];*/
 
-	if(isset($request["numero"])!="" && isset($request["annee"])!="" )
-	{
-		$query="SELECT * FROM `acte_deces` WHERE `numero`=? AND `annee`=?";
-	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($request["numero"],$request["annee"]));
 
-	}
-
-	if(isset($request["nom_ar"])!="" && isset($request["nom"])!="")
-	{
-		$query="SELECT * FROM `acte_deces` WHERE `nom_ar`=? AND `nom`=?";
-	$pdoResult = $pdoConnect->prepare($query);
-	$pdoResult->execute(array($request["nom_ar"],$request["nom"]));
-
-	}
-
-
-	$result=$pdoResult->fetch();
-if($pdoResult->rowCount()>0)
-{
 
 ?>
 
@@ -2023,6 +2004,28 @@ if($pdoResult->rowCount()>0)
                </div>
                <!--end modal acte deces-->
                <div class="">
+               <?php
+               	if(isset($request["numero"])!="" && isset($request["annee"])!="" )
+                 {
+                   $query="SELECT * FROM `acte_deces` WHERE `numero`=? AND `annee`=?";
+                 $pdoResult = $pdoConnect->prepare($query);
+                 $pdoResult->execute(array($request["numero"],$request["annee"]));
+               
+                 }
+               
+                 if(isset($request["nom_ar"])!="" && isset($request["nom"])!="")
+                 {
+                   $query="SELECT * FROM `acte_deces` WHERE `nom_ar`=? AND `nom`=?";
+                 $pdoResult = $pdoConnect->prepare($query);
+                 $pdoResult->execute(array($request["nom_ar"],$request["nom"]));
+               
+                 }
+               
+               
+                 $result=$pdoResult->fetch();
+               if($pdoResult->rowCount()>0)
+               {
+               ?>
                             <div class="card">
                                 <div class="card-header ">
 
@@ -2037,13 +2040,13 @@ if($pdoResult->rowCount()>0)
                                                 <div class="tab-pane active" id="infoRasm">
                                                   <div class="col-md-6">
                                             <div class="form-group label-floating">
-												<label class="control-label m-label-form">السنة</label>
+												<label class="control-label m-label-form droid-arabic-kufi">السنة</label>
 												<input type="text" name="annee"  value="<?php echo $result["annee"]?>" class="form-control" readonly>
 											  </div>
                                             </div>
                                                  <div class="col-md-6">
                                             <div class="form-group label-floating">
-											<label class="control-label m-label-form"> الرقم</label>
+											<label class="control-label m-label-form droid-arabic-kufi"> الرقم</label>
 											<input type="text" name="numero" value="<?php echo $result["numero"]?>"  class="form-control" readonly>
 										  </div>
                                             </div>
@@ -2063,7 +2066,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                    <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم الشخصي</label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم الشخصي</label>
 													<input type="text" name="prenom_ar" value="<?php echo $result["prenom_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2079,7 +2082,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                    <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم العائلي</label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم العائلي</label>
 													<input type="text" name="nom_ar" value="<?php echo $result["nom_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2096,7 +2099,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">مكان الوفاة</label>
+													<label class="control-label m-label-form droid-arabic-kufi">مكان الوفاة</label>
 													<input type="text" name="lieu_deces_ar" value="<?php echo $result["lieu_deces_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2106,13 +2109,13 @@ if($pdoResult->rowCount()>0)
 
                                                     <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">بالفرنسية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">بالفرنسية</label>
 													<input type="text" name="date_deces_miladi_fr" value="<?php echo $result["date_deces_miladi_fr"]?>" class="form-control">
 												</div>
                                             	</div>
                                                    <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">تاريخ الوفاة بالعربية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">تاريخ الوفاة بالعربية</label>
 													<input type="text" name="date_deces_miladi_ar" value="<?php echo $result["date_deces_miladi_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2122,13 +2125,13 @@ if($pdoResult->rowCount()>0)
 
                                                     <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">بالفرنسية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">بالفرنسية</label>
 													<input type="text" name="date_deces_hijri_fr" value="<?php echo $result["date_deces_hijri_fr"]?>" class="form-control">
 												</div>
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">موافق بالعربية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">موافق بالعربية</label>
 													<input type="text" name="date_deces_hijri_ar" value="<?php echo $result["date_deces_hijri_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2138,13 +2141,13 @@ if($pdoResult->rowCount()>0)
 
                                                     <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">بالفرنسية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">بالفرنسية</label>
 													<input type="text" name="date_naiss_miladi_fr" value="<?php echo $result["date_naiss_miladi_fr"]?>" class="form-control">
 												</div>
                                             	</div>
                                                    <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">تاريخ الولادة  بالعربية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">تاريخ الولادة  بالعربية</label>
 													<input type="text" name="date_naiss_miladi_ar" value="<?php echo $result["date_naiss_miladi_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2154,13 +2157,13 @@ if($pdoResult->rowCount()>0)
 
                                                     <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">بالفرنسية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">بالفرنسية</label>
 													<input type="text" name="date_naiss_hijri_fr" value="<?php echo $result["date_naiss_hijri_fr"]?>" class="form-control">
 												</div>
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">موافق بالعربية</label>
+													<label class="control-label m-label-form droid-arabic-kufi">موافق بالعربية</label>
 													<input type="text" name="date_naiss_hijri_ar" value="<?php echo $result["date_naiss_hijri_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2176,7 +2179,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">مكان الازدياد</label>
+													<label class="control-label m-label-form droid-arabic-kufi">مكان الازدياد</label>
 													<input type="text" name="lieu_naiss_ar" value="<?php echo $result["lieu_naiss_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2192,7 +2195,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">المهنة</label>
+													<label class="control-label m-label-form droid-arabic-kufi">المهنة</label>
 													<input type="text" name="profession_ar" value="<?php echo $result["profession_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2201,7 +2204,7 @@ if($pdoResult->rowCount()>0)
                                                    <!--etat familiale-->
                                                     <div class="row" >
                                           				<div class="col-md-4 " style="margin-left: 40% ">
-                                          					<select name="etat_famillial" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title="الحالة العائلية" data-size="7" >
+                                          					<select name="etat_famillial" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الحالة العائلية" data-size="7" >
 
 																<option value="celeb"  <?php echo ($result["etat_famillial"]=='celeb')?'selected':'' ?> class="m-label-form">عازب(ة)</option>
 																<option value="marie" <?php echo ($result["etat_famillial"]=='marie')?'selected':'' ?> class="m-label-form">متزوج(ة)</option>
@@ -2223,7 +2226,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">(السيد(ة</label>
+													<label class="control-label m-label-form droid-arabic-kufi">(السيد(ة</label>
 													<input type="text" name="mr_mme_ar" value="<?php echo $result["mr_mme_ar"]?>"  class="form-control">
 												</div>
                                             	</div>
@@ -2238,7 +2241,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الساكن(ة)ب</label>
+													<label class="control-label m-label-form droid-arabic-kufi">الساكن(ة)ب</label>
 													<input type="text" name="domicile_ar" value="<?php echo $result["domicile_ar"]?>" class="form-control">
 												</div>
                                             	</div>
@@ -2260,7 +2263,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم الشخصي</label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم الشخصي</label>
 													<input type="text" name="prenom_pere_ar" value="<?php echo $result["prenom_pere_ar"]?>" value="" class="form-control">
 												</div>
                                             	</div>
@@ -2280,7 +2283,7 @@ if($pdoResult->rowCount()>0)
                                             	</div>
                                                   <div class="col-md-6">
                                             	<div class="form-group label-floating">
-													<label class="control-label m-label-form">الاسم </label>
+													<label class="control-label m-label-form droid-arabic-kufi">الاسم </label>
 													<input type="text" name="prenom_mere_ar" value="<?php echo $result["prenom_mere_ar"]?>" class="form-control">
 												</div>
                                             	</div>
