@@ -610,7 +610,10 @@
                            <h3 style="text-align: center" class="droid-arabic-kufi">  البحث في قاعدة البيانات </h3>
                         </div>
                         <div class="modal-body">
-                           <ul class="nav nav-pills nav-pills-warning droid-arabic-kufi" style="margin-left : 24%">
+                           <ul class="nav nav-pills nav-pills-warning droid-arabic-kufi" style="margin-left : 14%">
+                           <li >
+                                 <a href="#other" data-toggle="tab" style="font-size : 18px !important"> إرسالات أخرى</a>
+                              </li>
                               <li >
                                  <a href="#takarir" data-toggle="tab" style="font-size : 18px !important">التقرير حول المكتب</a>
                               </li>
@@ -622,6 +625,10 @@
                               </li>
                            </ul>
                            <div class="tab-content">
+                           <!--other ****************///////////-->
+                           <div class="tab-pane" id="other">
+                           <h3 class="droid-arabic-kufi">لائحة الأطفال البالغين سن التمدرس</h3>
+                           </div><!-- END other ****************///////////-->
                               <div class="tab-pane " id="takarir">
                                  <!--takarir///////////*********************-->
                                  <?php
