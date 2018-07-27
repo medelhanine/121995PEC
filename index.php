@@ -625,10 +625,44 @@
                               </li>
                            </ul>
                            <div class="tab-content">
+
                            <!--other ****************///////////-->
                            <div class="tab-pane" id="other">
-                           <h3 class="droid-arabic-kufi">لائحة الأطفال البالغين سن التمدرس</h3>
+                           <h4 class="droid-arabic-kufi" style="color : #3F51B5;text-align : center">لائحة الأطفال البالغين سن التمدرس</h4>
+
+                            <form action="list_enfants_scolP.php" method="post">
+
+                            <div class="col-md-2" style="text-align: center;margin-left: 23%">
+                                          <button type="submit" name="type_irsal" value="detail" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
+                                          <i class="material-icons">print</i>
+                                          </button>
+                                       </div>
+
+                           <div class="col-md-4" >
+                           
+                                          <select name="annee_scol" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الموسم الدراسي" data-size="7" required>
+                                          <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center" selected><?php echo $anneActu."/".($anneActu+1) ?></option>
+                                          <?php
+                                          for($i=0;$i<3;$i++)
+                                          {
+                                            ?>
+                                            <option value="<?php echo ($anneActu-($i+1)) ?>" class="m-label-form droid-arabic-kufi" style="text-align:center" ><?php echo ($anneActu-($i+1))."/".($anneActu-$i) ?></option>
+                                            <?php
+                                          }
+                                          ?>
+                                
+                                             
+                                </select>
+                              </div>
+
+                              <div class="row"></div>
+                            
+                            </form>
+                            
                            </div><!-- END other ****************///////////-->
+
+
+
                               <div class="tab-pane " id="takarir">
                                  <!--takarir///////////*********************-->
                                  <?php
@@ -1291,7 +1325,7 @@
                                     <div class="col-md-3">
                                     <div class="form-group label-floating">
                                       <label class="control-label m-label-form droid-arabic-kufi">  مولود ميت (أنثى)</label>
-                                      <input type="text" name="dead_feminin" value="" class="form-control">
+                                      <input type="text" name="dead_feminin" value="0" class="form-control">
                                     </div>
                                     </div>
 
