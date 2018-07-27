@@ -57,13 +57,24 @@ $ahkam_naiss_annee_actu_fem = $request["ahkam_naiss_annee_actu_fem"];
 $ahkam_naiss_annee_actu_masc = $request["ahkam_naiss_annee_actu_masc"];
 $naiss_legal_fem = $request["naiss_legal_fem"];
 $naiss_legal_masc = $request["naiss_legal_masc"];
-$som_naiss_fem = $request["som_naiss_fem"];
-$som_naiss_masc = $request["som_naiss_masc"];
+
 $ahkam_naiss_fem = $request["ahkam_naiss_fem"];
 $ahkam_naiss_masc = $request["ahkam_naiss_masc"]; 
 $notDeclareOrdre_masc = $request["notDeclareOrdre_masc"];
-
 $notDeclareOrdre_fem = $request["notDeclareOrdre_fem"];
+
+$deces_delai_masc = $request["deces_delai_masc"];
+$deces_delai_fem = $request["deces_delai_fem"];
+
+$ahkam_deces_actu_fem = $request["ahkam_deces_actu_fem"];
+$ahkam_deces_actu_masc = $request["ahkam_deces_actu_masc"];
+
+$ahkam_deces_preced_fem = $request["ahkam_deces_preced_fem"];
+$ahkam_deces_preced_masc = $request["ahkam_deces_preced_masc"];
+
+
+
+
   // iterate through all pages
   for ($pageNo = 1; $pageNo <= $pageCount; $pageNo++) {
       // import a page
@@ -86,6 +97,79 @@ $notDeclareOrdre_fem = $request["notDeclareOrdre_fem"];
           $pdf->SetFont('helvetica', 'B', 11);
           $pdf->SetXY(167, 2.5);
           $pdf->Cell(0, 25,$year,'C'); // 
+
+           //wiladate and wifayate 
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 63);
+           $pdf->Cell(0, 25,$naiss_legal_masc,'C'); // $naiss_legal_masc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 63);
+           $pdf->Cell(0, 25,$naiss_legal_fem,'C'); // $naiss_legal_fem
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 71);
+           $pdf->Cell(0, 25,$ahkam_naiss_annee_actu_masc,'C'); // $ahkam_naiss_annee_actu_masc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 71);
+           $pdf->Cell(0, 25,$ahkam_naiss_annee_actu_fem,'C'); // $ahkam_naiss_annee_actu_fem
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 80);
+           $pdf->Cell(0, 25,$ahkam_naiss_masc,'C'); // $ahkam_naiss_masc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 80);
+           $pdf->Cell(0, 25,$ahkam_naiss_fem,'C'); // $ahkam_naiss_fem
+
+           $somNaissFem = (int)$naiss_legal_fem+(int)$ahkam_naiss_annee_actu_fem+(int)$ahkam_naiss_fem;
+           $somNaissMasc = (int)$naiss_legal_masc+(int)$ahkam_naiss_annee_actu_masc+(int)$ahkam_naiss_masc;
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 89);
+           $pdf->Cell(0, 25,$somNaissMasc,'C'); // $somNaissMasc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 89);
+           $pdf->Cell(0, 25,$somNaissFem,'C'); // $somNaissFem
+
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 97.5);
+           $pdf->Cell(0, 25,$deces_delai_masc,'C'); // $deces_delai_masc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 97.5);
+           $pdf->Cell(0, 25,$deces_delai_fem,'C'); // $deces_delai_fem
+           
+           
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 105.5);
+           $pdf->Cell(0, 25,$ahkam_deces_actu_masc,'C'); // $ahkam_deces_actu_masc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 105.5);
+           $pdf->Cell(0, 25,$ahkam_deces_actu_fem,'C'); // $ahkam_deces_actu_fem
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 113.5);
+           $pdf->Cell(0, 25,$ahkam_deces_preced_masc,'C'); // $ahkam_deces_preced_masc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 113.5);
+           $pdf->Cell(0, 25,$ahkam_deces_preced_fem,'C'); // $ahkam_deces_preced_fem
+
+           $somDecesFem = (int)$ahkam_deces_preced_fem+(int)$ahkam_deces_actu_fem+(int)$deces_delai_fem;
+           $somDecesMasc = (int)$ahkam_deces_preced_masc+(int)$ahkam_deces_actu_masc+(int)$deces_delai_masc;
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(113, 121.5);
+           $pdf->Cell(0, 25,$somDecesMasc,'C'); // $somDecesMasc
+
+           $pdf->SetFont('helvetica', 'B', 11);
+           $pdf->SetXY(160, 121.5);
+           $pdf->Cell(0, 25,$somDecesFem,'C'); // $somDecesFem
 
           //zawajat *******************
             //feminin

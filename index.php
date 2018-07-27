@@ -1237,34 +1237,34 @@
                                       <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
-                                          <input type="text" name="ahkam_naiss_annee_actu_fem" value="0" class="form-control">
+                                          <input type="text" name="ahkam_naiss_annee_actu_fem" value="00" class="form-control">
                                        </div>
                                     </div>
 
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi">   ذكر </label>
-                                          <input type="text" name="ahkam_naiss_annee_actu_masc" value="0" class="form-control">
+                                          <input type="text" name="ahkam_naiss_annee_actu_masc" value="00" class="form-control">
                                        </div>
                                     </div>
 
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
-                                          <input type="text" name="naiss_legal_fem" value="0" class="form-control">
+                                          <input type="text" name="naiss_legal_fem" value="00" class="form-control">
                                        </div>
                                     </div>
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi">  ذكر</label>
-                                          <input type="text" name="naiss_legal_masc" value="0" class="form-control">
+                                          <input type="text" name="naiss_legal_masc" value="00" class="form-control">
                                        </div>
                                     </div>
 
 
                                     <div class="row"> 
                                       <div class="col-md-6 ">
-                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">مجموع الولادات</h4>
+                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)"> وفيات داخل الأجل القانوني</h4>
                                       </div>
 
                                       <div class="col-md-6 " >
@@ -1277,64 +1277,124 @@
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
-                                          <input type="text" name="som_naiss_fem" value="0" class="form-control">
+                                          <input type="text" name="deces_delai_fem" value="00" class="form-control">
                                        </div>
                                     </div>
 
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi">   ذكر </label>
-                                          <input type="text" name="som_naiss_masc" value="0" class="form-control">
+                                          <input type="text" name="deces_delai_masc" value="00" class="form-control">
                                        </div>
                                     </div>
 
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
-                                          <input type="text" name="ahkam_naiss_fem" value="0" class="form-control">
+                                          <input type="text" name="ahkam_naiss_fem" value="00" class="form-control">
                                        </div>
                                     </div>
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi">  ذكر</label>
-                                          <input type="text" name="ahkam_naiss_masc" value="0" class="form-control">
+                                          <input type="text" name="ahkam_naiss_masc" value="00" class="form-control">
                                        </div>
                                     </div>
 
+                                    <div class="row"> 
+                                      <div class="col-md-6 ">
+                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)">    أحكام الوفيات للسنة الجارية</h4>
+                                      </div>
+
+                                      <div class="col-md-6 " >
+                                      <h4 class="droid-arabic-kufi" style="color : rgb(38, 50, 56)"> أحكام الوفيات للسنوات الفارطة</h4>
+                                      </div>
+
+                                      </div>
+
+
+                                        <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
+                                          <input type="text" name="ahkam_deces_actu_fem" value="00" class="form-control">
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">   ذكر </label>
+                                          <input type="text" name="ahkam_deces_actu_masc" value="00" class="form-control">
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> أنثى </label>
+                                          <input type="text" name="ahkam_deces_preced_fem" value="00" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">  ذكر</label>
+                                          <input type="text" name="ahkam_deces_preced_masc" value="00" class="form-control">
+                                       </div>
+                                    </div>
+
+
                                       </div><!--end row-->
+
+
 
                                       <div class="row">
                                       <h3 class="droid-arabic-kufi" >الوفيات حسب الفئات العمرية :</h3>
 
-
                                       <div class="col-md-3">
-                                       <div class="form-group label-floating">
-                                          <label class="control-label m-label-form droid-arabic-kufi"> غير مصرح به (أنثى) </label>
-                                          <input type="text" name="notDeclare_feminin" value="0" class="form-control">
-                                       </div>
-                                    </div>
+                                        <div class="form-group label-floating">
+                                            <label class="control-label m-label-form droid-arabic-kufi"> غير مصرح به (أنثى) </label>
+                                            <input type="text" name="notDeclare_feminin" value="00" class="form-control">
+                                        </div>
+                                      </div>
                                        
 
                                        <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi"> غير مصرح به (ذكر) </label>
-                                          <input type="text" name="notDeclare_masculin" value="0" class="form-control">
+                                          <input type="text" name="notDeclare_masculin" value="00" class="form-control">
                                        </div>
                                     </div>
 
                                     <div class="col-md-3">
                                     <div class="form-group label-floating">
                                       <label class="control-label m-label-form droid-arabic-kufi">  مولود ميت (أنثى)</label>
-                                      <input type="text" name="dead_feminin" value="0" class="form-control">
+                                      <input type="text" name="dead_feminin" value="00" class="form-control">
                                     </div>
                                     </div>
 
                                     <div class="col-md-3">
                                        <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi">  مولود ميت (ذكر)</label>
-                                          <input type="text" name="dead_masculin" value="0" class="form-control">
+                                          <input type="text" name="dead_masculin" value="00" class="form-control">
                                        </div>
                                     </div>
+
+                                     <h3 class="droid-arabic-kufi" >   رتبة الولادة :</h3>
+                                     <div class="col-md-6"></div>
+
+                                         <div class="col-md-3">
+                                    <div class="form-group label-floating">
+                                      <label class="control-label m-label-form droid-arabic-kufi">    غير مصرح بها (أنثى)</label>
+                                      <input type="text" name="notDeclareOrdre_fem" value="00" class="form-control">
+                                    </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> غير مصرح بها (ذكر)</label>
+                                          <input type="text" name="notDeclareOrdre_masc" value="00" class="form-control">
+                                       </div>
+                                    </div>
+
+                                        
 
                                       </div>
                                       
