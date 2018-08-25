@@ -208,7 +208,7 @@
                   </li>
                   <!--irsal-->
                   <li>
-                     <a href="" data-toggle="modal" data-target=".irsal">
+                     <a href="irsal.php" >
                         <img class="material-icons" style="width:24px;height:24px;display:inline;" src="svg/send-file.svg">
                         <p class="m-pages droid-arabic-kufi" style="margin-right:8px;display:inline;">   الإرسالات و التقارير </p>
                      </a>
@@ -509,121 +509,6 @@
                   </div>
                </div>
                <!--end modal avis divorce-->
-
-               <!--modal  irsal-->
-               <div class="modal fade irsal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                  <div class="modal-dialog  m-modal-margin" role="document">
-                     <div class="modal-content" style="margin-top:30%">
-                        <div class="modal-header">
-                           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                           <h3 style="text-align: center" class="droid-arabic-kufi">  البحث في قاعدة البيانات </h3>
-                        </div>
-                        <div class="modal-body">
-                        <ul class="nav nav-pills nav-pills-warning droid-arabic-kufi" style="margin-left : 15%"> 
-                                        <li >
-                                            <a href="#takarir" data-toggle="tab" style="font-size : 18px !important">التقارير</a>
-                                        </li>
-                                        <li>
-                                            <a href="#irsal_dawri" data-toggle="tab" style="font-size : 18px !important">الإرسال الدوري</a>
-                                        </li>
-                                        <li class="active">
-                                            <a href="#irsal_chahri" data-toggle="tab" style="font-size : 18px !important">الإرسال الشهري</a>
-                                        </li>
-                                    </ul>
-                                    <div class="tab-content">
-                                        <div class="tab-pane " id="takarir"><!--takarir-->
-                                          
-                                        </div><!--end takarir-->
-                                        <div class="tab-pane" id="irsal_dawri"><!--irsal dawri-->
-                                       
-
-                                        </div><!--end irsal dawri-->
-                                        <div class="tab-pane active" id="irsal_chahri"><!--irsal chahri-->
-                                        <!--searhc with num-->
-                           <form action="irsal_one_monthP.php" method="post" >
-                              <div class="row">
-                                 <h4 class="droid-arabic-kufi" style="color:#3F51B5;margin:0;text-align: center">  الإرسال الشهري العام</h4>
-                                 <div class="col-md-2" style="text-align: center">
-                                    <button type="submit" name="type_irsal" value="general" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
-                                    <i class="material-icons">print</i>
-                                    </button>
-                                 </div>
-                               
-                                 <div class="col-md-4" >
-                                    <select name="year_general" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="السنة" data-size="7" required>
-                                       <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu ?></option>
-                                       <option value="<?php echo $anneActu-1 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-1 ?></option>
-                                       <option value="<?php echo $anneActu-2 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-2 ?></option>
-                                       <option value="<?php echo $anneActu-3 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-3 ?></option>
-                                       <option value="<?php echo $anneActu-4 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-4 ?></option>
-                                    </select>
-                                 </div>
-                                 <div class="col-md-4" style="margin-right:1%">
-                                    <select name="month_general" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الشهر" data-size="7" required>
-                                       <option value="1" class="m-label-form droid-arabic-kufi" style="text-align:center">يناير</option>
-                                       <option value="2" class="m-label-form droid-arabic-kufi" style="text-align:center">فبراير</option>
-                                       <option value="3" class="m-label-form droid-arabic-kufi" style="text-align:center">مارس</option>
-                                       <option value="4" class="m-label-form droid-arabic-kufi" style="text-align:center">أبريل</option>
-                                       <option value="5" class="m-label-form droid-arabic-kufi" style="text-align:center">ماي</option>
-                                       <option value="6" class="m-label-form droid-arabic-kufi" style="text-align:center">يونيو</option>
-                                       <option value="7" class="m-label-form droid-arabic-kufi" style="text-align:center">يوليوز</option>
-                                       <option value="8" class="m-label-form droid-arabic-kufi" style="text-align:center">غشت</option>
-                                       <option value="9" class="m-label-form droid-arabic-kufi" style="text-align:center">شتنبر</option>
-                                       <option value="10" class="m-label-form droid-arabic-kufi" style="text-align:center">أكتوبر</option>
-                                       <option value="11" class="m-label-form droid-arabic-kufi" style="text-align:center">نونبر</option>
-                                       <option value="12" class="m-label-form droid-arabic-kufi" style="text-align:center">دجنبر</option>
-                                    </select>
-                                 </div>
-                              </div>
-                              </form>
-
-                              <!--mofassal-->
-                              <form action="irsal_one_monthP.php" method="post" >
-                              <div class="row">
-                                <h4 class="droid-arabic-kufi" style="color:#3F51B5;margin:0;text-align: center"> الإرسال الشهري المفصل</h4>
-                                <div class="col-md-2" style="text-align: center">
-                                   <button type="submit" name="type_irsal" value="detail" class="btn btn-primary btn-round btn-fab btn-fab-mini m-button-margin">
-                                   <i class="material-icons">print</i>
-                                   </button>
-                                </div>
-                              
-                                <div class="col-md-4" >
-                                   <select name="year_detail" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="السنة" data-size="7" required>
-                                      <option value="<?php echo $anneActu ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu ?></option>
-                                      <option value="<?php echo $anneActu-1 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-1 ?></option>
-                                      <option value="<?php echo $anneActu-2 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-2 ?></option>
-                                      <option value="<?php echo $anneActu-3 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-3 ?></option>
-                                      <option value="<?php echo $anneActu-4 ?>" class="m-label-form droid-arabic-kufi" style="text-align:center"><?php echo $anneActu-4 ?></option>
-                                   </select>
-                                </div>
-                                <div class="col-md-4" style="margin-right:1%">
-                                   <select name="month_detail" class="selectpicker m-label-form form droid-arabic-kufi" data-style="btn btn-info btn-round" title="الشهر" data-size="7" required>
-                                      <option value="1" class="m-label-form droid-arabic-kufi" style="text-align:center">يناير</option>
-                                      <option value="2" class="m-label-form droid-arabic-kufi" style="text-align:center">فبراير</option>
-                                      <option value="3" class="m-label-form droid-arabic-kufi" style="text-align:center">مارس</option>
-                                      <option value="4" class="m-label-form droid-arabic-kufi" style="text-align:center">أبريل</option>
-                                      <option value="5" class="m-label-form droid-arabic-kufi" style="text-align:center">ماي</option>
-                                      <option value="6" class="m-label-form droid-arabic-kufi" style="text-align:center">يونيو</option>
-                                      <option value="7" class="m-label-form droid-arabic-kufi" style="text-align:center">يوليوز</option>
-                                      <option value="8" class="m-label-form droid-arabic-kufi" style="text-align:center">غشت</option>
-                                      <option value="9" class="m-label-form droid-arabic-kufi" style="text-align:center">شتنبر</option>
-                                      <option value="10" class="m-label-form droid-arabic-kufi" style="text-align:center">أكتوبر</option>
-                                      <option value="11" class="m-label-form droid-arabic-kufi" style="text-align:center">نونبر</option>
-                                      <option value="12" class="m-label-form droid-arabic-kufi" style="text-align:center">دجنبر</option>
-                                   </select>
-                                </div>
-                             </div>
-                           </form>
-                           <!-- end searhc by num-->     
-
-                                        </div><!--end irsal chahri-->
-                                    </div>                   
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <!--end modal one month irsal-->
-
 
                <!--modal tasrih naiss-->
                <div class="modal fade tasrihNaiss" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">

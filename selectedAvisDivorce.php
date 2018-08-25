@@ -1998,9 +1998,9 @@
 
                <div class="card">
                <?php 
-               if(trim($adad)!="" && trim($numero_sijil)!="" )
+               if(trim($adad)!="" || trim($numero_sijil)!="" )
                {
-                 $query="SELECT * FROM `avis_divorce` WHERE `adad`=? AND `numero_sijil`=?";
+                 $query="SELECT * FROM `avis_divorce` WHERE `adad`=? OR `numero_sijil`=?";
                $pdoResult = $pdoConnect->prepare($query);
                $pdoResult->execute(array($adad,$numero_sijil));
                }
