@@ -1251,7 +1251,7 @@ $_SESSION["numero"] = $request['numero'];
                        <input type="hidden" name="annee" value="<?php echo $_SESSION['annee'] ?>">
                        <div class="row col-md-11 m-form-saisie">
                          <div class="col-md-4 " style="margin-left: 32% ">
-                           <select id="languageSelector" name="language" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
+                           <select id="languageSelector" name="language" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
                              <option  value="ar"  class="m-label-form" selected> العربية </option>
                              <option value="fr"   class="m-label-form"> الفرنسية </option>
                              <option value="ar_fr"   class="m-label-form"> عربية و فرنسية </option>
@@ -1262,7 +1262,7 @@ $_SESSION["numero"] = $request['numero'];
                            <div class="col-md-6">
                              <div class="form-group label-floating">
                                <label class="control-label m-label-form droid-arabic-kufi"> رقم شهادة المقدم أو الشيخ </label>
-                               <input type="text" name="numero_mokadam_ar"  class="form-control">
+                               <input type="text" name="numero_mokadam_ar"   class="form-control">
                              </div>
                            </div>
 
@@ -1296,10 +1296,22 @@ $_SESSION["numero"] = $request['numero'];
                          <input type="text" name="cine_ar"  class="form-control">
                        </div>
                        </div>
+
                            <div class="col-md-6">
                          <div class="form-group label-floating">
                            <label class="control-label m-label-form droid-arabic-kufi"> الساكن ب</label>
                            <input type="text" name="domicile_ar"  class="form-control">
+                         </div>
+                         </div>
+
+
+
+                        <div class="col-md-6"></div>
+
+                         <div class="col-md-6">
+                         <div class="form-group label-floating">
+                           <label class="control-label m-label-form droid-arabic-kufi"> اسم الزوجة</label>
+                           <input type="text" name="nom_epouse_ar"  class="form-control">
                          </div>
                          </div>
 
@@ -1351,6 +1363,16 @@ $_SESSION["numero"] = $request['numero'];
                          <div class="form-group label-floating">
                            <label class="control-label m-label-form droid-arabic-kufi"> Domicilié à </label>
                            <input type="text" name="domicile_fr"  class="form-control m-input-fr">
+                         </div>
+                         </div>
+
+
+                          <div class="col-md-6"></div>
+
+                         <div class="col-md-6">
+                         <div class="form-group label-floating">
+                           <label class="control-label m-label-form droid-arabic-kufi">Nom épouse</label>
+                           <input type="text" name="nom_epouse_fr"  class="form-control">
                          </div>
                          </div>
 
@@ -1425,6 +1447,21 @@ $_SESSION["numero"] = $request['numero'];
                          <div class="form-group label-floating">
                            <label class="control-label m-label-form droid-arabic-kufi"> رقــم بطاقة تعريفه (ها) الوطنية </label>
                            <input type="text" name="cineB"  class="form-control">
+                         </div>
+                         </div>
+
+
+                          <div class="col-md-6">
+                          <div class="form-group label-floating">
+                           <label class="control-label m-label-form droid-arabic-kufi">Nom épouse</label>
+                           <input type="text" name="nom_epouseB_fr"  class="form-control">
+                         </div>
+                          </div>
+
+                         <div class="col-md-6">
+                         <div class="form-group label-floating">
+                           <label class="control-label m-label-form droid-arabic-kufi">اسم الزوجة </label>
+                           <input type="text" name="nom_epouseB_ar"  class="form-control">
                          </div>
                          </div>
 
