@@ -1294,7 +1294,7 @@ $ActualDate = date('Y/m/d');
                              <div class="row col-md-11 m-form-saisie">
                                <h4 class="droid-arabic-kufi m-title-color" style="margin:0">معلومات شهادة عدم الزواج</h4>
                                <div class="col-md-4 " style="margin-left: 32% ">
-                                 <select id="languageSelector_non_mari" name="language" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
+                                 <select id="languageSelector_non_mari" name="language" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
                                    <option  value="ar_non_mari"  class="m-label-form" selected> العربية </option>
                                    <option value="fr_non_mari"   class="m-label-form"> الفرنسية </option>
                                    <option value="ar_fr_non_mari"   class="m-label-form"> عربية و فرنسية </option>
@@ -1536,7 +1536,7 @@ $ActualDate = date('Y/m/d');
                        <div class="row col-md-11 m-form-saisie">
                          <h4 class="droid-arabic-kufi m-title-color" style="margin:0">شهادة عدم الزواج بعد الطلاق</h4>
                          <div class="col-md-4 " style="margin-left: 32% ">
-                           <select id="languageSelector_divorce" name="language" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title="الجنس" data-size="7" >
+                           <select id="languageSelector_divorce" name="language" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title="اختيار اللغة" data-size="7" >
                              <option  value="ar_divorce"  class="m-label-form" selected> العربية </option>
                              <option value="fr_divorce"   class="m-label-form"> الفرنسية </option>
                              <option value="ar_fr_divorce"   class="m-label-form"> عربية و فرنسية </option>
@@ -1781,7 +1781,7 @@ $ActualDate = date('Y/m/d');
   <div class="row col-md-11 m-form-saisie">
     <h4 class="droid-arabic-kufi m-title-color" style="margin:0">شهادة عدم الزواج بعد الوفاة</h4>
     <div class="col-md-4 " style="margin-left: 32% ">
-      <select id="languageSelector_deces" name="language" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title="الجنس" data-size="7" >
+      <select id="languageSelector_deces" name="language" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title="اختيار اللغة" data-size="7" >
         <option  value="ar_deces"  class="m-label-form" selected> العربية </option>
         <option value="fr_deces"   class="m-label-form"> الفرنسية </option>
         <option value="ar_fr_deces"   class="m-label-form"> عربية و فرنسية </option>

@@ -1277,7 +1277,7 @@ $_SESSION["annee"] = $request['annee'];
 
                                   <div class="tab-content">
                                       <div class="tab-pane active" id="interne">
-                                  <form  action="individualiteP.php" method="post"><!--non Inscrit Birth-->
+                                  <form  action="" method="post"><!--non Inscrit Birth-->
                                   <input type="hidden" name="numero" value="<?php echo $_SESSION['numero'] ?>">
                                   <input type="hidden" name="annee" value="<?php echo $_SESSION['annee']?>">
                                   <div class="row col-md-11 m-form-saisie">
@@ -1474,7 +1474,7 @@ $_SESSION["annee"] = $request['annee'];
 
 
                                 <div class="tab-pane" id="externe"><!--death tab-->
-                                  <form  action="individualiteP.php" method="post"><!--non Inscrit Birth-->
+                                  <form  action="" method="post"><!--non Inscrit Birth-->
                                   <input type="hidden" name="numero" value="<?php echo $_SESSION['numero'] ?>">
                                   <input type="hidden" name="annee" value="<?php echo $_SESSION['annee'] ?>">
                                   <div class="row col-md-11 m-form-saisie">

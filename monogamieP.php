@@ -14,6 +14,7 @@ else {
     $username = $_SESSION['username'];
     $numero  = $_SESSION['numero'];
     $annee  = $_SESSION['annee'];
+    $id_user = $_SESSION['id_user'];
     //$superUser = $_SESSION['superUser'];
 }
 use setasign\Fpdi;
@@ -101,6 +102,29 @@ $query="SELECT * FROM `exbirth` WHERE `numero`=? AND `annee`=?";
 
       if($pdoResult->rowCount()>0)
     {
+       //trace
+$pdf->setRTL(false);
+$pdf->SetFont('helvetica','B',5);
+$pdf->SetXY(80, 43);
+
+$query2="SELECT * FROM `users` WHERE `id_user`=?";
+	$pdoResult2 = $pdoConnect->prepare($query2);
+	$pdoResult2->execute(array($id_user));
+	$result2=$pdoResult2->fetch();
+
+    if($pdoResult2->rowCount()>0)
+    {
+        if($result2["deleguer"] == "false")
+    {
+    $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}else {
+    $pdf->setRTL(false);
+    $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}
+    }
+
       $pdf->setRTL(true);
       $pdf->SetFont('helvetica', 'B', 10);
       $pdf->SetXY(34, 47);
@@ -184,6 +208,31 @@ if($language=="fr")
 
   if($pdoResult->rowCount()>0)
 {
+    //trace
+$pdf->setRTL(false);
+$pdf->SetFont('helvetica','B',5);
+$pdf->SetXY(96, 35.5);
+
+$query2="SELECT * FROM `users` WHERE `id_user`=?";
+	$pdoResult2 = $pdoConnect->prepare($query2);
+	$pdoResult2->execute(array($id_user));
+	$result2=$pdoResult2->fetch();
+
+    if($pdoResult2->rowCount()>0)
+    {
+        if($result2["deleguer"] == "false")
+    {
+    $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}else {
+    $pdf->setRTL(false);
+    $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}
+    }
+
+
+
   $pdf->setRTL(false);
   $pdf->SetFont('helvetica', 'B', 10);
 
@@ -269,6 +318,31 @@ if($language =="ar_fr")
           $size = $pdf->useImportedPage($templateId, 0 , 0, 150);
           if($pdoResult->rowCount()>0)
         {
+            //trace
+          $pdf->setRTL(false);
+          $pdf->SetFont('helvetica','B',5);
+          $pdf->SetXY(95, 36);
+
+          $query2="SELECT * FROM `users` WHERE `id_user`=?";
+            $pdoResult2 = $pdoConnect->prepare($query2);
+            $pdoResult2->execute(array($id_user));
+            $result2=$pdoResult2->fetch();
+
+              if($pdoResult2->rowCount()>0)
+              {
+                  if($result2["deleguer"] == "false")
+              {
+              $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+              $pdf->StopTransform();
+          }else {
+              $pdf->setRTL(false);
+              $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+              $pdf->StopTransform();
+          }
+              }
+
+
+
           $pdf->setRTL(false);
           $pdf->SetFont('helvetica', 'B', 10);
 
@@ -336,6 +410,31 @@ if($language =="ar_fr")
         $size = $pdf->useImportedPage($templateId, 0 , 0, 150);
         if($pdoResult->rowCount()>0)
       {
+        //trace
+          $pdf->setRTL(false);
+          $pdf->SetFont('helvetica','B',5);
+          $pdf->SetXY(80, 43);
+
+          $query2="SELECT * FROM `users` WHERE `id_user`=?";
+            $pdoResult2 = $pdoConnect->prepare($query2);
+            $pdoResult2->execute(array($id_user));
+            $result2=$pdoResult2->fetch();
+
+              if($pdoResult2->rowCount()>0)
+              {
+                  if($result2["deleguer"] == "false")
+              {
+              $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+              $pdf->StopTransform();
+          }else {
+              $pdf->setRTL(false);
+              $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+              $pdf->StopTransform();
+          }
+              }
+
+
+
         $pdf->setRTL(true);
         $pdf->SetFont('helvetica', 'B', 10);
         $pdf->SetXY(34, 47);

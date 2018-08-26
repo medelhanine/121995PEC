@@ -14,6 +14,7 @@ else {
     $username = $_SESSION['username'];
     $numero  = $_SESSION['numero'];
     $annee  = $_SESSION['annee'];
+    $id_user = $_SESSION['id_user'];
     //$superUser = $_SESSION['superUser'];
 }
 use setasign\Fpdi;
@@ -33,24 +34,18 @@ $ActualDate = date('Y/m/d');
 $anneActu = substr($ActualDate,0,4);
 $moisActu = substr($ActualDate,5,2);
 
-
-
-
-
 $numero_mokadam_ar= $request["numero_mokadam_ar"];
 $numero_certificat_ar= $request["numero_certificat_ar"];
 $date_certficat_ar= $request["date_certficat_ar"];
 $mokadam_cheikh_ar= $request["mokadam_cheikh_ar"];
 $cine_ar= $request["cine_ar"];
 $domicile_ar= $request["domicile_ar"];
-
 $numero_certificat_fr= $request["numero_certificat_fr"];
 $numero_mokadam_fr= $request["numero_mokadam_fr"];
 $date_certficat_fr= $request["date_certficat_fr"];
 $mokadam_cheikh_fr= $request["mokadam_cheikh_fr"];
 $cine_fr= $request["cine_fr"];
 $domicile_fr= $request["domicile_fr"];
-
 $numero_certificatB= $request["numero_certificatB"];
 $numero_mokadamB= $request["numero_mokadamB"];
 $date_certficatB= $request["date_certficatB"];
@@ -59,13 +54,10 @@ $mokadam_cheikhB_ar= $request["mokadam_cheikhB_ar"];
 $domicileB_fr= $request["domicileB_fr"];
 $domicileB_ar= $request["domicileB_ar"];
 $cineB= $request["cineB"];
-
 $nom_epouse_ar= $request["nom_epouse_ar"];
 $nom_epouse_fr= $request["nom_epouse_fr"];
 $nom_epouseB_ar= $request["nom_epouseB_ar"];
 $nom_epouseB_fr= $request["nom_epouseB_fr"];
-
-
 $language= $request["language"];
 
 
@@ -107,6 +99,31 @@ $query="SELECT * FROM `exbirth` WHERE `numero`=? AND `annee`=?";
 
       if($pdoResult->rowCount()>0)
     {
+       //trace
+$pdf->setRTL(false);
+$pdf->SetFont('helvetica','B',5);
+$pdf->SetXY(78, 40);
+
+$query2="SELECT * FROM `users` WHERE `id_user`=?";
+	$pdoResult2 = $pdoConnect->prepare($query2);
+	$pdoResult2->execute(array($id_user));
+	$result2=$pdoResult2->fetch();
+
+    if($pdoResult2->rowCount()>0)
+    {
+        if($result2["deleguer"] == "false")
+    {
+    $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}else {
+    $pdf->setRTL(false);
+    $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}
+    }
+
+
+
       $pdf->setRTL(true);
     //   $pdf->SetFont('helvetica', 'B', 8);
     //   $pdf->SetXY(32, 38.5);
@@ -194,6 +211,30 @@ if($language=="fr")
 
   if($pdoResult->rowCount()>0)
 {
+   //trace
+$pdf->setRTL(false);
+$pdf->SetFont('helvetica','B',5);
+$pdf->SetXY(101, 40);
+
+$query2="SELECT * FROM `users` WHERE `id_user`=?";
+	$pdoResult2 = $pdoConnect->prepare($query2);
+	$pdoResult2->execute(array($id_user));
+	$result2=$pdoResult2->fetch();
+
+    if($pdoResult2->rowCount()>0)
+    {
+        if($result2["deleguer"] == "false")
+    {
+    $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}else {
+    $pdf->setRTL(false);
+    $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}
+    }
+
+
   $pdf->setRTL(false);
   $pdf->SetFont('helvetica', 'B', 8);
 
@@ -285,6 +326,29 @@ if($language =="ar_fr")
           $size = $pdf->useImportedPage($templateId, 0 , 0, 150);
           if($pdoResult->rowCount()>0)
         {
+           //trace
+$pdf->setRTL(false);
+$pdf->SetFont('helvetica','B',5);
+$pdf->SetXY(100, 40);
+
+$query2="SELECT * FROM `users` WHERE `id_user`=?";
+	$pdoResult2 = $pdoConnect->prepare($query2);
+	$pdoResult2->execute(array($id_user));
+	$result2=$pdoResult2->fetch();
+
+    if($pdoResult2->rowCount()>0)
+    {
+        if($result2["deleguer"] == "false")
+    {
+    $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}else {
+    $pdf->setRTL(false);
+    $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+}
+    }
+
           $pdf->setRTL(false);
           $pdf->SetFont('helvetica', 'B', 8);
 
@@ -357,6 +421,31 @@ if($language =="ar_fr")
         $size = $pdf->useImportedPage($templateId, 0 , 0, 150);
         if($pdoResult->rowCount()>0)
       {
+        //trace
+        $pdf->setRTL(false);
+        $pdf->SetFont('helvetica','B',5);
+        $pdf->SetXY(78, 40);
+
+        $query2="SELECT * FROM `users` WHERE `id_user`=?";
+          $pdoResult2 = $pdoConnect->prepare($query2);
+          $pdoResult2->execute(array($id_user));
+          $result2=$pdoResult2->fetch();
+
+            if($pdoResult2->rowCount()>0)
+            {
+                if($result2["deleguer"] == "false")
+            {
+            $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+            $pdf->StopTransform();
+        }else {
+            $pdf->setRTL(false);
+            $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+            $pdf->StopTransform();
+        }
+            }
+
+
+
         $pdf->setRTL(true);
         // $pdf->SetFont('helvetica', 'B', 8);
         // $pdf->SetXY(32, 42.5);

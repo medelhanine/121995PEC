@@ -1255,7 +1255,7 @@ $_SESSION["annee"] = $request['annee'];
                        <input type="hidden" name="annee" value="<?php echo $_SESSION['annee']  ?>">
                        <div class="row col-md-11 m-form-saisie">
                          <div class="col-md-4 " style="margin-left: 32% ">
-                           <select id="languageSelector" name="language" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
+                           <select id="languageSelector" name="language" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
                              <option  value="ar"  class="m-label-form" selected> العربية </option>
                              <option value="fr"   class="m-label-form"> الفرنسية </option>
                              <option value="ar_fr"   class="m-label-form"> عربية و فرنسية </option>

@@ -1281,7 +1281,7 @@ $_SESSION["numero"] = $request['numero'];
                                   <input type="hidden" name="annee" value="<?php echo $_SESSION['annee'] ?>">
                                   <div class="row col-md-11 m-form-saisie">
                                     <div class="col-md-4 " style="margin-left: 32% ">
-                                      <select id="languageSelector" name="language" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
+                                      <select id="languageSelector" name="language" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title=" اختيار اللغة " data-size="7" >
                                         <option  value="ar"  class="m-label-form" selected> العربية(المخطوبة) </option>
                                         <option value="fr"   class="m-label-form"> الفرنسية </option>
                                         <option value="ar_fr"   class="m-label-form"> عربية و فرنسية </option>
@@ -1334,7 +1334,7 @@ $_SESSION["numero"] = $request['numero'];
                                     </div>
 
                                     <div class="col-md-4 " style="margin-left: 32% ">
-                                      <select  name="etat_fammiliale_ar" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title=" الحالة العائلية" data-size="7" >
+                                      <select  name="etat_fammiliale_ar" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title=" اختيار اللغة" data-size="7" >
                                         <option  value="celeb"  class="m-label-form" selected> عازبة  </option>
                                         <option value="divorce"   class="m-label-form"> مطلقة </option>
                                           <option value="veuf"   class="m-label-form"> أرملة </option>
@@ -1485,14 +1485,14 @@ $_SESSION["numero"] = $request['numero'];
                                   <input type="hidden" name="annee" value="<?php echo $_SESSION['annee'] ?>">
                                   <div class="row col-md-11 m-form-saisie">
                                     <div class="col-md-4 " style="margin-left: 32% ">
-                                      <select id="languageSelectorMasculin" name="language" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title="الجنس" data-size="7" >
+                                      <select id="languageSelectorMasculin" name="language" class="selectpicker m-label-form droid-arabic-kufi" data-style="btn btn-info btn-round" title="اختيار اللغة" data-size="7" >
                                         <option  value="ar_masculin"  class="m-label-form" selected> العربية (الخاطب) </option>
                                         <option value="fr_masculin"   class="m-label-form"> الفرنسية </option>
                                         <option value="ar_fr_masculin"   class="m-label-form"> عربية و فرنسية </option>
                                        </select>
                                     </div>
 
-                                    <div id="ar_death" class="language"><!--arabic side-->
+                                    <div id="ar_masculin" class="language"><!--arabic side-->
                                       <div class="col-md-6">
                                         <div class="form-group label-floating">
                                           <label class="control-label m-label-form droid-arabic-kufi"> رقم شهادة المقدم أو الشيخ </label>
@@ -1549,7 +1549,7 @@ $_SESSION["numero"] = $request['numero'];
 
                                   </div><!--end arabic side-->
 
-                                    <div id="fr_death" class="language row" style="display:none"><!--frensh side-->
+                                    <div id="fr_masculin" class="language row" style="display:none"><!--frensh side-->
                                       <div class="col-md-6">
                                     <div class="form-group label-floating">
                                       <label class="control-label m-label-form droid-arabic-kufi">Numero de Certificat </label>
@@ -1590,7 +1590,7 @@ $_SESSION["numero"] = $request['numero'];
                                     </div><!--end frensh side-->
 
 
-                                    <div id="ar_fr_death" class="language row" style="display:none"><!--arabic and frensh side/////////////////-->
+                                    <div id="ar_fr_masculin" class="language row" style="display:none"><!--arabic and frensh side/////////////////-->
                                       <div class="col-md-6">
 
                                       </div>
