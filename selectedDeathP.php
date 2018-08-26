@@ -9,10 +9,12 @@ if ( $_SESSION['logged_in'] != 1 ) {
 }
 else {
     // Makes it easier to read
+     $id_user = $_SESSION['id_user'];
     $first_name = $_SESSION['first_name'];
+    $first_name_ar = $_SESSION['first_name_ar'];
     $last_name = $_SESSION['last_name'];
+    $last_name_ar = $_SESSION['last_name_ar'];
     $username = $_SESSION['username'];
-    //$superUser = $_SESSION['superUser'];
 }
 use setasign\Fpdi;
 require_once('vendor/tecnickcom/tcpdf/tcpdf.php');
@@ -70,6 +72,56 @@ $query="SELECT * FROM `sdeadtable` WHERE `numero`=? AND `annee`=?";
           //Search In Solb*************
           if($pdoResult->rowCount()>0)
 {
+
+  //trace
+$pdf->setRTL(false);
+$pdf->SetFont('helvetica','B',5);
+$pdf->SetXY(35.95, 233);
+
+$query2="SELECT * FROM `users` WHERE `id_user`=?";
+	$pdoResult2 = $pdoConnect->prepare($query2);
+	$pdoResult2->execute(array($id_user));
+	$result2=$pdoResult2->fetch();
+
+    if($pdoResult2->rowCount()>0)
+    {
+        if($result2["deleguer"] == "false")
+    {
+    
+    $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+
+
+    $pdf->setRTL(true);
+    $pdf->SetFont($fontname, '', 9, '', false);
+    $pdf->SetXY(130, 234.25);
+    $pdf->Cell(0, 25, ucwords($result2["first_name_ar"]." ".$result2["last_name_ar"]),'C');
+      /*
+    $pdf->setRTL(false);
+    $pdf->SetFont('helvetica', 'B', 9);
+    $pdf->SetXY(133, 115.5);
+    $pdf->Cell(0, 25, ucwords($result2["first_name"]." ".$result2["last_name"]),'C');*/
+
+
+}else {
+    $pdf->setRTL(false);
+    $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+
+
+    
+    /*$pdf->setRTL(false);
+    $pdf->SetFont('helvetica', 'B', 10);
+    $pdf->SetXY(60, 116);
+    $pdf->Cell(0, 25, ucwords($result2["prenom_delegue"]." ".$result2["nom_delegue"]),'C');*/
+    
+    $pdf->setRTL(true);
+    $pdf->SetFont($fontname, '', 9, '', false);
+    $pdf->SetXY(130, 234.25);
+    $pdf->Cell(0, 25, ucwords($result2["prenom_delegue_ar"]." ".$result2["nom_delegue_ar"]),'C');
+}
+    }
+
 //pour les donnees arabe****************
 $pdf->setRTL(true);
 //date deces hijri ar
@@ -239,6 +291,55 @@ foreach($result as $row)
         $size = $pdf->useImportedPage($templateId, -3 , 10, 220);
         if($pdoResult->rowCount()>0)
         {
+
+
+          //trace
+$pdf->setRTL(false);
+$pdf->SetFont('helvetica','B',5);
+$pdf->SetXY(95.95, 233);
+
+$query2="SELECT * FROM `users` WHERE `id_user`=?";
+	$pdoResult2 = $pdoConnect->prepare($query2);
+	$pdoResult2->execute(array($id_user));
+	$result2=$pdoResult2->fetch();
+
+    if($pdoResult2->rowCount()>0)
+    {
+        if($result2["deleguer"] == "false")
+    {
+    
+    $pdf->Cell(0,0,strtoupper(substr($result2["first_name"],0,1).substr($result2["last_name"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+
+ /*
+    $pdf->setRTL(true);
+    $pdf->SetFont($fontname, '', 9, '', false);
+    $pdf->SetXY(130, 234.25);
+    $pdf->Cell(0, 25, ucwords($result2["first_name_ar"]." ".$result2["last_name_ar"]),'C');*/
+     
+    $pdf->setRTL(false);
+    $pdf->SetFont('helvetica', 'B', 9);
+    $pdf->SetXY(127, 250);
+    $pdf->Cell(0, 25, ucwords($result2["first_name"]." ".$result2["last_name"]),'C');
+
+
+}else {
+    $pdf->setRTL(false);
+    $pdf->Cell(0,0,strtoupper(substr($result2["prenom_delegue"],0,1).substr($result2["nom_delegue"],0,1)),0,0,'L',0,'');
+    $pdf->StopTransform();
+
+    $pdf->setRTL(false);
+    $pdf->SetFont('helvetica', 'B', 10);
+    $pdf->SetXY(127, 250);
+    $pdf->Cell(0, 25, ucwords($result2["prenom_delegue"]." ".$result2["nom_delegue"]),'C');
+    
+   /* $pdf->setRTL(true);
+    $pdf->SetFont($fontname, '', 9, '', false);
+    $pdf->SetXY(130, 234.25);
+    $pdf->Cell(0, 25, ucwords($result2["prenom_delegue_ar"]." ".$result2["nom_delegue_ar"]),'C');*/
+}
+    }
+
           $pdf->setRTL(false);
           $pdf->SetFont('helvetica', 'B', 10);
 
