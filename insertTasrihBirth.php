@@ -1398,12 +1398,27 @@
                                     <!--end info child-->
                                     <!-- info dad-->
                                     <div class="tab-pane" id="infoDad">
+
+                                        <div class="col-md-6">
+                                       <div class="form-group label-floating ">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> السنة </label>
+                                          <input type="text" name="annee_husband" id="annee_husband" class="form-control" >
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">رقم الرسم </label>
+                                          <input type="text" name="numero_husband" id="numero_husband" class="form-control" >
+                                       </div>
+                                    </div>
+
                                        <!--prenom dad-->
                                        <div class="col-md-6">
 
                                        </div>
                                        <div class="col-md-6">
-                                          <div class="form-group label-floating">
+                                          <div class="form-group label-floating" id="prenom_nom_ar">
                                              <label class="control-label m-label-form droid-arabic-kufi">الإسم </label>
                                              <input type="text" name="nom_pere"  value="" class="form-control">
                                           </div>
@@ -1418,8 +1433,7 @@
                                           </div>
                                        </div>
                                        <div class="col-md-6">
-                                          <div class="form-group label-floating">
-
+                                          <div class="form-group label-floating" id="date_naiss_hijri">
                                              <label class="control-label m-label-form droid-arabic-kufi"> تاريخ ولادة الأب </label>
                                              <input type="text" name="date_naiss_pere_hijri"  class="form-control " >
                                           </div>
@@ -1433,8 +1447,7 @@
                                           </div>
                                        </div>
                                        <div class="col-md-6">
-                                          <div class="form-group label-floating">
-
+                                          <div class="form-group label-floating" id="date_naiss_miladi">
                                              <label class="control-label m-label-form droid-arabic-kufi"> الموافق ل </label>
                                              <input type="text" name="date_naiss_pere_miladi"  class="form-control">
                                           </div>
@@ -1443,13 +1456,13 @@
 
                                        <!--lieu naiss-->
                                        <div class="col-md-6">
-                                         <div class="form-group label-floating">
+                                         <div class="form-group label-floating" >
                                             <label class="control-label m-label-form droid-arabic-kufi">الجنسية</label>
                                             <input type="text" name="nationalite_pere" value="<?php echo  $nationalite_ar ?>" class="form-control">
                                          </div>
                                        </div>
                                        <div class="col-md-6">
-                                          <div class="form-group label-floating">
+                                          <div class="form-group label-floating" id="lieu_naiss">
                                              <label class="control-label m-label-form droid-arabic-kufi">مكان الازدياد</label>
                                              <input type="text" name="lieu_naiss_pere"  class="form-control">
                                           </div>
@@ -1476,11 +1489,27 @@
                                     <!-- info mom-->
                                     <div class="tab-pane" id="infoMom">
                                       <!--prenom mom-->
+
+                                       <div class="col-md-6">
+                                       <div class="form-group label-floating ">
+                                          <label class="control-label m-label-form droid-arabic-kufi"> السنة </label>
+                                          <input type="text" name="annee_wife" id="annee_wife" class="form-control" >
+                                       </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                       <div class="form-group label-floating">
+                                          <label class="control-label m-label-form droid-arabic-kufi">رقم الرسم </label>
+                                          <input type="text" name="numero_wife" id="numero_wife" class="form-control" >
+                                       </div>
+                                    </div>   
+
+
                                       <div class="col-md-6">
 
                                       </div>
                                       <div class="col-md-6">
-                                         <div class="form-group label-floating">
+                                         <div class="form-group label-floating" id="prenom_nom_ar_wife">
                                             <label class="control-label m-label-form droid-arabic-kufi">الإسم </label>
                                             <input type="text" name="nom_mere"  value="" class="form-control">
                                          </div>
@@ -1495,8 +1524,7 @@
                                          </div>
                                       </div>
                                       <div class="col-md-6">
-                                         <div class="form-group label-floating">
-
+                                         <div class="form-group label-floating" id="date_naiss_wife_hijri">
                                             <label class="control-label m-label-form droid-arabic-kufi"> تاريخ ولادة الأم </label>
                                             <input type="text" name="date_naiss_mere_hijri"  class="form-control " >
                                          </div>
@@ -1510,8 +1538,7 @@
                                          </div>
                                       </div>
                                       <div class="col-md-6">
-                                         <div class="form-group label-floating">
-
+                                         <div class="form-group label-floating" id="date_naiss_wife_miladi">
                                             <label class="control-label m-label-form droid-arabic-kufi"> الموافق ل </label>
                                             <input type="text" name="date_naiss_mere_miladi"  class="form-control">
                                          </div>
@@ -1526,7 +1553,7 @@
                                         </div>
                                       </div>
                                       <div class="col-md-6">
-                                         <div class="form-group label-floating">
+                                         <div class="form-group label-floating" id="lieu_naiss_wife">
                                             <label class="control-label m-label-form droid-arabic-kufi">مكان الازدياد</label>
                                             <input type="text" name="lieu_naiss_mere"  class="form-control">
                                          </div>
@@ -1773,10 +1800,8 @@
    <script src="assets/vendors/sweetalert2.js"></script>
    <!--upload verification-->
    <script src="assets/js/verifyUpload.js"></script>
-   <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-   <script src="assets/js/moment-with-locales.min.js"></script>
-   <!-- DateTimePicker Plugin -->
-   <script src="assets/vendors/bootstrap-datetimepicker.js"></script>
+
+
    <!--Some js-->
    <script src="assets/js/generalSearch.js"></script>
    <script src="assets/js/avis_mngmnt.js"></script>
@@ -1786,6 +1811,7 @@
    <script src="assets/js/solbMngmt.js"></script>
    <script src="assets/js/extraitMngmnt.js"></script>
    <script src="assets/js/toraMangmnt.js"></script>
+   <script src="assets/js/tasrih_info_parents.js"></script>
    <script>
       $('#submitTasrihBirthForm').click( function() {
          $('.tasrihForm').submit();

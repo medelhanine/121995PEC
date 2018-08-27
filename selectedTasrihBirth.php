@@ -1852,10 +1852,8 @@
    <script src="assets/vendors/sweetalert2.js"></script>
    <!--upload verification-->
    <script src="assets/js/verifyUpload.js"></script>
-   <!--  Plugin for Date Time Picker and Full Calendar Plugin-->
-   <script src="assets/js/moment-with-locales.min.js"></script>
-   <!-- DateTimePicker Plugin -->
-   <script src="assets/vendors/bootstrap-datetimepicker.js"></script>
+ 
+ 
 <script src="assets/js/lightbox.js"></script>
    <!--Some js-->
    <script src="assets/js/generalSearch.js"></script>
