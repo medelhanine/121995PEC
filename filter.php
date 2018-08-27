@@ -1449,7 +1449,7 @@
                                                 <th style="text-align : center">
                                                 <select  name="lieu_naiss" id="lieu_naiss" class="selectpicker m-label-form" data-style="btn btn-info btn-round" title="مكان الإزدياد" data-size="7">
                                                     <option value="all" style="text-align: right">الكل</option>
-                                                  
+      
                                                   </select>
                                                  </th>
 
