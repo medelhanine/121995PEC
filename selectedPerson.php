@@ -37,10 +37,28 @@
       <!--some CSS-->
       <link href="assets/css/someCss.css" rel="stylesheet">
       <style>
-         .card
+        
+         .m-card:hover 
          {
-         margin : 10px 0 !important;
+          
+          box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+          transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+          
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
          }
+
+         h3,h2 {
+           margin-bottom : 0;
+           margin-top : 0;
+         }
+
+         .m-card
+         {
+          border-radius: 5px;
+           width : 210px !important;
+           height : 100px !important;
+         }
+       
       </style>
    </head>
    <body class="rtl-layout" style="overflow: hidden !important">
@@ -1155,7 +1173,7 @@
                  
                    ?>
                 
-                      <h3 class="droid-arabic-kufi" style="text-align : center;color : #FFC107">نتائج البحث العام الخاص ب :<?php echo $result["prenom_ar"]." ".$result["nom_ar"] ?></h3>
+                      <h2 class="droid-arabic-kufi" style="text-align : center;color : #808080; margin-top : 0; margin-bottom : 0;"><?php echo $result["prenom_ar"]." ".$result["nom_ar"] ?></h2>
                    
                </div>
                <div class="tab-content">
@@ -1163,9 +1181,9 @@
                      <!--impression documents-->
                      <div class="row">  
 
-                     <h3 class="droid-arabic-kufi" style="color : rgb(38, 50, 56);margin-right : 5%" >الوثائق المتعلقة بالحالة المدنية</h3>                     
-                       
-                        <div class="col-lg-4 col-md-4 col-sm-4" style="margin-left :30.5%">
+                     <h3 class="droid-arabic-kufi" style="color : #5A92F8;margin-right : 5%;margin-top : 0; margin-bottom : 0;" >الوثائق المتعلقة بالحالة المدنية</h3>                     
+                       <div class="col-md-6"></div>
+                        <div class="col-lg-3 col-md-3 col-sm-3" >
                         <form action="selectedBirthP.php" method="post" class="form_copie_integ_birth">
                             <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
                             <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
@@ -1179,11 +1197,11 @@
                            </div>
                         </form>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
                             <form action="selectedExtBirthP.php" method="post" class="form_acte_naiss">
                             <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
                             <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
-                           <div class="card card-stats m-card "  style="background-color: #02B07D ;width :322px;">
+                           <div class="card card-stats m-card "  style="background-color: #02B07D ;margin-right : 14%">
                               <div class="card-content">
                                  <a href="#" id="submit_acte_naiss">
                                     <h4 class="m-card-title droid-arabic-kufi" >رسم الولادة</h4>
@@ -1199,8 +1217,38 @@
                   <div >
                      <!--chawahid*******************************************-->
                      <div class="row" style="margin-right: 15px !important; margin-left: 15px !important;">
-                     <h3 class="droid-arabic-kufi" style="color : rgb(38, 50, 56);margin-right : 2.5%" > الشواهد الإدارية الخاصة</h3>  
-                        <div class="col-lg-4 col-md-4 col-sm-4">
+                     <h3 class="droid-arabic-kufi" style="color : #5A92F8; margin-right : 2.5%" > الشواهد الإدارية الخاصة</h3>
+                        <div class="col-md-3">
+
+                        <div class="card card-stats m-card" style="background-color: #EA80FC ">
+                                <form action="monogamieInfo.php" method="post" class="form_monogamie">
+                                        <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
+                                        <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
+                              <div class="card-content">
+                                 <a href="#" id="submit_monogamie">
+                                    <h4 class="m-card-title droid-arabic-kufi"> الزوجة الوحيدة </h4>
+                                    <h6 class="m-card-title">MONOGAMIE</h6>
+                                 </a>
+                              </div>
+                              </form>
+                           </div>
+
+                           <div class="card card-stats m-card" style="background-color: #827717 ">
+                                <form action="celibatInfo.php" method="post" class="form_celibat">
+                                        <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
+                                        <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
+                              <div class="card-content">
+                                 <a href="#" id="submit_celibat">
+                                    <h4 class="m-card-title droid-arabic-kufi">العزوبة</h4>
+                                    <h6 class="m-card-title">celibat</h6>
+                                 </a>
+                              </div>
+                              </form>
+                           </div>
+                        
+                        </div>  
+
+                        <div class="col-lg-3 col-md-3 col-sm-3">
                            <div class="card card-stats m-card" style="background-color: #8BC34A ">
                                 <form action="nonDivorceInfo.php" method="post" class="form_non_divorce">
                                         <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
@@ -1230,7 +1278,7 @@
                               </form>
                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4" >
+                        <div class="col-lg-3 col-md-3 col-sm-3" >
                            <div class="card card-stats m-card" style="background-color: #1A237E ">
                                 <form action="nonMariageInfo.php" method="post" class="form_non_mariage">
                                         <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
@@ -1259,22 +1307,11 @@
                               </div>
                               </form>
                            </div>
-                           <div class="card card-stats m-card" style="background-color: #EA80FC ">
-                                <form action="monogamieInfo.php" method="post" class="form_monogamie">
-                                        <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
-                                        <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
-                              <div class="card-content">
-                                 <a href="#" id="submit_monogamie">
-                                    <h4 class="m-card-title droid-arabic-kufi"> الزوجة الوحيدة </h4>
-                                    <h6 class="m-card-title">MONOGAMIE</h6>
-                                 </a>
-                              </div>
-                              </form>
-                           </div>
+                           
                         </div>
 
 
-                        <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
                            <div class="card card-stats m-card" style="background-color: #2ABCCF ">
                                 <form action="vieIndividuInfo.php" method="post" class="form_vie_individuelle">
                                         <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
@@ -1299,18 +1336,7 @@
                                 </div>
                              </div>
                       
-                           <div class="card card-stats m-card" style="background-color: #827717 ">
-                                <form action="celibatInfo.php" method="post" class="form_celibat">
-                                        <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
-                                        <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
-                              <div class="card-content">
-                                 <a href="#" id="submit_celibat">
-                                    <h4 class="m-card-title droid-arabic-kufi">العزوبة</h4>
-                                    <h6 class="m-card-title">celibat</h6>
-                                 </a>
-                              </div>
-                              </form>
-                           </div>
+                           
                         </div>
                      </div>
                      <!--end chawahid-->
