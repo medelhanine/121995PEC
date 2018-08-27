@@ -338,19 +338,7 @@ while($row=mysqli_fetch_array($query))
   }else {
       $subdata[]='<div style="text-align: center;font-size: 0.95em;">ذكر</div>';
   }
-
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.($anneActu - (int)$annee_naiss).'</div>'; // age start
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.($anneActu - (int)$annee_naiss).'</div>'; // age end
-
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['lieu_naiss_ar'].'</div>'; //lieu niass
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['nom_mere_ar'].'</div>'; //nom mere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['nom_pere_ar'].'</div>'; //nom pere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['profession_mere_ar'].'</div>'; //profession mere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['niveau_scol_mer_ar'].'</div>'; //niveau scolaire mere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['profession_pere_ar'].'</div>'; //profession pere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['niveau_scol_pere_ar'].'</div>'; //profession pere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['ordre_naiss'].'</div>'; 
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['officier_etat_civil_ar'].'</div>'; 
+  $subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['lieu_naiss_ar'].'</div>'; // nom_ar
 $data[]= $subdata;
 }
 $json_data = array(

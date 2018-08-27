@@ -202,6 +202,17 @@ if(isset($request['is_numero']))
         }
     }
 
+    //lieu deces
+    if(isset($request['is_lieu_deces']))
+    {
+        if($request['is_lieu_deces']== "all")
+        {
+            $sql .= "  ";
+        }else{
+            $sql .= " AND lieu_deces_ar = '". $request['is_lieu_deces']."'  ";
+        }
+    }
+
     //profession pere
     if(isset($request['is_profession_pere']))
     {
@@ -311,18 +322,9 @@ while($row=mysqli_fetch_array($query))
       $subdata[]='<div style="text-align: center;font-size: 0.95em;">ذكر</div>';
   }
 
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.($annee_deces - (int)$annee_naiss).'</div>'; // age start
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.($annee_deces - (int)$annee_naiss).'</div>'; // age end
 
 $subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['lieu_naissance_ar'].'</div>'; //lieu niass
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['nom_mere_ar'].'</div>'; //nom mere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['nom_pere_ar'].'</div>'; //nom pere
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['profession_mere_ar'].'</div>'; //profession mere
-
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['profession_pere_ar'].'</div>'; //profession pere
-
-
-$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['officier_etat_civil_ar'].'</div>'; 
+$subdata[]='<div style="text-align: center;font-size: 0.95em;">'.$row['lieu_deces_ar'].'</div>'; //lieu niass
 $data[]= $subdata;
 }
 $json_data = array(
