@@ -60,10 +60,7 @@
         width: 100%;
       }
       
-      .navbar
-      {
-        width : 2400px;
-      }
+    
 
       .imgs {
         display: grid;

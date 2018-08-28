@@ -31,7 +31,8 @@ session_start();
   <?php include 'css/css.html'; ?>
   <style media="screen">
   #background{
-    background-image: url("../assets/img/archive.jpg"); 
+    background-image: url("../assets/img/archive.jpg");
+    
   
   }
 
