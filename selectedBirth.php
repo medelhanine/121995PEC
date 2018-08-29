@@ -54,50 +54,9 @@
            
          }
 
+         
 
-         /*image slider*/
-/*gallery styling*/
-.container {
-  max-width: 610px;
-  height : 900px;
-  margin-top : 2%;
-  /*margin: auto;*/
-  border: #253340 solid 2px;
-  /*border-radius : 25px;*/
-  background: #D8D8D8;
-  margin-bottom: 20px;
-}
 
-.main-img img,
-.imgs img {
-  width: 100%;
-}
-
-.imgs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
-  margin-bottom : 5px;
-  margin-top: 5px;
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in 1 forwards;
-}
-
-  .card
-  {
-    margin : 10px 0 !important;
-  }
-/*end image slider*/
       </style>
    </head>
    <body class="rtl-layout sidebar-mini" >
@@ -1387,9 +1346,17 @@
                   <div class="card">
                      <div class="card-content" style="padding : 0 !important">
                           <div class="col-md-6"><!--images div-->
-                          <div class="container">
-                          <div class="main-img">
-                          <?php 
+                          <div class="container" style="width : 600px">
+                          
+                  
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                              <!-- Indicators -->
+                                  <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1" ></li>
+                                    <li data-target="#myCarousel" data-slide-to="2" ></li>
+                                  </ol>
+                              <?php 
                               $j=1;
                               $folder = "uploads/solbBirth/".$numero.".".$annee."/";
 
@@ -1397,33 +1364,48 @@
                                 if(count($images) > 0 )
                                 { 
                             ?>
-                          
-                            <img src="<?php echo $images[0] ?>" id="current" style="height : 650px;margin-top:3%;">
-                          </div>
-
-                          <div class="imgs">
-                                    <?php
+                                   <?php
                                     foreach($images as $image)
                                     {
                                       ?>
-                                      <img src="<?php echo $image ?>">
-                                      <?php
-                                      $j++;
-                                    }
+
+                                  <!-- Wrapper for slides -->
+                                  <div class="carousel-inner">
+                                    <div class="item active img-magnifier-container">
+                                      <img id="myimage" src="<?php echo $image ?>" alt="">
+                                    </div>
+                                    <?php
+                                    $j++;
+                                  }
                                     
                                   }else{
                                     ?>
-                                    <img src="assets/img/no-image.png" id="current" style="height : 650px;margin-top:3%;opacity: 0.5;">
+
+                                     <!-- Wrapper for slides -->
+                                  <div class="carousel-inner">
+                                    <div class="item active">
+                                      <img src="assets/img/no-image.png" alt="">
                                     </div>
 
-                                    <div class="imgs">
-                                    </div>
-
-                                 <?php } ?>
-
+                                    <?php
+                                  }
+                                    ?>
+                                   
                                   </div>
-                        </div>
+
+                                  <!-- Left and right controls -->
+                                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </div>
+                            </div>
                           </div><!--end image div-->
+
                         <div class=" col-md-6">
                            <div class="col-md-9">
                               <form action="updateSBirthDB.php" method="post" class="sBirthFormUpdate">
@@ -2333,7 +2315,7 @@
    <!-- Sweet Alert 2 plugin -->
    <script src="assets/vendors/sweetalert2.js"></script>
   
-   <script src="assets/js/lightbox.js"></script>
+   <!-- <script src="assets/js/lightbox.js"></script> -->
 
   
    <!--Some js-->
@@ -2345,6 +2327,8 @@
    <script src="assets/js/solbMngmt.js"></script>
    <script src="assets/js/extraitMngmnt.js"></script>
    <script src="assets/js/toraMangmnt.js"></script>
+   <script src="assets/js/loupe.js"></script>
+  
    <script>
       $('#submitSbirthForm').click( function() {
          $('.sBirthFormUpdate').submit();
@@ -2419,32 +2403,8 @@
       }
 
 
-      //image slider 
-      const current = document.querySelector("#current");
-const imgs = document.querySelectorAll(".imgs img");
-const opacity = 0.6;
+      
 
-// Set first img opacity
-imgs[0].style.opacity = opacity;
-
-imgs.forEach(img => img.addEventListener("click", imgClick));
-
-function imgClick(e) {
-  // Reset the opacity
-  imgs.forEach(img => (img.style.opacity = 1));
-
-  // Change current image to src of clicked image
-  current.src = e.target.src;
-
-  // Add fade in class
-  current.classList.add("fade-in");
-
-  // Remove fade-in class after .5 seconds
-  setTimeout(() => current.classList.remove("fade-in"), 500);
-
-  // Change the opacity to opacity var
-  e.target.style.opacity = opacity;
-}
    </script>
 </html>
 <?php } ?>

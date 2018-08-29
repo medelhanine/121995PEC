@@ -1,3 +1,22 @@
+/* LOUPE *********/
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  /* border: 3px solid #000; */
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 260px;
+  height: 260px;
+  box-shadow: inset -5px -7px 52px rgba(0, 0, 0, 0.72),
+    inset 0px -3px 8px 0px rgba(253, 253, 253, 0.46),
+    0 0 20px -1px rgba(0, 0, 0, 0.95);
+  background-color: #0a0a0a;
+}
+
 /*drop zone style*/
 .drop-zone-style {
   border: 2px dashed #bbb;
