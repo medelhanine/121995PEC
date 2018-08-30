@@ -55,6 +55,50 @@
          }
 
 
+
+           /*image slider*/
+/*gallery styling*/
+.container {
+  max-width: 610px;
+  height : 900px;
+  margin-top : 2%;
+  /*margin: auto;*/
+  border: #253340 solid 2px;
+  /*border-radius : 25px;*/
+  background: #D8D8D8;
+  margin-bottom: 20px;
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-bottom : 5px;
+  margin-top: 5px;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+  .card
+  {
+    margin : 10px 0 !important;
+  }
+/*end image slider*/
          
 
          
@@ -1349,88 +1393,46 @@
                   <div class="card">
                      <div class="card-content" style="padding : 0 !important">
                           <div class="col-md-6"><!--images div-->
-                          <div class="container" style="width : 600px">
-
-
-                              <div id="myCarousel" class="carousel slide" data-interval="false"><!--div carousel-->
-
-
-                              <?php 
-                              $j=0;
+                          <div class="container">
+                          <div class="main-img">
+                          <?php 
+                              $j=1;
                               $folder = "uploads/solbBirth/".$numero.".".$annee."/";
 
                                 $images = glob($folder."*.*");
                                 if(count($images) > 0 )
                                 { 
-                                  ?>
-                                    <!-- Indicators -->
-                                      <ol class="carousel-indicators">
-                                      
+                            ?>
+                                  <div class="magnify">
+                                      <div class="large"></div>
+                                      <img class="small"  src="<?php echo $images[0] ?>" id="current" style="height : 650px;margin-top:3%;">
+                                  </div>
+                          </div>
+
+                          <div class="imgs">
                                     <?php
                                     foreach($images as $image)
                                     {
-                                      if($j == 0)
-                                      {
-                                        ?>
-                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        <?php
-                                      }else{
-                                        ?>
-                                        <li data-target="#myCarousel" data-slide-to="<?php echo $j ?>"></li>
-                                        <?php
-                                      }                                     
-                                       $j++;
-                                    }
-                                    $j = 0;
                                       ?>
-                                    </ol>
-                                    
-                                    <!-- Wrapper for slides -->
-                                      <div class="carousel-inner">
-
-                                      
-                                    <?php 
-                                    foreach($images as $image)
-                                    {   
-                                      if($j == 0)
-                                      {                                                        
-                                    ?>                                   
-
-                                    <div class="item active zoom-area">
-                                    <!-- It's container of the magnify glass -->
-		                                      <div class="large"></div>
-                                      <img class="small" src="<?php echo $image ?>" alt="">
-                                    </div>
-                                    <?php
-                                    } else{
-                                      ?>
-                                      <div class="item zoom-area">
-                                       <!-- It's container of the magnify glass -->
-		                                      <div class="large"></div>
-                                      <img class="small" src="<?php echo $image ?>" alt="">
-                                    </div>
+                                  
+                                        <img  src="<?php echo $image ?>">
+                                     
                                       <?php
-                                    }  
-                                    $j++;                                 
+                                      $j++;
                                     }
-                                  }
+                                    
+                                  }else{
                                     ?>
+                                    <img src="assets/img/no-image.png" id="current" style="height : 650px;margin-top:3%;opacity: 0.5;">
+                                    </div>
 
-                                  </div><!--end carousel inner-->
+                                    <div class="imgs">
+                                    </div>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
+                                 <?php } ?>
 
-</div><!-- end div carousel-->
-                            
-                            </div>
+                                  </div>
+                        </div>
                           </div><!--end image div-->
 
                         <div class=" col-md-6">
@@ -2354,7 +2356,8 @@
    <script src="assets/js/solbMngmt.js"></script>
    <script src="assets/js/extraitMngmnt.js"></script>
    <script src="assets/js/toraMangmnt.js"></script>
-   <script src="assets/js/loupe.js"></script>
+   <script src="assets/js/loupe.js"></script> 
+   <script src="assets/js/gallery.js"></script> 
   
    <script>
       $('#submitSbirthForm').click( function() {
@@ -2429,8 +2432,6 @@
 
       }
 
-
-      
 
 
 
