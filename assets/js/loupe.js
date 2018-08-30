@@ -1,78 +1,40 @@
-//LOUPE ******
+//loupe *******************
+/* Created by Rohan Hapani */
+$(document).ready(function () {
+  var sub_width = 0;
+  var sub_height = 0;
+  $(".large").css("background", "url('" + $(".small").attr("src") + "') no-repeat");
 
-function magnify(imgID, zoom) {
-  var img, glass, w, h, bw;
-  img = document.getElementById(imgID);
-
-  /*create magnifier glass:*/
-  glass = document.createElement("DIV");
-  glass.setAttribute("class", "img-magnifier-glass");
-
-  /*insert magnifier glass:*/
-  img.parentElement.insertBefore(glass, img);
-
-  /*set background properties for the magnifier glass:*/
-  glass.style.backgroundImage = "url('" + img.src + "')";
-  glass.style.backgroundRepeat = "no-repeat";
-  glass.style.backgroundSize =
-    img.width * zoom + "px " + img.height * zoom + "px";
-  bw = 3;
-  w = glass.offsetWidth / 2;
-  h = glass.offsetHeight / 2;
-
-  /*execute a function when someone moves the magnifier glass over the image:*/
-  glass.addEventListener("mousemove", moveMagnifier);
-  img.addEventListener("mousemove", moveMagnifier);
-
-  /*and also for touch screens:*/
-  glass.addEventListener("touchmove", moveMagnifier);
-  img.addEventListener("touchmove", moveMagnifier);
-  function moveMagnifier(e) {
-    var pos, x, y;
-    /*prevent any other actions that may occur when moving over the image*/
-    e.preventDefault();
-    /*get the cursor's x and y positions:*/
-    pos = getCursorPos(e);
-    x = pos.x;
-    y = pos.y;
-    /*prevent the magnifier glass from being positioned outside the image:*/
-    if (x > img.width - w / zoom) {
-      x = img.width - w / zoom;
+  $(".zoom-area").mousemove(function (e) {
+    if (!sub_width && !sub_height) {
+      var image_object = new Image();
+      image_object.src = $(".small").attr("src");
+      sub_width = image_object.width;
+      sub_height = image_object.height;
     }
-    if (x < w / zoom) {
-      x = w / zoom;
-    }
-    if (y > img.height - h / zoom) {
-      y = img.height - h / zoom;
-    }
-    if (y < h / zoom) {
-      y = h / zoom;
-    }
-    /*set the position of the magnifier glass:*/
-    glass.style.left = x - w + "px";
-    glass.style.top = y - h + "px";
-    /*display what the magnifier glass "sees":*/
-    glass.style.backgroundPosition =
-      "-" + (x * zoom - w + bw) + "px -" + (y * zoom - h + bw) + "px";
-  }
+    else {
+      var magnify_position = $(this).offset();
 
-  function getCursorPos(e) {
-    var a,
-      x = 0,
-      y = 0;
-    e = e || window.event;
-    /*get the x and y positions of the image:*/
-    a = img.getBoundingClientRect();
-    /*calculate the cursor's x and y coordinates, relative to the image:*/
-    x = e.pageX - a.left;
-    y = e.pageY - a.top;
-    /*consider any page scrolling:*/
-    x = x - window.pageXOffset;
-    y = y - window.pageYOffset;
-    return { x: x, y: y };
-  }
-}
+      var mx = e.pageX - magnify_position.left;
+      var my = e.pageY - magnify_position.top;
 
-/*Execute the magnify function:*/
-magnify("myimage", 2);
-/*Specify the id of the image, and the strength of the magnifier glass:*/
+      if (mx < $(this).width() && my < $(this).height() && mx > 0 && my > 0) {
+        $(".large").fadeIn(50);
+      }
+      else {
+        $(".large").fadeOut(50);
+      }
+      if ($(".large").is(":visible")) {
+        var rx = Math.round(mx / $(".small").width() * sub_width - $(".large").width() / 2) * -1;
+        var ry = Math.round(my / $(".small").height() * sub_height - $(".large").height() / 2) * -1;
+
+        var bgp = rx + "px " + ry + "px";
+
+        var px = mx - $(".large").width() / 2;
+        var py = my - $(".large").height() / 2;
+
+        $(".large").css({ left: px, top: py, backgroundPosition: bgp });
+      }
+    }
+  })
+})
