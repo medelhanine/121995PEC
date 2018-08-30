@@ -59,16 +59,16 @@ $ActualDate = date('d/m/Y');
 <body class="rtl-layout"  style="overflow: hidden !important">
     <div class="wrapper">
     <div class="sidebar" data-background-color="gray">
-            <div class="logo">
-               <div style="text-align: center;" class="picture">
-                  <a href="profile.php">
-                  <img src="assets/img/faces/avatar.png" class="img-circle picture-src" width="100px" height="100px" style="max-height: 150px;border: 4px solid #CCCCCC;">
-                  </a>
-               </div>
-               <h4 style="text-align: center;" class="droid-arabic-kufi">
-                  <?php echo $username ?>
-               </h4>
-            </div>
+            <div class="profile-header-container">   
+    		          <div class="profile-header-img">
+                    <img class="img-circle" src="assets/img/user.svg" />
+                    <!-- badge -->
+                    <div class="rank-label-container">
+                        <span class="label label-default rank-label"> <b class="profile-label"><?php echo $username?></b> </span>
+                    </div>
+                  </div>    
+                  <hr class="styling">              
+                </div>
             <div class="sidebar-wrapper">
                <ul class="nav m-padding">
                   <li >

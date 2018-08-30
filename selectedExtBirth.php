@@ -59,16 +59,16 @@ border-radius: 5px;
 <body class="rtl-layout" style="overflow: hidden !important">
     <div class="wrapper">
     <div class="sidebar" data-background-color="gray">
-            <div class="logo">
-               <div style="text-align: center;" class="picture">
-                  <a href="profile.php">
-                  <img src="assets/img/faces/avatar.png" class="img-circle picture-src" width="100px" height="100px" style="max-height: 150px;border: 4px solid #CCCCCC;">
-                  </a>
-               </div>
-               <h4 style="text-align: center;" class="droid-arabic-kufi">
-                  <?php echo $username ?>
-               </h4>
-            </div>
+            <div class="profile-header-container">   
+    		          <div class="profile-header-img">
+                    <img class="img-circle" src="assets/img/user.svg" />
+                    <!-- badge -->
+                    <div class="rank-label-container">
+                        <span class="label label-default rank-label"> <b class="profile-label"><?php echo $username?></b> </span>
+                    </div>
+                  </div>    
+                  <hr class="styling">              
+                </div>
             <div class="sidebar-wrapper">
                <ul class="nav m-padding">
                   <li >
@@ -1244,6 +1244,28 @@ border-radius: 5px;
                </div>
                <!--end modal acte deces-->
                <div class="">
+                   <?php
+               	if(isset($request["numero"])!="" && isset($request["annee"])!="" )
+                 {
+                   $query="SELECT * FROM `exbirth` WHERE `numero`=? AND `annee`=?";
+                 $pdoResult = $pdoConnect->prepare($query);
+                 $pdoResult->execute(array($request["numero"],$request["annee"]));
+               
+                 }
+               
+                 if(isset($request["nom_ar"])!="" && isset($request["nom"])!="")
+                 {
+                   $query="SELECT * FROM `exbirth` WHERE `nom_ar`=? AND `nom`=?";
+                 $pdoResult = $pdoConnect->prepare($query);
+                 $pdoResult->execute(array($request["nom_ar"],$request["nom"]));
+               
+                 }
+               
+               
+                 $result=$pdoResult->fetch();
+               if($pdoResult->rowCount()>0)
+               {
+               ?>
                             <div class="card">
                                 <div class="card-header ">
 
@@ -1545,10 +1567,7 @@ border-radius: 5px;
                                                     <b class="droid-arabic-kufi">الصور</b>
                                                     </a>
                                                 </li>
-
                                             </ul>
-
-
                                         </div>
                                         <!---end vertical pills-->
 
@@ -1578,7 +1597,6 @@ border-radius: 5px;
                                 </div>
                             </div>
                         </div>
-	<?php } ?>
             </div>
             <!--end content div-->
             <footer class="footer">
@@ -1692,3 +1710,4 @@ function swalDelete(numero,annee)
 </script>
 
 </html>
+<?php } ?>
