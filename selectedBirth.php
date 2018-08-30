@@ -40,8 +40,7 @@
       <!--some CSS-->
       <link href="assets/css/someCss.css" rel="stylesheet">
       <!--drop zone-->
-      <link href="assets/vendors/dropzone/dropzone.min.css" rel="stylesheet">
-      <link href="assets/css/jquery.datetimepicker.css" rel="stylesheet">
+      <link href="assets/vendors/dropzone/dropzone.min.css" rel="stylesheet">     
       <style media="screen">
          .dropzone{
          border: 2px dashed #BBB;
@@ -54,55 +53,9 @@
            
          }
 
-
-
-           /*image slider*/
-/*gallery styling*/
-.container {
-  max-width: 610px;
-  height : 900px;
-  margin-top : 2%;
-  /*margin: auto;*/
-  border: #253340 solid 2px;
-  /*border-radius : 25px;*/
-  background: #D8D8D8;
-  margin-bottom: 20px;
-}
-
-.main-img img,
-.imgs img {
-  width: 100%;
-}
-
-.imgs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
-  margin-bottom : 5px;
-  margin-top: 5px;
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in 1 forwards;
-}
-
-  .card
-  {
-    margin : 10px 0 !important;
-  }
-/*end image slider*/
-         
-
-         
-
+         .form-group {
+           padding-bottom :0;
+         }
 
       </style>
    </head>
@@ -1403,9 +1356,9 @@
                                 if(count($images) > 0 )
                                 { 
                             ?>
-                                  <div class="magnify">
+                                  <div class="magnify" id="boxshadow">
                                       <div class="large"></div>
-                                      <img class="small"  src="<?php echo $images[0] ?>" id="current" style="height : 650px;margin-top:3%;">
+                                      <img class="small"  src="<?php echo $images[0] ?>" id="current" style="height : 700px;">
                                   </div>
                           </div>
 
@@ -1423,7 +1376,10 @@
                                     
                                   }else{
                                     ?>
-                                    <img src="assets/img/no-image.png" id="current" style="height : 650px;margin-top:3%;opacity: 0.5;">
+                                    <div id="boxshadow">
+                                      <img  src="assets/img/no-image.png" id="current" style="height : 650px;opacity: 0.5;">
+                                    </div>
+                                    
                                     </div>
 
                                     <div class="imgs">
@@ -2222,50 +2178,50 @@
                            <div class="col-md-3 ">
                               <ul class="nav nav-pills nav-pills-rose nav-stacked col-md-12">
                                  <li class="active">
-                                    <a href="#infoRasm" data-toggle="tab" rel="tooltip">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoRasm" data-toggle="tab" rel="tooltip" style="border-radius : 4px;line-height : 10px">
+                                   
                                     <b class="droid-arabic-kufi">معلومات حول الرسم</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoChild" data-toggle="tab" >
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoChild" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول المولود</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoDad" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoDad" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول الأب</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoMom" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoMom" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول الام</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#plusDetail" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#plusDetail" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                   
                                     <b class="droid-arabic-kufi">معلومات اضافية</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoTasrih" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoTasrih" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                   
                                     <b class="droid-arabic-kufi">معلومات حول التصريح</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#officeEtat" data-toggle="tab" >
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#officeEtat" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">ضابط الحالة المدنية</b>
                                     </a>
                                  </li>
                                  <li >
-                                    <a href="#image" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#image" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">الصور</b>
                                     </a>
                                  </li>
@@ -2358,6 +2314,7 @@
    <script src="assets/js/toraMangmnt.js"></script>
    <script src="assets/js/loupe.js"></script> 
    <script src="assets/js/gallery.js"></script> 
+   
   
    <script>
       $('#submitSbirthForm').click( function() {

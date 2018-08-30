@@ -51,49 +51,6 @@
          border-radius: 5px;
          }
 
-         /*image slider*/
-/*gallery styling*/
-.container {
-  max-width: 610px;
-  height : 900px;
-  margin-top : 2%;
-  /*margin: auto;*/
-  border: #253340 solid 2px;
-  /*border-radius : 25px;*/
-  background: #D8D8D8;
-  margin-bottom: 20px;
-}
-
-.main-img img,
-.imgs img {
-  width: 100%;
-}
-
-.imgs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 5px;
-  margin-bottom : 5px;
-  margin-top: 5px;
-}
-
-/* Fade in animation */
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in 1 forwards;
-}
-
-  .card
-  {
-    margin : 10px 0 !important;
-  }
-/*end image slider*/
       </style>
    </head>
    <body class="rtl-layout sidebar-mini" >
@@ -2174,50 +2131,49 @@
                            <div class="col-md-3 ">
                               <ul class="nav nav-pills nav-pills-rose nav-stacked">
                                  <li class="active">
-                                    <a href="#infoRasm" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoRasm" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول الرسم</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoDeath" data-toggle="tab" >
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoDeath" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول الوفاة</b>
                                     </a>
                                  </li>
                                  <li >
-                                    <a href="#infoDead" data-toggle="tab" >
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoDead" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول المتوفي</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoDad" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoDad" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول الأب</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoMom" data-toggle="tab">
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoMom" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول الام</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#infoTasrih" data-toggle="tab" >
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#infoTasrih" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">معلومات حول التصريح</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#officeEtat" data-toggle="tab" >
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#officeEtat" data-toggle="tab" style="border-radius : 4px;line-height : 10px">
+                                    
                                     <b class="droid-arabic-kufi">ضابط الحالة المدنية</b>
                                     </a>
                                  </li>
                                  <li>
-                                    <a href="#image" data-toggle="tab" >
-                                    <i class="material-icons myPills">keyboard_arrow_left</i>
+                                    <a href="#image" data-toggle="tab" style="border-radius : 4px;line-height : 10px">                                  
                                     <b class="droid-arabic-kufi">الصور</b>
                                     </a>
                                  </li>
@@ -2302,6 +2258,8 @@
    <script src="assets/js/solbMngmt.js"></script>
    <script src="assets/js/extraitMngmnt.js"></script>
    <script src="assets/js/toraMangmnt.js"></script>
+   <script src="assets/js/loupe.js"></script> 
+   <script src="assets/js/gallery.js"></script> 
    <script>
       $('#submitSDeathForm').click( function() {
          $('.sDeathFormUpdate').submit();

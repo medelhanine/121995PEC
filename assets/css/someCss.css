@@ -1,3 +1,84 @@
+ /*image slider*/
+/*gallery styling*/
+.container {
+  max-width: 610px;
+  height : 900px;
+  margin-top : 2%;
+  /*margin: auto;*/
+  /* border: #b2b2b2 solid 2px; */
+  /*border-radius : 25px;*/
+  /* background: #e5e5e5; */
+  margin-bottom: 20px;
+}
+
+.main-img img,
+.imgs img {
+  width: 100%;
+
+}
+
+.imgs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin: 5px;
+  margin-right: 5px;
+  /* box-shadow: 10px 10px 5px grey; */
+  background: #e5e5e5;
+  /* border: #b2b2b2 solid 2px; */
+  border-radius: 5px;
+
+}
+
+/*create a box shadow effect*/
+#boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}
+
+/* Make the image fit the box */
+#boxshadow img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+  .card
+  {
+    margin : 10px 0 !important;
+  }
+/*end image slider*/
+
+
 /*loupe*/
    /*Some CSS*/
 * {margin: 0; padding: 0;}
@@ -21,6 +102,12 @@
 /*To solve overlap bug at the edges during magnification*/
 .small { display: block; }
 
+
+
+/*Form groupe */
+ .form-group {
+           padding-bottom :0;
+         }
 
 
 /*drop zone style*/
