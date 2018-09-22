@@ -32,7 +32,7 @@ ob_start();
 $pdf = new Pdf();
 $pdf->SetAutoPageBreak(true, 0);
 $pageCount = $pdf->setSourceFile('imprimeModels\copieIntegDeath.pdf');
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 // set some language dependent data:
 $lg = Array();
 $lg['a_meta_charset'] = 'UTF-8';
@@ -125,128 +125,128 @@ $query2="SELECT * FROM `users` WHERE `id_user`=?";
 //pour les donnees arabe****************
 $pdf->setRTL(true);
 //date deces hijri ar
-  $pdf->SetFont($fontname, 'B', 11);
+$pdf->SetFont($fontname, 'B', 11);
 $pdf->SetXY(70, 0);
 $pdf->Cell(0, 25, $result["date_deces_hijri_ar"],'C');
 //date deces miladi ar
 
-$pdf->SetXY(75, 8.5);
+$pdf->SetXY(75, 8);
 $pdf->Cell(0, 25, $result["date_deces_miladi_ar"],'C');
 
 //heure
 $pdf->SetFont('freeserif', 'B', 10);
-$pdf->SetXY(98, 16);
+$pdf->SetXY(98, 15.75);
 $pdf->Cell(0, 25, $result["heure"],'C');
 
 //min
 $pdf->SetFont('freeserif', 'B', 10);
-$pdf->SetXY(155, 16);
+$pdf->SetXY(155, 15.75);
 $pdf->Cell(0, 25, $result["minute"],'C');
 
 //lieu naiiss ar
 $pdf->SetFont($fontname, 'B', 11);
-$pdf->SetXY(82, 24.5);
+$pdf->SetXY(82, 24.25);
 $pdf->Cell(0, 25, $result["lieu_deces_ar"],'C');
 //prenom ar
-$pdf->SetXY(85, 33);
+$pdf->SetXY(85, 32.75);
 $pdf->Cell(0, 25, $result["prenom_ar"],'C');
 //nom ar
-$pdf->SetXY(82, 41);
+$pdf->SetXY(82, 40.75);
 $pdf->Cell(0, 25, $result["nom_ar"],'C');
 //nationalite
-$pdf->SetXY(78, 49);
+$pdf->SetXY(78, 48.75);
 $pdf->Cell(0, 25, $result["nationalite_ar"],'C');
 //lieu naiss
-$pdf->SetXY(85, 57);
+$pdf->SetXY(85, 56.75);
 $pdf->Cell(0, 25, $result["lieu_naissance_ar"],'C');
 //date naiss hijri
-$pdf->SetXY(73, 65.5);
+$pdf->SetXY(73, 65.25);
 $pdf->Cell(0, 25, $result["date_naiss_hijri_ar"],'C');
 //date naiss miladi
-$pdf->SetXY(77, 73.5);
+$pdf->SetXY(77, 73.25);
 $pdf->Cell(0, 25, $result["date_naiss_miladi_ar"],'C');
 //profession
-$pdf->SetXY(83, 82);
+$pdf->SetXY(83, 81.75);
 $pdf->Cell(0, 25, $result["profession_ar"],'C');
 //domicile
-$pdf->SetXY(85, 90);
+$pdf->SetXY(85, 89.75);
 $pdf->Cell(0, 25, $result["domicile_ar"],'C');
 //prenom pere
-$pdf->SetXY(80, 98);
+$pdf->SetXY(80, 97.75);
 $pdf->Cell(0, 25, $result["nom_pere_ar"],'C');
 //nationalite pere
-$pdf->SetXY(80, 107);
+$pdf->SetXY(80, 106.75);
 $pdf->Cell(0, 25, $result["nationalite_pere_ar"],'C');
 //profession pere
-$pdf->SetXY(150, 106.5);
+$pdf->SetXY(150, 106.25);
 $pdf->Cell(0, 25, $result["profession_pere_ar"],'C');
 //domicile pere
-$pdf->SetXY(82, 114);
+$pdf->SetXY(82, 113.75);
 $pdf->Cell(0, 25, $result["domicile_pere_ar"],'C');
 //prenom mere
-$pdf->SetXY(83, 122);
+$pdf->SetXY(83, 121.7);
 $pdf->Cell(0, 25, $result["nom_mere_ar"],'C');
 //nationalite mere
-$pdf->SetXY(81, 130.5);
+$pdf->SetXY(81, 130.25);
 $pdf->Cell(0, 25, $result["nationalite_mere_ar"],'C');
 //profession mere
-$pdf->SetXY(150, 130.5);
+$pdf->SetXY(150, 130.25);
 $pdf->Cell(0, 25, $result["profession_mere_ar"],'C');
 //domcile mere
-$pdf->SetXY(82, 139);
+$pdf->SetXY(82, 138.7);
 $pdf->Cell(0, 25, $result["domicile_mere_ar"],'C');
 //etat familiale
 //etat Familiale
 
 if($result["etat_familiale"]=="celeb")
 {
-$pdf->SetXY(88, 147);
+$pdf->SetXY(88, 146.7);
 $pdf->Cell(0, 25,"عازب" ,'C');
 }
 if($result["etat_familiale"]=="marie")
 {
-$pdf->SetXY(88, 147);
+$pdf->SetXY(88, 146.7);
 $pdf->Cell(0, 25,"متزوج" ,'C');
 }
 if($result["etat_familiale"]=="divorce")
 {
-$pdf->SetXY(88, 147);
+$pdf->SetXY(88, 146.7);
 $pdf->Cell(0, 25,"مطلق" ,'C');
 }
 if($result["etat_familiale"]=="veuf")
 {
-$pdf->SetXY(88, 147);
+$pdf->SetXY(88, 146.7);
 $pdf->Cell(0, 25,"أرمل" ,'C');
 }
 
 //selon
-$pdf->SetXY(88, 154.5);
+$pdf->SetXY(88, 154.25);
 $pdf->Cell(0, 25,$result["selon_ar"] ,'C');
 //date_ ecritture hijri
-$pdf->SetXY(84, 163.25);
+$pdf->SetXY(84, 163);
 $pdf->Cell(0, 25,$result["ecrite_le_hijri_ar"] ,'C');
 
 //date ecrit miladi
-$pdf->SetXY(80, 171.75);
+$pdf->SetXY(80, 171.5);
 $pdf->Cell(0, 25,$result["ecrite_le_miladi_ar"] ,'C');
 
 //heure ecrit
 $pdf->SetFont('freeserif', 'B', 11);
-$pdf->SetXY(90, 179.75);
+$pdf->SetXY(90, 179.5);
 $pdf->Cell(0, 25,$result["heure_ecrit"] ,'C');
 //min ecrit
-$pdf->SetXY(156, 179.75);
+$pdf->SetXY(156, 179.5);
 $pdf->Cell(0, 25,$result["min_ecrit"] ,'C');
 
 $pdf->SetFont($fontname, 'B', 11);
-$pdf->SetXY(86, 187.5);
+$pdf->SetXY(86, 187.25);
 $pdf->Cell(0, 25,$result["par_nous_ar"] ,'C');
 
-$pdf->SetXY(92, 195.5);
+$pdf->SetXY(92, 195.25);
 $pdf->Cell(0, 25,$result["officier_etat_civil_ar"] ,'C');
 
 $pdf->SetFont("helvetica", 'B', 10);
-$pdf->SetXY(142, 227);
+$pdf->SetXY(142, 226.7);
 $pdf->Cell(0, 25,$ActualDate ,'C');
 //francais version**********************************************
 $pdf->setRTL(false);

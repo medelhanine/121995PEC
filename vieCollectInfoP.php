@@ -79,7 +79,7 @@ if($language =="ar") //ARabic*******************************
   // set some language-dependent strings (optional)
   $pdf->setLanguageArray($lg);
   //some queries with db
-  $fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+  $fontname = "aefurat";
   	// add a page
   $pdf->AddPage('P', 'A4');
   //$cin=$_POST["cin"];
@@ -272,7 +272,7 @@ if($language=="fr") { //francais*******************************/////////////////
   // set some language-dependent strings (optional)
   $pdf->setLanguageArray($lg);
   //some queries with db
-  $fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+  $fontname = "aefurat";
   	// add a page
   $pdf->AddPage('P', 'A4');
   //$cin=$_POST["cin"];
@@ -377,7 +377,7 @@ ob_start();
 // initiate PDF
 $pdf = new Pdf();
 $pageCount = $pdf->setSourceFile('imprimeModels\vie_collective_billingue.pdf');
-  $fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+  $fontname = "aefurat";
 $pdf->SetAutoPageBreak(true, 1);
 for ($pageNo = 1; $pageNo <= $pageCount; $pageNo++) {
     // import a page

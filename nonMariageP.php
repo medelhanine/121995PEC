@@ -65,7 +65,7 @@ $professionB_ar= $request["professionB_ar"];
 $language= $request["language"];
 
 
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 $query="SELECT * FROM `exbirth` WHERE `numero`=? AND `annee`=?";
 	$pdoResult = $pdoConnect->prepare($query);
 	$pdoResult->execute(array($numero,$annee));

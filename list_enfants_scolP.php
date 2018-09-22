@@ -66,7 +66,7 @@ $ActualDate = date('d/m/Y');
 $anneActu = substr($ActualDate,0,4);
 $moisActu = substr($ActualDate,5,2);
 $pdoResult;
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 $pdf->setRTL(true);
 //numero
 $pdf->SetFont("helvetica", 'B', 14);
@@ -81,8 +81,8 @@ $pdf->SetFont("helvetica", 'B', 13.5);
 $pdf->SetXY(212, 17);
 $pdf->Cell(0, 25, "31/03/".($annee_scol-5),'C');//$annee_scol."/".($annee_scol+1)
 
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
-$fontnameBody = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
+$fontnameBody = "aefurat";
 $pdf->SetLineStyle(array('width' => 0.5, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)));
 
 

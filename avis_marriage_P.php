@@ -20,7 +20,7 @@ use setasign\Fpdi;
 require_once('vendor/tecnickcom/tcpdf/tcpdf.php');
 require_once('vendor/setasign/fpdi/src/autoload.php');
 
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 date_default_timezone_set('UTC');
 $ActualDate = date('d/m/Y');
 $anneActu = substr($ActualDate,0,4);
@@ -62,7 +62,7 @@ $lieu_naiss_wife= $request["lieu_naiss_wife"];
 $tora_ar= $request["tora_ar"];
 $tora_fr= $request["tora_fr"];
 
-/* IKHBAR ............................... */
+/* IKHBAR ................................... */
 if(isset($request["print_ikhbar"]))
 {
   class Pdf extends Fpdi\TcpdfFpdi
@@ -102,7 +102,7 @@ $pdf->setLanguageArray($lg);
 	// add a page
   $pdf->AddPage('P', 'A4');
 $pdf->setRTL(true);
-$pdf->SetFont($fontname, 'B', 10);
+$pdf->SetFont($fontname, 'B', 11);
 $pdf->SetXY(17, 6.25);
 $pdf->Cell(0, 25, "المملكة المغربية",'C');
 
@@ -126,39 +126,39 @@ $pdf->Cell(0, 25, "قطاع الحالة المدنية-المكتب المرك�
 
 
 $pdf->SetFont($fontname, 'B', 16);
-$pdf->SetXY(85, 111.5);
+$pdf->SetXY(85, 111.25);
 $pdf->Cell(0, 25, $prenom_nom_ar,'C');
 
 $pdf->SetFont("helvetica", 'B', 14);
-$pdf->SetXY(83, 120.5);
+$pdf->SetXY(83, 120.25);
 $pdf->Cell(0, 25, $numero_husband,'C');
 
 $pdf->SetFont("helvetica", 'B', 14);
-$pdf->SetXY(115, 120.5);
+$pdf->SetXY(115, 120.25);
 $pdf->Cell(0, 25, $annee_husband,'C');
 
 $pdf->SetFont("helvetica", 'B', 11);
-$pdf->SetXY(44, 127.5);
+$pdf->SetXY(44, 127.25);
 $pdf->Cell(0, 25, $date_naiss_num,'C');
 
 $pdf->SetFont("helvetica", 'B', 11);
-$pdf->SetXY(44, 127.5);
+$pdf->SetXY(44, 127.25);
 $pdf->Cell(0, 25, $date_naiss_num,'C');
 
 $pdf->SetFont($fontname, 'B', 16);
-$pdf->SetXY(88, 127.5);
+$pdf->SetXY(88, 127.25);
 $pdf->Cell(0, 25, $lieu_naiss,'C');
 
 $pdf->SetFont($fontname, 'B', 16);
-$pdf->SetXY(148, 127.5);
+$pdf->SetXY(148, 127.25);
 $pdf->Cell(0, 25, $profession,'C');
 
 $pdf->SetFont($fontname, 'B', 16);
-$pdf->SetXY(44, 137.5);
+$pdf->SetXY(44, 137.25);
 $pdf->Cell(0, 25, $nationalite,'C');
 
 $pdf->SetFont($fontname, 'B', 16);
-$pdf->SetXY(108, 137.5);
+$pdf->SetXY(108, 137.25);
 if($etat_familiale=="celeb")
 {  
 $pdf->Cell(0, 25, "عازب",'C');
@@ -180,43 +180,43 @@ $pdf->Cell(0, 25, "أرمل",'C');
 }
 
 $pdf->SetFont($fontname, 'B', 14);
-$pdf->SetXY(20, 144);
+$pdf->SetXY(20, 143.7);
 $pdf->Cell(0, 25, $adress,'C');
 
 $pdf->SetFont($fontname, 'B', 14);
-$pdf->SetXY(90, 144);
+$pdf->SetXY(90, 143.7);
 $pdf->Cell(0, 25, $prenom_nom_ar_wife,'C');
 
 
 $pdf->SetFont("helvetica", 'B', 14);
-$pdf->SetXY(20, 150);
+$pdf->SetXY(20, 149.7);
 $pdf->Cell(0, 25, $numero_wife,'C');
 
 $pdf->SetFont("helvetica", 'B', 13);
-$pdf->SetXY(70, 150);
+$pdf->SetXY(70, 159.7);
 $pdf->Cell(0, 25, $annee_wife,'C');
 
 
 $pdf->SetFont("helvetica", 'B', 13);
-$pdf->SetXY(115, 150);
+$pdf->SetXY(115, 149.7);
 $pdf->Cell(0, 25, $date_naiss_num_wife,'C');
 
 
 $pdf->SetFont($fontname, 'B', 14);
-$pdf->SetXY(20, 157.5);
+$pdf->SetXY(20, 157.25);
 $pdf->Cell(0, 25, $lieu_naiss_wife,'C');
 
 $pdf->SetFont($fontname, 'B', 14);
-$pdf->SetXY(85, 157.5);
+$pdf->SetXY(85, 157.25);
 $pdf->Cell(0, 25, $profession_wife,'C');
 
 
 $pdf->SetFont($fontname, 'B', 15);
-$pdf->SetXY(145, 157.5);
+$pdf->SetXY(145, 157.25);
 $pdf->Cell(0, 25, $nationalite_wife,'C');
 
 $pdf->SetFont($fontname, 'B', 16);
-$pdf->SetXY(55, 166.5);
+$pdf->SetXY(55, 166.25);
 
 if($etat_familiale_wife=="celeb_wife")
 {
@@ -245,21 +245,21 @@ $pdf->Cell(0, 25, "rasm ",'C');*/
 
 
 $pdf->SetFont("helvetica", 'B', 14);
-$pdf->SetXY(110, 175.5);
+$pdf->SetXY(110, 175.25);
 $pdf->Cell(0, 25, $adad,'C');
 
 
 $pdf->SetFont("helvetica", 'B', 14);
-$pdf->SetXY(160, 175.5);
+$pdf->SetXY(160, 175.25);
 $pdf->Cell(0, 25, $sahifa,'C');
 
 $pdf->SetFont("helvetica", 'B', 14);
-$pdf->SetXY(35, 185);
+$pdf->SetXY(35, 184.7);
 $pdf->Cell(0, 25, $date_avis,'C');
 
 
 $pdf->SetFont("helvetica", 'B', 14);
-$pdf->SetXY(85, 185);
+$pdf->SetXY(85, 184.7);
 $pdf->Cell(0, 25, $numero_sijil,'C');
 
 
@@ -320,8 +320,7 @@ $pdf->AddPage('P', 'A4');
 if(isset($request["id_avis_mariage"]))
 {
   //update values
-
-  $query = "UPDATE `avis_mariage` SET `tribunal_istinaf`=?,`tribunal_ibtidaia`=?,`adad`=?,`sahifa`=?,`date`=?,`numero_sijil`=?,`type_rasm`=?,`tarikh_rasm`=?,`nom_epoux_ar`=?,`nom_epoux`=?,`numero_epoux`=?,`annee_epoux`=?,`date_naiss_epoux`=?,`date_naiss_epoux_num`=?,`lieu_naiss_epoux`=?,`profession_epoux`=?,`nationalite_epoux`=?,`etat_familiale_epoux`=?,`adresse_epoux`=?,`nom_epouse_ar`=?,`nom_epouse`=?,`numero_epouse`=?,`annee_epouse`=?,`date_naiss_epouse`=?,`date_naiss_epouse_num`=?,`lieu_naiss_epouse`=?,`profession_epouse`=?,`nationalite_epouse`=?,`etat_familiale`=?,`date_divorce`=?,`date_deces_epoux`=?,`adress_epouse`=? WHERE `id_avis_mariage`=?";
+$query = "UPDATE `avis_mariage` SET `tribunal_istinaf`=?,`tribunal_ibtidaia`=?,`adad`=?,`sahifa`=?,`date`=?,`numero_sijil`=?,`type_rasm`=?,`tarikh_rasm`=?,`nom_epoux_ar`=?,`nom_epoux`=?,`numero_epoux`=?,`annee_epoux`=?,`date_naiss_epoux`=?,`date_naiss_epoux_num`=?,`lieu_naiss_epoux`=?,`profession_epoux`=?,`nationalite_epoux`=?,`etat_familiale_epoux`=?,`adresse_epoux`=?,`nom_epouse_ar`=?,`nom_epouse`=?,`numero_epouse`=?,`annee_epouse`=?,`date_naiss_epouse`=?,`date_naiss_epouse_num`=?,`lieu_naiss_epouse`=?,`profession_epouse`=?,`nationalite_epouse`=?,`etat_familiale`=?,`date_divorce`=?,`date_deces_epoux`=?,`adress_epouse`=? WHERE `id_avis_mariage`=?";
 $pdoResult = $pdoConnect->prepare($query);
 $pdoResult->execute(array($istinaf,$ibtidaayia,$adad,$sahifa,$date_reference,$numero_sijil,$categorie_avis,$date_avis,$prenom_nom_ar,$prenom_nom,$numero_husband,$annee_husband,$date_naiss,$date_naiss_num,$lieu_naiss,$profession,$nationalite,$etat_familiale,$adress,$prenom_nom_ar_wife,$prenom_nom_wife,$numero_wife,$annee_wife,$date_naiss_wife,$date_naiss_num_wife,$lieu_naiss_wife,$profession_wife,$nationalite_wife,$etat_familiale_wife,$date_divorce,$date_deces_marie,$adress_wife,$request["id_avis_mariage"]));
 }else
@@ -444,43 +443,43 @@ if($categorie_avis=="rijaa")
 
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(34,118);
+$pdf->SetXY(34,117.7);
 $pdf->Cell(0, 25, $date_avis,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(56,134);
+$pdf->SetXY(56,133.7);
 $pdf->Cell(0, 25, $prenom_nom_ar,'C');
 
 $pdf->setRTL(false);
 $pdf->SetFont("helvetica", 'B', 10);
-$pdf->SetXY(126,141);
+$pdf->SetXY(126,141.25);
 $pdf->Cell(0, 25, strtoupper($prenom_nom),'C');
 
 $pdf->setRTL(true);
 
 $pdf->SetFont("helvetica", 'B', 12);
-$pdf->SetXY(47,148);
+$pdf->SetXY(47,147.7);
 $pdf->Cell(0, 25, $numero_husband,'C');
 
 $pdf->SetFont("helvetica", 'B', 12);
-$pdf->SetXY(97,148);
+$pdf->SetXY(97,147.7);
 $pdf->Cell(0, 25, $annee_husband,'C');
 
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,155.5);
+$pdf->SetXY(33,155.25);
 $pdf->Cell(0, 25, $date_naiss."  ".$date_naiss_num,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,162);
+$pdf->SetXY(33,161.7);
 $pdf->Cell(0, 25, $lieu_naiss,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,169);
+$pdf->SetXY(33,168.7);
 $pdf->Cell(0, 25, $profession,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,176);
+$pdf->SetXY(33,175.7);
 $pdf->Cell(0, 25, $nationalite,'C');
 
 
@@ -515,39 +514,39 @@ if($etat_familiale=="marie")
 
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(56,204.5);
+$pdf->SetXY(56,204.25);
 $pdf->Cell(0, 25, $prenom_nom_ar_wife,'C');
 
 $pdf->setRTL(false);
 $pdf->SetFont("helvetica", 'B', 10);
-$pdf->SetXY(126,211);
+$pdf->SetXY(126,211.25);
 $pdf->Cell(0, 25, strtoupper($prenom_nom_wife),'C');
 
 
 $pdf->setRTL(true);
 $pdf->SetFont("helvetica", 'B', 12);
-$pdf->SetXY(47,218);
+$pdf->SetXY(47,217.7);
 $pdf->Cell(0, 25, $numero_wife,'C');
 
 $pdf->SetFont("helvetica", 'B', 12);
-$pdf->SetXY(97,218);
+$pdf->SetXY(97,217.7);
 $pdf->Cell(0, 25, $annee_wife,'C');
 
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,225.5);
+$pdf->SetXY(33,225.25);
 $pdf->Cell(0, 25, $date_naiss_wife."  ".$date_naiss_num_wife,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,232);
+$pdf->SetXY(33,231.7);
 $pdf->Cell(0, 25, $lieu_naiss_wife,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,239);
+$pdf->SetXY(33,238.7);
 $pdf->Cell(0, 25, $profession_wife,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(33,246);
+$pdf->SetXY(33,245.7);
 $pdf->Cell(0, 25, $nationalite_wife,'C');
 
 
@@ -582,7 +581,7 @@ if($etat_familiale_wife=="veuf_wife")
 }
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(34,268);
+$pdf->SetXY(34,267.7);
 $pdf->Cell(0, 25, $adress_wife,'C');
 }
 

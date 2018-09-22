@@ -1237,9 +1237,7 @@
                               </li>
                            </ul>     
 
-                           <div class="row col-md-12 ">
-                                    <hr style="width: 115px;margin-bottom: 2.5%; margin-top: 2%;border-color : black"> 
-                                </div>
+                           
                            
                            <div class="tab-content"><!--tab content-->
                            <!--other ****************///////////-->

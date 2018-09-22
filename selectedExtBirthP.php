@@ -99,8 +99,8 @@ $pdf->Cell(0, 25, $result["annee"],'C');
 
 
 //prenom ar
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
-$pdf->SetFont($fontname, '', 9, '', false);
+$fontname = "aefurat";
+$pdf->SetFont($fontname, 'B', 9);
 $pdf->SetXY(34, 44.25);
 $pdf->Cell(0, 25, $result["prenom_ar"],'C');
 //nom_ar
@@ -108,7 +108,7 @@ $pdf->SetXY(34, 50.25);
 $pdf->Cell(0, 25, $result["nom_ar"],'C');
 
 //date naiss hijri ar
-$pdf->SetFont($fontname, '', 8, '', false);
+$pdf->SetFont($fontname, 'B', 10);
 $pdf->SetXY(34, 56.25);
 $pdf->Cell(0, 25, $result["date_naiss_hijri_ar"],'C');
 //date naiss miladi ara
@@ -116,7 +116,7 @@ $pdf->SetXY(34, 62.25);
 $pdf->Cell(0, 25, $result["date_naiss_miladi_ar"],'C');
 
 //lieu naisss
-$pdf->SetFont($fontname, '', 9, '', false);
+$pdf->SetFont($fontname, 'B', 10);
 $pdf->SetXY(34, 68);
 $pdf->Cell(0, 25, $result["lieu_naiss_ar"],'C');
 
@@ -200,7 +200,7 @@ $query2="SELECT * FROM `users` WHERE `id_user`=?";
 
 
     $pdf->setRTL(true);
-    $pdf->SetFont($fontname, '', 9, '', false);
+    $pdf->SetFont($fontname, 'B', 10);
     $pdf->SetXY(51, 109.5);
     $pdf->Cell(0, 25, ucwords($result2["first_name_ar"]." ".$result2["last_name_ar"]),'C');
 
@@ -223,7 +223,7 @@ $query2="SELECT * FROM `users` WHERE `id_user`=?";
     $pdf->Cell(0, 25, ucwords($result2["prenom_delegue"]." ".$result2["nom_delegue"]),'C');
     
     $pdf->setRTL(true);
-    $pdf->SetFont($fontname, '', 9, '', false);
+    $pdf->SetFont($fontname, 'B', 10);
     $pdf->SetXY(123, 109.5);
     $pdf->Cell(0, 25, ucwords($result2["prenom_delegue_ar"]." ".$result2["nom_delegue_ar"]),'C');
 }

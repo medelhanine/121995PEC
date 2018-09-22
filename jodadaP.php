@@ -30,7 +30,7 @@ ob_start();
 $pdf = new Pdf();
 $pdf->SetAutoPageBreak(true, 0);
 $pageCount = $pdf->setSourceFile('imprimeModels\jodada.pdf');
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 // set some language dependent data:
 $lg = Array();
 $lg['a_meta_charset'] = 'UTF-8';

@@ -86,7 +86,7 @@ $lieu_naissB_fr= $request["lieu_naissB_fr"];
 $language= $request["language"];
 
 
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 
 
 // ONLY ARABIC ///////////////////////////////////////////////////////////////////////////////

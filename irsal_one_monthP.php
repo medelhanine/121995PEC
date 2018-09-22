@@ -47,7 +47,7 @@ $months_letter= array("1" =>"يناير",
 $type_irsal= $request["type_irsal"];
 $feminin_number = 0;
 $masculin_number = 0;
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 // general irsal ///////////////////////////////////////////////////////////////////////////////
   if($type_irsal=="general")
   {
@@ -375,7 +375,7 @@ if($type_irsal=="detail")
                     {
                     $pdf->AddPage('L', 'A4');
                     $j= 16.5;
-                    $fontname2 = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+                    $fontname2 = "aefurat";
                     $pdf->SetFont($fontname2, 'B', 17);
                     $pdf->SetXY(36.5, $j);
                     $pdf->MultiCell(200, 65, " لائحة الأشخاص المتوفين الراشدين المصرح بهم خلال شهر".$result_month." سنة  ".$year, 0, 'C', 0, 0, '', '', true);
@@ -490,7 +490,7 @@ if($type_irsal=="detail")
                   {
                   $pdf->AddPage('L', 'A4');
                   $j= 36.5;
-                  $fontname2 = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+                  $fontname2 = "aefurat";
                   $pdf->SetFont($fontname2, 'B', 17);
                   $pdf->SetXY(36.5, $j);
                   $pdf->MultiCell(200, 65, " قائمة النساء المغربيات المتوفيات اللاتي تتراوح أعمارهن ما بين 15 و 45 سنة والمصرح بهن لدى مكتب الحالة المدنية خلال شهر".$result_month." سنة  ".$year, 0, 'C', 0, 0, '', '', true);
@@ -618,7 +618,7 @@ if($type_irsal=="detail")
                   {
                   $pdf->AddPage('L', 'A4');
                   $j= 16.5;
-                  $fontname2 = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+                  $fontname2 = "aefurat";
                   $pdf->SetFont($fontname2, 'B', 17);
                   $pdf->SetXY(36.5, $j);
                   $pdf->MultiCell(200, 65, "الولادات الجدد المصرح بها خلال شهر ".$result_month." سنة  ".$year." ميلادية ", 0, 'C', 0, 0, '', '', true);

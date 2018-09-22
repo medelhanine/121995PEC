@@ -77,7 +77,7 @@ $pdf->setRTL(true);
 
 
 //prenom ar
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 
 $pdf->SetFont($fontname, 'B', 11);
 $pdf->SetXY(89, 6.25);

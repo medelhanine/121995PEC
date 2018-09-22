@@ -96,8 +96,8 @@ $pdf->Cell(0, 25, $result["annee"],'C');
 
 
 //prenom ar
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
-$pdf->SetFont($fontname, '', 9, '', false);
+$fontname = "aefurat";
+$pdf->SetFont($fontname, '', 10, '', false);
 $pdf->SetXY(34, 54);
 $pdf->Cell(0, 25,$result["prenom_ar"] ,'C');//
 //nom_ar
@@ -105,7 +105,7 @@ $pdf->SetXY(34, 58.5);
 $pdf->Cell(0, 25,$result["nom_ar"],'C');//
 
 //date naiss hijri ar
-$pdf->SetFont($fontname, '', 8, '', false);
+$pdf->SetFont($fontname, '', 10, '', false);
 $pdf->SetXY(34, 38.5);
 $pdf->Cell(0, 25, $result["date_deces_hijri_ar"],'C');//
 //date naiss miladi ara
@@ -113,7 +113,7 @@ $pdf->SetXY(34, 44);
 $pdf->Cell(0, 25,$result["date_deces_miladi_ar"] ,'C');//
 
 //lieu naisss
-$pdf->SetFont($fontname, '', 9, '', false);
+$pdf->SetFont($fontname, '', 10, '', false);
 $pdf->SetXY(34, 49);
 $pdf->Cell(0, 25,$result["lieu_deces_ar"],'C');//
 

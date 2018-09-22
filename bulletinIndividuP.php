@@ -131,8 +131,8 @@ if($pdoResult->rowCount()>0)
 }
 
 
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
-//$fontname = "aealarabiya";
+$fontname = "aefurat";
+
 $query="SELECT * FROM `bulletin_individu` WHERE `numero`=? AND `annee`=?";
 	$pdoResult = $pdoConnect->prepare($query);
 	$pdoResult->execute(array($numero,$annee));

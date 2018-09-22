@@ -1179,9 +1179,9 @@
                <div class="tab-content">
                   <div class="">
                      <!--impression documents-->
-                     <div class="row">  
+                     <div class="row" style="margin-right: 15px !important; margin-left: 15px !important;">  
 
-                     <h3 class="droid-arabic-kufi" style="color : #5A92F8;margin-right : 5%;margin-top : 0; margin-bottom : 0;" >الوثائق المتعلقة بالحالة المدنية</h3>                     
+                     <h3 class="droid-arabic-kufi" style="color : #5A92F8;margin-right : 2.5%" >الوثائق المتعلقة بالحالة المدنية</h3>                     
                        <div class="col-md-6"></div>
                         <div class="col-lg-3 col-md-3 col-sm-3" >
                         <form action="selectedBirthP.php" method="post" class="form_copie_integ_birth">
@@ -1201,7 +1201,7 @@
                             <form action="selectedExtBirthP.php" method="post" class="form_acte_naiss">
                             <input type="hidden" name="numero" value="<?php echo $result["numero"] ?>"> 
                             <input type="hidden" name="annee" value="<?php echo $result["annee"] ?>"> 
-                           <div class="card card-stats m-card "  style="background-color: #02B07D ;margin-right : 14%">
+                           <div class="card card-stats m-card "  style="background-color: #02B07D ">
                               <div class="card-content">
                                  <a href="#" id="submit_acte_naiss">
                                     <h4 class="m-card-title droid-arabic-kufi" >رسم الولادة</h4>
@@ -1215,6 +1215,7 @@
                      <!--end impression document-->
                   </div>
                   <div >
+
                      <!--chawahid*******************************************-->
                      <div class="row" style="margin-right: 15px !important; margin-left: 15px !important;">
                      <h3 class="droid-arabic-kufi" style="color : #5A92F8; margin-right : 2.5%" > الشواهد الإدارية الخاصة</h3>

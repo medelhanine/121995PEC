@@ -103,11 +103,24 @@ $lieu_acte_marriage= $request["lieu_acte_marriage"];
 $tora_ar= $request["tora_ar"];
 $tora_fr= $request["tora_fr"];
 
+if(isset($request["id_avis_divorce"]))
+{
+   //update values
+$query = "UPDATE `avis_divorce` SET `tribunal_istinaf`=?,`tribunal_ibtidaia`=?,`adad`=?,`sahifa`=?,`date`=?,`numero_sijil`=?,`type_divorce`=?,`date_divorce`=?,`date_mariage`=?,`lieu_mariage`=?,`nombre_enfants`=?,`nom_motalak_ar`=?,`nom_motalak`=?,`numero_motalak`=?,`annee_motalak`=?,`date_naiss_motalak`=?,`date_naiss_motalak_num`=?,`lieu_naiss_motalak`=?,`profession_motalak`=?,`nationalite_motalak`=?,`adresse_motalak`=?,`nom_motalaka_ar`=?,`nom_motalaka`=?,`numero_motalaka`=?,`annee_motalaka`=?,`date_naiss_motalaka`=?,`date_naiss_motalaka_num`=?,`lieu_naiss_motalaka`=?,`profession_motalaka`=?,`nationalite_motalaka`=?,`adresse_motalaka`=? WHERE `id_avis_divorce`=?";
+$pdoResult = $pdoConnect->prepare($query);
+$pdoResult->execute(array($istinaf,$ibtidaayia,$adad,$sahifa,$date_avis,$numero_sijil,$categorie_avis,$date_divorce,$date_marriage,$lieu_acte_marriage,$child_number,$prenom_nom_ar,$prenom_nom,$numero_husband,$annee_husband,$date_naiss,$date_naiss_num,$lieu_naiss,$profession,$nationalite,$adress,$prenom_nom_ar_wife,$prenom_nom_wife,$numero_wife,$annee_wife,$date_naiss_wife,$date_naiss_num_wife,$lieu_naiss_wife,$profession_wife,$nationalite_wife,$adress_wife,$request["id_avis_divorce"]));
 
-//insert avis in database
+}else{
+  //insert avis in database
 $query = "INSERT INTO `avis_divorce`(`tribunal_istinaf`, `tribunal_ibtidaia`, `adad`, `sahifa`, `date`, `numero_sijil`, `type_divorce`, `date_divorce`, `date_mariage`, `lieu_mariage`, `nombre_enfants`, `nom_motalak_ar`, `nom_motalak`, `numero_motalak`, `annee_motalak`, `date_naiss_motalak`,`date_naiss_motalak_num`, `lieu_naiss_motalak`, `profession_motalak`, `nationalite_motalak`, `adresse_motalak`, `nom_motalaka_ar`, `nom_motalaka`, `numero_motalaka`, `annee_motalaka`, `date_naiss_motalaka`,`date_naiss_motalaka_num`, `lieu_naiss_motalaka`, `profession_motalaka`, `nationalite_motalaka`, `adresse_motalaka`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 $pdoResult = $pdoConnect->prepare($query);
 $pdoResult->execute(array($istinaf,$ibtidaayia,$adad,$sahifa,$date_avis,$numero_sijil,$categorie_avis,$date_divorce,$date_marriage,$lieu_acte_marriage,$child_number,$prenom_nom_ar,$prenom_nom,$numero_husband,$annee_husband,$date_naiss,$date_naiss_num,$lieu_naiss,$profession,$nationalite,$adress,$prenom_nom_ar_wife,$prenom_nom_wife,$numero_wife,$annee_wife,$date_naiss_wife,$date_naiss_num_wife,$lieu_naiss_wife,$profession_wife,$nationalite_wife,$adress_wife));
+
+}
+
+
+
+
 
 //database insert 
 if(isset($numero_husband) && isset($annee_husband))
@@ -141,7 +154,7 @@ $pdf->setRTL(true);
 
 
 //prenom ar
-$fontname = TCPDF_FONTS::addTTFfont('assets\css\Generator_Black.ttf', 'TrueTypeUnicode', '', 96);
+$fontname = "aefurat";
 
 $pdf->SetFont($fontname, 'B', 12);
 $pdf->SetXY(35, 31.75);
@@ -292,7 +305,7 @@ $pdf->Cell(0, 25, $annee_wife,'C');
 
 
 $pdf->SetFont($fontname, 'B', 12);
-$pdf->SetXY(41,203);
+$pdf->SetXY(41,202);
 $pdf->Cell(0, 25, $date_naiss_wife."  ".$date_naiss_num_wife,'C');
 
 $pdf->SetFont($fontname, 'B', 12);
