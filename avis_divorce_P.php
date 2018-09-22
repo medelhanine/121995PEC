@@ -33,9 +33,7 @@ class Pdf extends Fpdi\TcpdfFpdi
         }
         $size = $this->useImportedPage($this->tplId, -2 , 5, 215);
 
-
     }
-
 
 }
 

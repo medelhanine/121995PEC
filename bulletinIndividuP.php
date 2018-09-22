@@ -33,8 +33,6 @@ $ActualDate = date('Y/m/d');
 $anneActu = substr($ActualDate,0,4);
 $moisActu = substr($ActualDate,5,2);
 
-
-
 $numero= $_GET["numero"];
 $annee= $_GET["annee"];
 
@@ -133,8 +131,8 @@ if($pdoResult->rowCount()>0)
 }
 
 
-
 $fontname = TCPDF_FONTS::addTTFfont('assets\css\DroidKufi-Regular.ttf', 'TrueTypeUnicode', '', 96);
+//$fontname = "aealarabiya";
 $query="SELECT * FROM `bulletin_individu` WHERE `numero`=? AND `annee`=?";
 	$pdoResult = $pdoConnect->prepare($query);
 	$pdoResult->execute(array($numero,$annee));
@@ -421,12 +419,6 @@ if($language =="ar_fr")
           $pdf->SetFont("helvetica", 'B', 9);
           $pdf->SetXY(21, 38);
           $pdf->Cell(0, 25,ucwords($nom) ,'C');
-
-
-
-
-
-
 
       }
       // FRANCAIS VERSION**********************************************************************
